@@ -7,7 +7,6 @@ import GreetingContainer from './greeting/greeting_container';
 import HomeContainer from './home/home_container';
 
 
-
 const Root = ({store}) => {
 
   const _redirect = (nextState, replace) => {
@@ -20,7 +19,7 @@ const Root = ({store}) => {
   const _ensureLoggedIn = (nextState, replace) => {
     const currentUser = store.getState().session.currentUser;
     if (!currentUser) {
-      replace('/welcome');
+      replace('/');
     }
   };
 
@@ -34,7 +33,8 @@ const Root = ({store}) => {
                  onEnter={_redirect} />
           <Route path="/signup" component={AuthFormContainer}
                  onEnter={_redirect} />
-          <Route path="/home" component={HomeContainer} />
+          <Route path="/home" component={HomeContainer}
+                 onEnter={_ensureLoggedIn}/>
         </Route>
       </Router>
     </Provider>

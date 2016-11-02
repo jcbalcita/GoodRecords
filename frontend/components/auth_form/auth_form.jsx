@@ -42,6 +42,8 @@ class AuthForm extends React.Component {
 		}
 	}
 
+
+
 	renderErrors() {
 		if (this.props.errors) {
 			return(
@@ -87,9 +89,11 @@ class AuthForm extends React.Component {
 									className="login-input" />
 							</label>
 							<br/>
-							<input type="submit" value="Submit" />
+							<input className="login-button" type="submit" value="Submit" />
 						</div>
 					</form>
+					<button className="guest-login-button"
+									onClick={this.props.guestLogin}>Guest Login</button>
 				</div>
 			</div>
 		);

@@ -1,14 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router';
-import AuthForm from './auth_form/auth_form';
-import GreetingContainer from './greeting/greeting_container';
+import NavBarContainer from './nav_bar/nav_bar_container';
 
 const App = ({children}) => (
   <div>
-    <nav className="navbar">
-      goodrecords
-    </nav>
-      {children}
+    <NavBarContainer />
+    {children}
   </div>
 );
 
