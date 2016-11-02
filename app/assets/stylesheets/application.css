@@ -164,3 +164,12 @@ a:link {
   height: 20px;
   font-size: 14px;
 }
+
+.sidebar {
+  float: left;
+  background-color: red;
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 320px;
+  height: 500px;
+}
