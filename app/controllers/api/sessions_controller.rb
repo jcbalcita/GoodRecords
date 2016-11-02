@@ -5,7 +5,7 @@ class Api::SessionsController < ApplicationController
 
     if @user
       login(@user)
-      render "api/users/show"
+      render json: @user
     else
       render json: ["No such user"], status: 422
     end
@@ -16,6 +16,7 @@ class Api::SessionsController < ApplicationController
 
     if @user
       logout
+      render json: ["Goodbye"]
     else
       render json: ["errors"], status: 404
     end

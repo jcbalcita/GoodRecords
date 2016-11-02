@@ -30,10 +30,14 @@
  padding: 0;
  background-color: transparent;
  font-family: Roboto, sans-serif;
-
+ list-style: none;
  }
 
-.navbar-splash {
+a:link {
+   text-decoration: underline;
+ }
+
+.navbar {
   display: flex;
   justify-content: space-between;
   background-color: black;
@@ -59,4 +63,33 @@
   font-size: 36px;
   font-weight: 700;
   color: white;
+}
+
+.login-signup {
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  color: white;
+  font-size: 24px;
+  background-color: #330000;
+  opacity: 0.7;
+  padding: 10px;
+  list-style: none;
+}
+
+.login-form-box {
+  position: absolute;
+  padding: 10px;
+  top: 220px;
+  right: 40px;
+  color: white;
+  background-color: #330000;
+  opacity: 0.7;
+  width: 400px;
+}
+
+.login-input {
+  border: 1px solid black;
+  background-color: white;
+  color: black;
 }
