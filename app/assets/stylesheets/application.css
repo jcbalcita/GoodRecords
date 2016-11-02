@@ -13,3 +13,50 @@
  *= require_tree .
  *= require_self
  */
+
+ html, body, header, nav, h1, a,
+ ul, li, strong, main, button, i,
+ section, img, div, h2, p, form,
+ fieldset, label, input, textarea,
+ span, article, footer, time, small {
+
+ box-sizing: inherit;
+ font: inherit;
+ text-align: inherit;
+ text-decoration: inherit;
+ color: inherit;
+ margin: 0;
+ border: 0;
+ padding: 0;
+ background-color: transparent;
+ font-family: Roboto, sans-serif;
+
+ }
+
+.navbar-splash {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+.login-form-container {
+  background-color: red;
+}
+
+.splash-image-container {
+  position: relative
+  width: 100%;
+}
+
+.splash-image {
+  width: 100%;
+}
+
+.splash-greeting {
+  position: absolute;
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+}
