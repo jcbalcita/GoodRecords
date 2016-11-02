@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
+import SearchContainer from '../search/search_container';
 
 
 class NavBar extends React.Component {
@@ -38,8 +39,8 @@ class NavBar extends React.Component {
 
     return (
       <nav className="navbar">
-        goodrecords
-        <p>search bar goes here</p>
+        <Link to='home'>goodrecords</Link>
+        {currentUser ? <SearchContainer /> : <span></span>}
         {currentUser ? this.navGreeting(currentUser.username, logout) : this.navSlogan()}
       </nav>
     );

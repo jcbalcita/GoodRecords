@@ -7,7 +7,11 @@ class Home extends React.Component {
 
   render() {
     return (
-      <h1>Home</h1>
+      <div className="home">
+				This is my home.
+				<SideBarContainer />
+				{this.props.children}
+      </div>
     );
   }
 }
