@@ -99,22 +99,22 @@ a:link {
 
 .login-signup {
   position: absolute;
-  top: 175px;
-  right: 290px;
+  top: 120px;
+  right: 320px;
   color: white;
   background-color: black;
   opacity: 1;
   padding: 10px;
   list-style: none;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 16px;
   border-radius: 10px;
 }
 
 .login-form-container {
   position: absolute;
   padding: 10px;
-  top: 220px;
+  top: 230px;
   right: 40px;
   color: white;
   background-color: black;
