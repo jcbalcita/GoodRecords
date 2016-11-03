@@ -18,7 +18,10 @@ const personalGreeting = (currentUser, logout) => (
 
 const Greeting = ({ currentUser, logout }) => (
   <div className="splash-image-container">
-    <h1 className="splash-greeting">Welcome to GoodRecords</h1>
+    <div className="splash-greeting">
+      <h1 className="greeting-message">Welcome to GoodRecords</h1>
+      <h2 className="greeting-subhead">Keep track of your record collection, and find new music!</h2>
+    </div>
     <img className="splash-image"
       src="http://res.cloudinary.com/jcbalcita/image/upload/c_scale,q_71,w_900/v1478043095/splash_lm8asd.gif">
     </img>

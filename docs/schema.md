@@ -14,8 +14,17 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 title       | string    | not null
+artist      | string    | not null
 description | text      | not null
-image_url   | text      | default: [generic image]
+image_url   | string    | default: [generic image]
+
+## album_status
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+user_id     | string    | not null
+album_id    | string    | not null
+status      | text      | not null
 
 ## reviews
 column name | data type | details

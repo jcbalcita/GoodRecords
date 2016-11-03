@@ -2,9 +2,13 @@ class User < ActiveRecord::Base
   validates :username, :password_digest, :session_token, presence: true
   validates :password, length: { minimum: 6, allow_nil: true }
 
+  after_initialize :ensure_session_token
   attr_reader :password
 
-  after_initialize :ensure_session_token
+  has_many :album_statuses
+  has_many :albums,
+    through: :album_statuses,
+    source: :albums
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)

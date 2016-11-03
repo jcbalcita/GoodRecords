@@ -10,9 +10,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className="home">
-				This is my home.
 				<SidebarContainer />
-				{this.props.children}
       </div>
     );
   }
