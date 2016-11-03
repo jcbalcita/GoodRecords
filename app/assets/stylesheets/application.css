@@ -162,7 +162,7 @@ a:link {
 }
 
 .home {
-  background-color: gray;
+  background-color: white;
   margin: 0 auto;
   width: 960px;
   height: 800px;
@@ -177,9 +177,35 @@ a:link {
 
 .sidebar {
   float: left;
-  background-color: red;
+  background-color: white;
   margin-left: 20px;
   margin-top: 20px;
-  width: 320px;
+  width: 280px;
+}
+
+.sidebar-box {
+  border: 3px solid black;
+  width: 200px;
+  margin: 0 auto;
   height: 500px;
+}
+
+.album-index-container img {
+  width: 150px;
+  height: 150px;
+}
+
+.album-index-container {
+  width: 660px;
+  background-color: green;
+  float: left;
+  margin-top: 20px;
+}
+
+.album-index-item {
+  padding-left: 10px;
+  padding-top: 15px;
+  width: 205px;
+  display: inline-block;
+  height: 220px;
 }

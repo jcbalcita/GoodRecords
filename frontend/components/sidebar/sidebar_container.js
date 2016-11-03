@@ -1,11 +1,18 @@
 import { connect } from 'react-redux';
-import { logout } from '../../actions/session_actions';
+import { requestAllAlbums,
+         requestUserAlbums } from '../../actions/album_actions';
 import Sidebar from './sidebar';
 
-const mapStateToProps = state => ({
-  albums: state.albums
+const mapStateToProps = ({session}) => ({
+  currentUser: session.currentUser
+});
+
+const mapDispatchToProps = dispatch => ({
+   requestAllAlbums: () => dispatch(requestAllAlbums()),
+   requestUserAlbums: status => dispatch(requestUserAlbums(status))
 });
 
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(Sidebar);

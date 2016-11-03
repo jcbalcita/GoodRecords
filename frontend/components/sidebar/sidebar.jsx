@@ -2,14 +2,21 @@ import React from 'react';
 import { Link } from 'react-router';
 
 class Sidebar extends React.Component {
-	constructor(props) {
-		super(props);
-	}
+
 
   render() {
+
     return (
       <div className="sidebar col-1-3">
-				This is my sidebar.
+				<div className="sidebar-box">
+					<button className="sidebar-item" onClick={this.props.requestUserAlbums.bind(this, "owned")}>
+						My Collection
+					</button>
+					<br></br>
+					<span className="sidebar-item">
+						My Wish List
+					</span>
+				</div>
       </div>
     );
   }

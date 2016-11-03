@@ -1,5 +1,5 @@
 class AlbumStatus < ActiveRecord::Base
-  validates :user, :album, presence: true
+  validates :user_id, :album_id, presence: true
   validates :status, inclusion: { in: ['owned', 'wishlist', 'want to listen'],
                                   allow_nil: true }
 

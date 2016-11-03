@@ -3,9 +3,8 @@ import { fetchAlbums } from '../../actions/album_actions';
 import AlbumIndex from './album_index';
 
 const mapStateToProps = state => ({
-  albums: state.albums
+  albums: Object.keys(state.albums).map(idx => state.albums[idx])
 });
-
 
 export default connect(
   mapStateToProps
