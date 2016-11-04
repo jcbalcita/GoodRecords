@@ -16,14 +16,14 @@ const Root = ({store}) => {
   const _redirect = (nextState, replace) => {
       const currentUser = store.getState().session.currentUser;
       if (currentUser) {
-        replace('/home');
+        replace('home');
       }
   };
 
   const _ensureLoggedIn = (nextState, replace) => {
     const currentUser = store.getState().session.currentUser;
     if (!currentUser) {
-      replace('/');
+      replace('/login');
     }
   };
 
