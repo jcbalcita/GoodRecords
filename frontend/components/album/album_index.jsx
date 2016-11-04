@@ -3,12 +3,8 @@ import { Link } from 'react-router';
 import AlbumIndexItem from './album_index_item';
 
 class AlbumIndex extends React.Component {
-	constructor(props) {
-		super(props);
-	}
 
   render() {
-
 		let albums = this.props.albums.map((album, idx) =>
 			<AlbumIndexItem key={idx} album={album} />
 		);

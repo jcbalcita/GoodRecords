@@ -1,7 +1,8 @@
 class Api::AlbumsController < ApplicationController
+
   def index
     if (params[:status])
-      @albums = Album.joins(:album_statuses).where('album_statuses.user_id  = ?', current_user.id).where('album_statuses.status = ?', params[:status])
+      @albums = Album.find_by_status(current_user.id, params[:status])
     else
       @albums = Album.all
     end

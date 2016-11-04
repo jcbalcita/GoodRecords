@@ -8,6 +8,7 @@ import AuthFormContainer from './auth_form/auth_form_container';
 import GreetingContainer from './greeting/greeting_container';
 import HomeContainer from './home/home_container';
 import AlbumIndexContainer from './album/album_index_container';
+import AlbumDetailContainer from './album/album_detail_container';
 
 
 const Root = ({store}) => {
@@ -35,10 +36,11 @@ const Root = ({store}) => {
       <Router history={hashHistory}>
         <Route path="/" component={App}>
           <IndexRoute component={GreetingContainer} onEnter={_redirect} />
-          <Route path="/login" component={AuthFormContainer} onEnter={_redirect} />
-          <Route path="/signup" component={AuthFormContainer} onEnter={_redirect} />
-          <Route path="/home" component={HomeContainer} onEnter={_ensureLoggedIn}>
+          <Route path="login" component={AuthFormContainer} onEnter={_redirect} />
+          <Route path="signup" component={AuthFormContainer} onEnter={_redirect} />
+          <Route path="home" component={HomeContainer} onEnter={_ensureLoggedIn}>
             <IndexRoute component={AlbumIndexContainer} onEnter={_requestOnEnter} />
+            <Route path="albums/:albumId" component={AlbumDetailContainer} onEnter={_ensureLoggedIn} />
           </Route>
         </Route>
       </Router>

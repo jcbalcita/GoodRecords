@@ -14,3 +14,11 @@ export const fetchUserAlbums = (status, success) => {
     success
   });
 };
+
+export const fetchAlbum = (id, success) => {
+  $.ajax({
+    method: 'GET',
+    url: `api/albums/${id}`,
+    success
+  });
+};

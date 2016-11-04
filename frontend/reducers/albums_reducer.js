@@ -1,4 +1,6 @@
-import { RECEIVE_ALL_ALBUMS, receiveAllAlbums } from '../actions/album_actions';
+import { RECEIVE_ALL_ALBUMS,
+         receiveAllAlbums } from '../actions/album_actions';
+
 import merge from 'lodash/merge';
 
 const AlbumsReducer = (state = {}, action) => {

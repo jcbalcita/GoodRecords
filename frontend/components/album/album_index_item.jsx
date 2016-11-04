@@ -2,13 +2,17 @@ import React from 'react';
 import { Link, withRouter } from 'react-router';
 
 const AlbumIndexItem = ({album}) => (
-  <span className="album-index-item">
+  <div className="album-index-item">
     <p>
       <img src={album.image_url}></img>
     </p>
-    <p>{album.title}</p>
+
+    <Link to={`/home/albums/${album.id}`}>
+      <p className="album-title">{album.title}</p>
+    </Link>
+
     <p>{album.artist}</p>
-  </span>
+  </div>
 );
 
 export default withRouter(AlbumIndexItem);
