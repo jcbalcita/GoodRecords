@@ -57,14 +57,16 @@ a:link {
    border: none;
    background-color: white;
    color: black;
-   padding: 5px;
    border-radius: 10px;
    cursor: pointer;
+   width: 100px;
+   text-align: center;
  }
 
  .login-button:hover {
    color: white;
    background-color: red;
+   font-weight: 700;
  }
 
 .navbar {
@@ -108,8 +110,8 @@ a:link {
 
 .login-signup {
   position: absolute;
-  top: 120px;
-  right: 320px;
+  top: 110px;
+  right: 380px;
   color: white;
   background-color: black;
   opacity: 1;
@@ -123,11 +125,11 @@ a:link {
 .login-form-container {
   position: absolute;
   padding: 10px;
-  top: 230px;
-  right: 40px;
+  top: 220px;
+  right: 100px;
   color: white;
   background-color: black;
-  opacity: 0.8;
+  opacity: 0.9;
   width: 400px;
   vertical-align: middle;
   border-radius: 10px;
@@ -137,6 +139,7 @@ a:link {
   border: 1px solid black;
   background-color: white;
   color: black;
+  width: 200px;
 }
 
 .login-form * {
@@ -177,6 +180,7 @@ a:link {
 }
 
 .guest-login-button:hover {
+  font-weight: 700;
   color: white;
   background-color: red;
 }
@@ -309,6 +313,7 @@ a:link {
 .status-button {
   margin-top: 20px;
   border-radius: 0px;
+  font-weight: 700;
 }
 
 .status-button:hover {

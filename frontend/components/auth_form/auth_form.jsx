@@ -34,16 +34,6 @@ class AuthForm extends React.Component {
 		this.props.processForm({user});
 	}
 
-	navLink() {
-		if (this.props.formType === "login") {
-			return <Link to="/signup">sign up instead</Link>;
-		} else {
-			return <Link to="/login">log in instead</Link>;
-		}
-	}
-
-
-
 	renderErrors() {
 		if (this.props.errors) {
 			return(
@@ -69,7 +59,7 @@ class AuthForm extends React.Component {
 				<div className="login-form-container">
 					<form onSubmit={this.handleSubmit} className="login-form-box">
 						<br/>
-						Please {this.props.formType} or {this.navLink()}
+						Please <b>{this.props.formType}</b> below:
 						{this.renderErrors()}
 						<div className="login-form">
 							<br/>
@@ -92,8 +82,7 @@ class AuthForm extends React.Component {
 							<input className="login-button" type="submit" value="Submit" />
 						</div>
 					</form>
-					<button className="guest-login-button"
-									onClick={this.props.guestLogin}>Guest Login</button>
+					<button className="guest-login-button" onClick={this.props.guestLogin}>Guest Login</button>
 				</div>
 			</div>
 		);

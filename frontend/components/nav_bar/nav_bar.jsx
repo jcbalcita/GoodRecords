@@ -12,7 +12,7 @@ class NavBar extends React.Component {
 
 handleLogoutClick() {
   this.props.logout();
-  this.props.router.replace('/');
+  this.props.router.replace('/login');
 }
 
   navGreeting(username, logout) {
