@@ -6,23 +6,20 @@ import SearchContainer from '../search/search_container';
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
+
+    this.handleLogoutClick = this.handleLogoutClick.bind(this)
   }
 
-  componentDidUpdate() {
-		this.redirectIfLoggedOut();
-	}
-
-	redirectIfLoggedOut() {
-		if (!this.props.loggedIn) {
-			this.props.router.replace("/login");
-		}
-	}
+handleLogoutClick() {
+  this.props.logout();
+  this.props.router.replace('/');
+}
 
   navGreeting(username, logout) {
     return (
       <hgroup className="nav-right">
         <h2 className="header-name">Hello, {username}</h2>
-        <button className="header-button" onClick={logout}>Log Out</button>
+        <button className="header-button" onClick={this.handleLogoutClick}>Log Out</button>
     	</hgroup>
     );
   }

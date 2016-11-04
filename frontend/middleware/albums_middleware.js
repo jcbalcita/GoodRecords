@@ -17,10 +17,13 @@ export default ({ getState, dispatch }) => next => action => {
   switch (action.type) {
     case REQUEST_ALL_ALBUMS:
       fetchAllAlbums(fetchAlbumsSuccess);
+      return next(action);
     case REQUEST_USER_ALBUMS:
       fetchUserAlbums(action.status, fetchAlbumsSuccess);
+      return next(action);
     case REQUEST_ALBUM:
       fetchAlbum(action.id, fetchAlbumSuccess);
+      return next(action);
     default:
       return next(action);
   }

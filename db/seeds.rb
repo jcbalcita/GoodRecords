@@ -6,6 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+User.create!(username: "username", password: "password")
+User.create!(username: "johncarlo", password: "password")
 
 Album.create!(title: "Aquemini",
              artist: "Outkast",
@@ -47,3 +49,35 @@ Album.create!(title: "22, A Million",
              image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478212240/mi0004108722-a8d78931-79be-44dd-899b-17b6291dee45_gre6aw.jpg",
              description:
              "22, A Million is a complicated and intricate record that features chopped-up lyrics, altered vocals, sped-up samples, alternately shimmering and clipped keyboards, treated saxophones, and the occasional gently strummed guitar.")
+
+Album.create!(title: "Ambient 1: Music for Airports",
+             artist: "Brian Eno",
+             year: "1978",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478274120/music-for-airports-550_iylvza.jpg",
+             description:
+             "Four subtle, slowly evolving pieces grace Eno's first conscious effort at creating ambient music.")
+
+Album.create!(title: "Madvillainy",
+             artist: "Madvillain",
+             year: "2004",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478274119/madvillainy_eosbse.jpg",
+             description:
+             "Twenty-two short and blunted tracks bang out mythical stories of villains and urban (anti) heroes trying to make it through with their ganja and wits still intact -- each flows together in a comic book fashion sometimes segued with vignettes sampled from 1940s movies and broadcasts or left-field marjuana-toting skits.")
+
+Album.create!(title: "Selected Ambient Works: 85-92",
+             artist: "Aphex Twin",
+             year: "1992",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478274119/aphex-twin_lb5zyg.jpg",
+             description:
+             "One of the indisputable classics of electronica, and a defining document for ambient music in particular, SELECTED AMBIENT WORKS 85-92 is one of Aphex Twin's (AKA Richard D. James) earliest and most fully realized achievements.")
+
+
+
+
+AlbumStatus.create!(user_id: 1, album_id: 1, status: "owned")
+AlbumStatus.create!(user_id: 1, album_id: 2, status: "owned")
+AlbumStatus.create!(user_id: 1, album_id: 3, status: "owned")
+AlbumStatus.create!(user_id: 1, album_id: 4, status: "wishlist")
+AlbumStatus.create!(user_id: 1, album_id: 5, status: "want to listen")
+AlbumStatus.create!(user_id: 1, album_id: 6, status: "wishlist")
+AlbumStatus.create!(user_id: 2, album_id: 6, status: "owned")

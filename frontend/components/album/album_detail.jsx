@@ -8,9 +8,6 @@ class AlbumDetail extends React.Component {
     this.props.requestAlbum(this.props.params.albumId);
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   this.props.requestAlbum(nextProps.params.albumId);
-  // }
 
   render() {
     const album = this.props.album;
@@ -19,10 +16,27 @@ class AlbumDetail extends React.Component {
     }
 
     return (
-      <div>
+      <div className="album-detail-container">
+        <p>Hover over the album art to add to your collections!</p>
+        <br></br>
+        <div className="album-image-container">
+          <img src={album.image_url} className="album-show-image"></img>
+            <div className="status-button-container">
+              <button className="status-button">Add to Collection</button>
+              <button className="status-button">Add to Wish List</button>
+              <button className="status-button">Add to Want to Listen</button>
+              <button className="status-button">Remove from my lists</button>
+            </div>
+        </div>
+
         <h3>{album.title}</h3>
-        <p>{album.artist}</p>
-        <Link to="/">Back to Index</Link>
+        <h4>{album.artist}</h4>
+
+        <span className="album-description-container">
+          <p>{album.description}</p>
+        </span>
+        <br></br>
+        <Link to="/home">Back to Index</Link>
       </div>
     );
   }

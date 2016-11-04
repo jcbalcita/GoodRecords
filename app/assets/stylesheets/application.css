@@ -229,8 +229,9 @@ a:link {
   padding-top: 15px;
   width: 205px;
   display: inline-block;
-  height: 220px;
+  height: 230px;
   text-align: center;
+  vertical-align: top;
 }
 
 .sidebar-item {
@@ -249,4 +250,69 @@ a:link {
 
 .album-title:hover {
   font-weight: 700;
+}
+
+.album-detail-container {
+  width: 640px;
+  background-color: white;
+  float: left;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.album-show-image {
+  height: 300px;
+  width: 300px;
+  border: 1px solid black;
+}
+
+.album-image-container {
+  display: inline-block;
+  height: 300px;
+  width: 300px;
+  position: relative;
+  margin: 0, auto;
+}
+
+.album-detail-container h3 {
+  color: red;
+}
+
+.album-description-container {
+  text-align: left;
+  width: 400px;
+}
+
+.status-button-container {
+  display: none;
+  width: 299px;
+  height: 300px;
+  opacity: 0.85;
+  background-color: black;
+}
+
+.status-button {
+  background-color: white;
+  color: black;
+}
+
+.album-image-container:hover .status-button-container{
+  display: flex;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.status-button {
+  margin-top: 20px;
+  border-radius: 0px;
+}
+
+.status-button:hover {
+  background-color: red;
+  color: white;
+  border: none;
 }

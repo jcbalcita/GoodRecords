@@ -1,13 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const sessionLinks = () => (
-  <nav className="login-signup">
-    <Link to="/login" activeClassName="current">Login</Link>
-    &nbsp;or&nbsp;
-    <Link to="/signup" activeClassName="current">Sign up!</Link>
-  </nav>
-);
 
 const personalGreeting = (currentUser, logout) => (
 	<hgroup className="greeting-group">
@@ -25,7 +18,7 @@ const Greeting = ({ currentUser, logout }) => (
     <img className="splash-image"
       src="http://res.cloudinary.com/jcbalcita/image/upload/c_scale,q_71,w_900/v1478043095/splash_lm8asd.gif">
     </img>
-    { currentUser ? personalGreeting(currentUser, logout) : sessionLinks() }
+    { currentUser ? personalGreeting(currentUser, logout) : "" }
   </div>
 );
 
