@@ -4,11 +4,19 @@ import { requestAllAlbums,
          REQUEST_USER_ALBUMS,
          RECEIVE_ALBUM,
          REQUEST_ALBUM,
-         receiveAlbum } from '../actions/album_actions';
+         receiveAlbum,
+         requestNewStatus,
+         REQUEST_NEW_STATUS,
+         REQUEST_UPDATE_STATUS,
+         REQUEST_REMOVE_STATUS,
+         requestRemoveStatus } from '../actions/album_actions';
 
 import { fetchAllAlbums,
          fetchUserAlbums,
-         fetchAlbum } from '../util/album_api_util';
+         fetchAlbum,
+         createStatus,
+         updateStatus,
+         removeStatus } from '../util/album_api_util';
 
 export default ({ getState, dispatch }) => next => action => {
   const fetchAlbumsSuccess = albums => dispatch(receiveAllAlbums(albums));
@@ -16,14 +24,17 @@ export default ({ getState, dispatch }) => next => action => {
 
   switch (action.type) {
     case REQUEST_ALL_ALBUMS:
-      fetchAllAlbums(fetchAlbumsSuccess);
-      return next(action);
+      return fetchAllAlbums(fetchAlbumsSuccess);
     case REQUEST_USER_ALBUMS:
-      fetchUserAlbums(action.status, fetchAlbumsSuccess);
-      return next(action);
+      return fetchUserAlbums(action.status, fetchAlbumsSuccess);
     case REQUEST_ALBUM:
-      fetchAlbum(action.id, fetchAlbumSuccess);
-      return next(action);
+      return fetchAlbum(action.id, fetchAlbumSuccess);
+    case REQUEST_NEW_STATUS:
+      return createStatus(action.status, action.albumId, fetchAlbumSuccess);
+    case REQUEST_UPDATE_STATUS:
+      return updateStatus(action.id, action.albumId, fetchAlbumSuccess);
+    case REQUEST_REMOVE_STATUS:
+      return updateStatus(action.id, fetchAlbumSuccess);
     default:
       return next(action);
   }

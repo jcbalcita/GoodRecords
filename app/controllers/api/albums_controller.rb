@@ -12,6 +12,6 @@ class Api::AlbumsController < ApplicationController
 
   def show
     @album = Album.find_by(id: params[:id])
-    @status = AlbumStatus.find_by(album_id: @album.id, user_id: current_user.id).status
+    @status = AlbumStatus.find_by(album_id: @album.id, user_id: current_user.id)
   end
 end

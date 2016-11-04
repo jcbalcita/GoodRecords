@@ -3,6 +3,9 @@ export const RECEIVE_ALL_ALBUMS = "RECEIVE_ALL_ALBUMS";
 export const REQUEST_USER_ALBUMS = "REQUEST_USER_ALBUMS";
 export const REQUEST_ALBUM = "REQUEST_ALBUM";
 export const RECEIVE_ALBUM = "RECEIVE_ALBUM";
+export const REQUEST_NEW_STATUS = "REQUEST_NEW_STATUS";
+export const REQUEST_UPDATE_STATUS = "REQUEST_UPDATE_STATUS";
+export const REQUEST_REMOVE_STATUS = "REQUEST_REMOVE_STATUS";
 
 export const requestAllAlbums = () => ({
   type: REQUEST_ALL_ALBUMS
@@ -27,4 +30,21 @@ export const receiveAllAlbums = albums => ({
 export const receiveAlbum = album => ({
   type: RECEIVE_ALBUM,
   album
+});
+
+export const requestNewStatus = (status, albumId) => ({
+  type: REQUEST_NEW_STATUS,
+  status,
+  albumId
+});
+
+export const requestUpdateStatus = (id, albumId) => ({
+  type: REQUEST_UPDATE_STATUS,
+  id,
+  albumId
+});
+
+export const requestRemoveStatus = id => ({
+  type: REQUEST_REMOVE_STATUS,
+  id
 });

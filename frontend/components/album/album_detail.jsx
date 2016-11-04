@@ -8,6 +8,16 @@ class AlbumDetail extends React.Component {
     this.props.requestAlbum(this.props.params.albumId);
   }
 
+  statusButtons() {
+    const statuses = ["owned", "wishlist", "want to listen", "remove"];
+
+    statuses.map((type, idx) => (
+      <StatusContainer type={type}
+              statusExists={Boolean(this.props.status)}
+              status={this.props.status ? this.props.status : ""}/>
+    ));
+
+  }
 
   render() {
     const album = this.props.album;
@@ -21,12 +31,7 @@ class AlbumDetail extends React.Component {
         <br></br>
         <div className="album-image-container">
           <img src={album.image_url} className="album-show-image"></img>
-            <div className="status-button-container">
-              <button className="status-button">Add to Collection</button>
-              <button className="status-button">Add to Wish List</button>
-              <button className="status-button">Add to Want to Listen</button>
-              <button className="status-button">Remove from my lists</button>
-            </div>
+
         </div>
 
         <h3>{album.title}</h3>
