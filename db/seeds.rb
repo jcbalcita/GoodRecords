@@ -7,7 +7,11 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.create!(username: "username", password: "password")
+<<<<<<< HEAD
 User.create!(username: "johncarlo", password: "password")
+=======
+
+>>>>>>> 700e775dc062015ce6c8a8765201a51a7fad1551
 
 Album.create!(title: "Aquemini",
              artist: "Outkast",
