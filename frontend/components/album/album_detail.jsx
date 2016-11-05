@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router';
+import { Link, withRouter, Route, Router } from 'react-router';
 import StatusContainer from '../status/status_container';
 
 class AlbumDetail extends React.Component {
@@ -13,10 +13,12 @@ class AlbumDetail extends React.Component {
     const album = this.props.album;
     if (!album.title) {
       return <div>Loading...</div>;
+    } else if (this.props.album.id.toString() !== this.props.router.params.albumId) {
+      return <div>Loading...</div>;
     } else {
-      let statuses = ["collection", "wishlist", "want to listen", "remove"]
+      let statuses = ["owned", "wishlist", "want to listen", "remove"]
       let statusButtons = statuses.map((status, id) => (
-        <StatusContainer key={id} type={status} album={this.props.album} status={this.props.album.status} />
+        <StatusContainer key={id} type={status} status={this.props.album.status} />
       ));
 
       return (

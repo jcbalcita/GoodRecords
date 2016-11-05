@@ -13,21 +13,29 @@ class Status extends React.Component {
   handleClick(e) {
     e.preventDefault();
 
-    if (this.props.type === "remove" && this.props.status){
-      this.props.requestRemoveStatus(this.props.id, this.props.album.id)
-    } else if (this.props.type !== "remove" && this.props.status) {
-      this.props.requestUpdateStatus(this.props.id, this.props.status, this.props.album.id)
-    } else if (this.props.type !== "remove" && this.props.status) {
-      this.props.requestNewStatus(this.props.status, this.props.album.id)
+    if (this.props.type === "remove" && this.props.hasStatus) {
+      this.props.requestRemoveStatus(this.props.id, this.props.albumId);
+    } else if (this.props.type !== "remove" && this.props.hasStatus) {
+      this.props.requestUpdateStatus(this.props.id, this.props.type, this.props.albumId);
+    } else if (this.props.type !== "remove" && !this.props.hasStatus) {
+      this.props.requestNewStatus(this.props.type, this.props.albumId);
     }
   }
 
   render() {
-    let buttonText = this.props.type !== "remove" ? `add to: ${this.props.type}` : `remove from lists`
+    const buttonTexts = {
+      "remove": "Remove from my lists",
+      "owned": "Add to My Collection",
+      "wishlist": "Add to My Wishlist",
+      "want to listen": "Want to Listen"
+    }
 
+    let buttonText = buttonTexts[this.props.type];
 
     return (
-      <button className="status-button" onClick={this.handleClick}>{buttonText}</button>
+      <button className="status-button" onClick={this.handleClick} >
+        {buttonText}
+      </button>
     );
   }
 }

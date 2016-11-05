@@ -40,7 +40,7 @@ class AuthForm extends React.Component {
 				<ul className="error-message">
 					{this.props.errors.map((error, i) => (
 						<li key={`error-${i}`}>
-							{error}
+							{error}<br></br>
 						</li>
 					))}
 				</ul>

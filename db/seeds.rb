@@ -7,11 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.create!(username: "username", password: "password")
-<<<<<<< HEAD
-User.create!(username: "johncarlo", password: "password")
-=======
-
->>>>>>> 700e775dc062015ce6c8a8765201a51a7fad1551
 
 Album.create!(title: "Aquemini",
              artist: "Outkast",
@@ -75,6 +70,69 @@ Album.create!(title: "Selected Ambient Works: 85-92",
              description:
              "One of the indisputable classics of electronica, and a defining document for ambient music in particular, SELECTED AMBIENT WORKS 85-92 is one of Aphex Twin's (AKA Richard D. James) earliest and most fully realized achievements.")
 
+Album.create!(title: "Grab That Gun",
+             artist: "The Organ",
+             year: "2004",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478372679/the_organ_o4y5pc.jpg",
+             description:
+             "While this sound comes from the legacy of '80s college rock -- at times suggesting a fusion of the Smiths' witty, bouncy melancholy and the on-the-sleeve passion of Throwing Muses -- and also has ties to some of the other bands remaking new wave and post-punk in their own images, the Organ and Grab That Gun have a freshness that isn't often heard in any kind of rock music.")
+
+Album.create!(title: "Good Kid, M.A.A.D. City",
+             artist: "Kendrick Lamar",
+             year: "2012",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478372680/kendrick_dmqere.jpg",
+             description:
+             "This journey through the concrete jungle of Compton is worth taking because of the artistic richness within, plus the attraction of a whip-smart rapper flying high during his rookie season. Any hesitation about the horror of it all is quickly wiped away by Kendrick's mix of true talk, open heart, open mind, and extended hand.")
+
+Album.create!(title: "Coming Home",
+             artist: "Leon Bridges",
+             year: "2015",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478372681/leonbridges_oyzyxg.jpg",
+             description:
+             "Here's Leon Bridges. He was born in 1989. The singer, songwriter, and guitarist takes it back to the early '60s, slightly earlier than the majority of soul-rooted artists, including labelmates Raphael Saadiq, who have favored a vintage approach over a contemporary one.")
+
+Album.create!(title: "Moondance",
+             artist: "Van Morrison",
+             year: "1970",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478372681/van-morrison-Moondance_bqqly7.jpg",
+             description:
+             "The yang to Astral Weeks' yin, the brilliant Moondance is every bit as much a classic as its predecessor; Van Morrison's first commercially successful solo effort, it retains the previous album's deeply spiritual thrust but transcends its bleak, cathartic intensity to instead explore themes of renewal and redemption.")
+
+Album.create!(title: "Masters of the Universe",
+             artist: "Binary Star",
+             year: "2000",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/c_scale,w_300/v1478372679/binarystar_jqawok.jpg",
+             description:
+             "Any lucky owner of Binary Star's limited-distribution pressing of the 1999 LP Waterworld would already be familiar with most of the material on Masters of the Universe. It has everything a great hip-hop album requires, with varied beats, differing rhyme deliveries, and content you'll find yourself thinking about long after it's been said.")
+
+Album.create!(title: "Vespertine",
+             artist: "Björk",
+             year: "2001",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478372680/vespertine_nfkyhf.jpg",
+             description:
+             "Described by Björk as \"about being on your own in your house with your laptop and whispering for a year and just writing a very peaceful song that tiptoes,\" Vespertine's vocals seldom rise above a whisper, the rhythms mimic heartbeats and breathing, and a pristine, music-box delicacy unites the album into a deceptively fragile, hypnotic whole.")
+
+Album.create!(title: "Lunatic Harness",
+             artist: "µ-Ziq",
+             year: "1997",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478372680/muziq_usjkcp.jpg",
+             description:
+             "Mike Paradinas' first success story from the frontlines of ambient/electro/drum'n'bass experimentation comes via his second attempt, Lunatic Harness. Following the brief but for the most part uninteresting toy-box chop-up of 1996's Urmur Bile Trax, the album escapes the mire of noncommittal cheekiness by returning to early releases such as Tango N' Vectif and Bluff Limbo for inspiration, fusing pretty, affecting melodies and dynamic ambient atmospheres with beats that manage a tight balance between structured groove and complete chaos.")
+
+Album.create!(title: "Super Tight",
+             artist: "UGK",
+             year: "1994",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478372680/ugk_y9tqgp.jpg",
+             description:
+             "UGK's third release smoothed out some of the rough edges of their earlier efforts without even coming close to selling out, something that not only landed them in the Billboard 200 album chart for the first time but solidified their status as the leaders of Texas hip-hop.")
+
+Album.create!(title: "The Lost Tapes",
+             artist: "Nas",
+             year: "1992",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478372680/losttapes_pqkzsq.jpg",
+             description:
+             "Leading up to the release of God's Son, the second new Nas album in less than a year, Ill Will dropped a collection of \"lost recordings\" -- basically, tracks recorded for I Am and Stillmatic that just didn't make it. No cameos. No hype. No BS.s")
+
 
 
 
@@ -84,4 +142,11 @@ AlbumStatus.create!(user_id: 1, album_id: 3, status: "owned")
 AlbumStatus.create!(user_id: 1, album_id: 4, status: "wishlist")
 AlbumStatus.create!(user_id: 1, album_id: 5, status: "want to listen")
 AlbumStatus.create!(user_id: 1, album_id: 6, status: "wishlist")
-AlbumStatus.create!(user_id: 2, album_id: 6, status: "owned")
+AlbumStatus.create!(user_id: 2, album_id: 16, status: "owned")
+AlbumStatus.create!(user_id: 1, album_id: 18, status: "wishlist")
+AlbumStatus.create!(user_id: 1, album_id: 17, status: "want to listen")
+AlbumStatus.create!(user_id: 1, album_id: 15, status: "wishlist")
+AlbumStatus.create!(user_id: 1, album_id: 10, status: "wishlist")
+AlbumStatus.create!(user_id: 1, album_id: 13, status: "want to listen")
+AlbumStatus.create!(user_id: 1, album_id: 12, status: "wishlist")
+AlbumStatus.create!(user_id: 2, album_id: 11, status: "want to listen")

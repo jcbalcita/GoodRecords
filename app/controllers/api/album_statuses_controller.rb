@@ -29,7 +29,7 @@ class Api::AlbumStatusesController < ApplicationController
   end
 
   def destroy
-    status = AlbumStatus.find_by(params[:id])
+    status = AlbumStatus.find_by(id: params[:id])
     @album = Album.find_by(id: params[:album_id])
     status.destroy
 

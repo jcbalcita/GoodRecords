@@ -1,17 +1,23 @@
 ## Component Hierarchy
 
-**AuthFormContainer**
- - AuthForm
+**App**
+- NavBarContainer
+  + SearchContainer
 
- **HomeContainer**
- - Home
- - Search
+**GreetingContainer**
+- AuthFormContainer
 
- **AlbumsIndexContainer**
- - AlbumIndexItem
+**HomeContainer**
+- SidebarContainer
+  + SidebarItem
+
+**AlbumIndexContainer**
+- AlbumIndexItem
 
  **AlbumDetailContainer**
- - Reviews
+ - StatusContainer
+ - ReviewsContainer
+
 
 ## Routes
 

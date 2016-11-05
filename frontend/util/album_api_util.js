@@ -32,11 +32,11 @@ export const createStatus = (status, albumId, success) => {
   });
 };
 
-export const updateStatus = (id, albumId, success) => {
+export const updateStatus = (id, status, albumId, success) => {
   $.ajax({
     method: 'PATCH',
-    url: `/api/album_status/${id}`,
-    data: { id, album_id: albumId },
+    url: `/api/album_statuses/${id}`,
+    data: { id, status, album_id: albumId },
     success
   });
 };
@@ -44,7 +44,7 @@ export const updateStatus = (id, albumId, success) => {
 export const removeStatus = (id, albumId, success) => {
   $.ajax({
     method: 'DELETE',
-    url: `/api/album_status/${id}`,
+    url: `/api/album_statuses/${id}`,
     data: { id, album_id: albumId },
     success
   });

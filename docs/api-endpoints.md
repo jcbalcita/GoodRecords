@@ -19,6 +19,11 @@
 - `GET /api/albums/`
 - `GET /api/albums/:id`
 
+### Album Statuses
+- `POST /api/album_statuses`
+- `PATCH /api/album_statuses/:album_status_id`
+- `DELETE /api/album_statuses/:album_status_id`
+
 ### Reviews
 - `POST /api/reviews`
 - `DELETE /api/reviews/:review_id`

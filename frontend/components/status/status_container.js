@@ -8,7 +8,8 @@ const mapStateToProps = ({ album }, ownProps) => ({
     albumId: album.id,
     id: album.status_id,
     type: ownProps.type,
-    status: album.status
+    status: album.status,
+    hasStatus: Boolean(album.status)
 });
 
 const mapDispatchToProps = dispatch => ({
