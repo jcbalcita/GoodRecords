@@ -14,7 +14,7 @@ const mapStateToProps = ({ album }, ownProps) => ({
 
 const mapDispatchToProps = dispatch => ({
   requestNewStatus: (status, albumId) => dispatch(requestNewStatus(status, albumId)),
-  requestUpdateStatus: (id, albumId) => dispatch(requestUpdateStatus(id, albumId)),
+  requestUpdateStatus: (id, status, albumId) => dispatch(requestUpdateStatus(id, status, albumId)),
   requestRemoveStatus: (id, albumId) => dispatch(requestRemoveStatus(id, albumId))
 });
 

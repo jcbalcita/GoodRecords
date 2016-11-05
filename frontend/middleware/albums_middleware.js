@@ -32,7 +32,7 @@ export default ({ getState, dispatch }) => next => action => {
     case REQUEST_NEW_STATUS:
       return createStatus(action.status, action.albumId, fetchAlbumSuccess);
     case REQUEST_UPDATE_STATUS:
-      return updateStatus(action.id, action.albumId, fetchAlbumSuccess);
+      return updateStatus(action.id, action.status, action.albumId, fetchAlbumSuccess);
     case REQUEST_REMOVE_STATUS:
       return removeStatus(action.id, action.albumId, fetchAlbumSuccess);
     default:

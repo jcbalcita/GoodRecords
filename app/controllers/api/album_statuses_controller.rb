@@ -14,10 +14,9 @@ class Api::AlbumStatusesController < ApplicationController
   end
 
   def update
-    status = AlbumStatus.find_by(params[:id])
-
+    status = AlbumStatus.find_by(id: params[:id])
     if status
-      status.update_attributes(album_params)
+      status.update_attribute("status", params[:status])
       @album = Album.find_by(id: params[:album_id])
       @status = status.status
       @id = status.id
