@@ -32,8 +32,22 @@ class Status extends React.Component {
 
     let buttonText = buttonTexts[this.props.type];
 
+    let cssClass = () => {
+      if (this.props.type === this.props.status) {
+        return "status-button-freeze";
+      } else if (this.props.type === "remove" && !this.props.hasStatus) {
+        return "status-button-gray"
+      } else {
+        return "status-button"
+      }
+    }
+
+    let functionality = cssClass().length > 13
+
     return (
-      <button className="status-button" onClick={this.handleClick} >
+      <button className={cssClass()}
+              onClick={this.handleClick}
+              disabled={functionality}>
         {buttonText}
       </button>
     );

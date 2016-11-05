@@ -292,7 +292,7 @@ a:link {
 
 .status-button-container {
   display: none;
-  width: 299px;
+  width: 300px;
   height: 300px;
   opacity: 0.85;
   background-color: black;
@@ -316,6 +316,23 @@ a:link {
   margin-top: 20px;
   border-radius: 0px;
   font-weight: 700;
+}
+
+.status-button-freeze {
+  margin-top: 20px;
+  background-color: red;
+  color: white;
+  padding: 5px;
+  border-radius: 0px;
+  cursor: none;
+}
+
+.status-button-gray {
+  margin-top: 20px;
+  background-color: gray;
+  padding: 5px;
+  border-radius: 0px;
+  cursor: none;;
 }
 
 .status-button:hover {
