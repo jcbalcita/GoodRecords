@@ -1,15 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-class Status extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+const Status = ({ album, type }) => {
+  let buttonText = type !== "remove" ? `add to: ${type}` : `remove from lists`
 
+  return (
+    <button className="status-button">{buttonText}</button>
+  );
+};
 
-  render() {
-    <div className="status-button-container">
-      <button className="status-button" disabled>Add to: Collection</button>
-    </div>
-  }
-}
+export default Status;

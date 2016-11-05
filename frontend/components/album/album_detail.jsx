@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
+import Status from '../status/status';
 
 class AlbumDetail extends React.Component {
 
@@ -8,30 +9,27 @@ class AlbumDetail extends React.Component {
     this.props.requestAlbum(this.props.params.albumId);
   }
 
-  statusButtons() {
-    const statuses = ["owned", "wishlist", "want to listen", "remove"];
-
-    statuses.map((type, idx) => (
-      <StatusContainer type={type}
-              statusExists={Boolean(this.props.status)}
-              status={this.props.status ? this.props.status : ""}/>
-    ));
-
-  }
-
   render() {
     const album = this.props.album;
     if (!album) {
       return <div>Loading...</div>;
     }
 
+    let statuses = ["collection", "wishlist", "want to listen", "remove"]
+    let statusButtons = statuses.map((status, id) => (
+      <Status key={id} type={status} album={this.props.album} />
+    ));
+
     return (
       <div className="album-detail-container">
         <p>Hover over the album art to add to your collections!</p>
         <br></br>
+
         <div className="album-image-container">
           <img src={album.image_url} className="album-show-image"></img>
-
+          <div className="status-button-container">
+            {this.props.album ? statusButtons : ''}
+          </div>
         </div>
 
         <h3>{album.title}</h3>
@@ -40,6 +38,7 @@ class AlbumDetail extends React.Component {
         <span className="album-description-container">
           <p>{album.description}</p>
         </span>
+
         <br></br>
         <Link to="/home">Back to Index</Link>
       </div>
