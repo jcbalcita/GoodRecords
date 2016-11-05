@@ -1,3 +1,3 @@
-json.status @status.status
-json.status_id @status.id
+json.status @status
+json.status_id @id
 json.(@album, :id, :title, :artist, :year, :description, :image_url)

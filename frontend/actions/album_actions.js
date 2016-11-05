@@ -38,13 +38,15 @@ export const requestNewStatus = (status, albumId) => ({
   albumId
 });
 
-export const requestUpdateStatus = (id, albumId) => ({
+export const requestUpdateStatus = (id, status, albumId) => ({
   type: REQUEST_UPDATE_STATUS,
   id,
+  status,
   albumId
 });
 
-export const requestRemoveStatus = id => ({
+export const requestRemoveStatus = (id, albumId) => ({
   type: REQUEST_REMOVE_STATUS,
-  id
+  id,
+  albumId
 });

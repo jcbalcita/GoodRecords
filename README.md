@@ -1,6 +1,8 @@
 # Goodrecords
 
-(Heroku link)
+[Heroku Link][heroku link]
+
+[heroku link]: http://goodrecords.heroku.com
 
 [Trello Link][trello link]
 

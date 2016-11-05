@@ -4,8 +4,9 @@ class Api::AlbumStatusesController < ApplicationController
                              user_id: current_user.id,
                              album_id: params[:album_id])
     if status.save
-      @status = status
-      @album = Album.find_by(id: @album.id)
+      @status = status.status
+      @id = status.id
+      @album = Album.find_by(id: params[:album_id])
       render '/api/albums/show'
     else
       render json: ["Error"], status: :unproccessable_entity
@@ -13,11 +14,33 @@ class Api::AlbumStatusesController < ApplicationController
   end
 
   def update
+    status = AlbumStatus.find_by(params[:id])
 
+    if status
+      status.update_attributes(album_params)
+      @album = Album.find_by(id: params[:album_id])
+      @status = status.status
+      @id = status.id
+
+      render '/api/albums/show'
+    else
+      render json: ["Error"], status: :unproccessable_entity
+    end
   end
 
   def destroy
+    status = AlbumStatus.find_by(params[:id])
+    @album = Album.find_by(id: params[:album_id])
+    status.destroy
 
+    @status = ""
+    @id = ""
+
+    render 'api/albums/show'
   end
 
+  private
+  def album_params
+    params.permit(:id, :status, :album_id)
+  end
 end

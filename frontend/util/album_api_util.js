@@ -26,7 +26,7 @@ export const fetchAlbum = (id, success) => {
 export const createStatus = (status, albumId, success) => {
   $.ajax({
     method: 'POST',
-    url: `api/album_statuses`,
+    url: `/api/album_statuses`,
     data: { status, album_id: albumId },
     success
   });
@@ -34,18 +34,18 @@ export const createStatus = (status, albumId, success) => {
 
 export const updateStatus = (id, albumId, success) => {
   $.ajax({
-    method: 'POST',
-    url: `api/album_statuses`,
-    data: { status, album_id: albumId },
+    method: 'PATCH',
+    url: `/api/album_status/${id}`,
+    data: { id, album_id: albumId },
     success
   });
 };
 
-export const removeStatus = (id, success) => {
+export const removeStatus = (id, albumId, success) => {
   $.ajax({
     method: 'DELETE',
-    url: `api/album_statuses`,
-    data: { id },
+    url: `/api/album_status/${id}`,
+    data: { id, album_id: albumId },
     success
   });
 };
