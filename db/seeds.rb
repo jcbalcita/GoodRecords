@@ -131,7 +131,49 @@ Album.create!(title: "The Lost Tapes",
              year: "1992",
              image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478372680/losttapes_pqkzsq.jpg",
              description:
-             "Leading up to the release of God's Son, the second new Nas album in less than a year, Ill Will dropped a collection of \"lost recordings\" -- basically, tracks recorded for I Am and Stillmatic that just didn't make it. No cameos. No hype. No BS.s")
+             "Leading up to the release of God's Son, the second new Nas album in less than a year, Ill Will dropped a collection of \"lost recordings\" -- basically, tracks recorded for I Am and Stillmatic that just didn't make it. No cameos. No hype. No BS.")
+
+Album.create!(title: "Fool Around",
+             artist: "Rachel Sweet",
+             year: "1978",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478394554/rachelsweet_lebofa.jpg",
+             description:
+             "Sweet was fully sweet 16 in 1978, though, and pictures aside, \"the little girl with the big voice,\" as the bosses billed her, lived up to that description. Belting, whooping, pleading, and near-weeping through the speakers, she rides the crest of Liam Sternberg and his Spector-ized production (that feel of a marching brass band keeping warm on a snowy morning), embodying the tough, rowdy sides of Brenda Lee and Wanda Jackson, though not so genre-bound as the latter.")
+
+Album.create!(title: "Still Brazy",
+             artist: "YG",
+             year: "2016",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478394554/stillbrazy_v3ozzu.jpg",
+             description:
+             "Alluring G-Funk and infectious songs of strife are what attracted suburban America to Suge, Snoop, and Dre, and while the Game grows older and Kendrick's music ventures further out, YG offers a West Coast way to keep their heads ringin', and maybe shake something loose in the process.")
+
+Album.create!(title: "Coloring Book",
+             artist: "Chance the Rapper",
+             year: "2016",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478394554/coloringbook_oqfavf.jpg",
+             description:
+             "The first unsigned artist to appear as Saturday Night Live's musical guest, Chance the Rapper continued to buck the system with his 2016 mixtape Coloring Book, a surprise release that dropped as a free download. Don't take that as \"cheap,\" \"half-finished,\" or anything of the sort as this 14-track effort plays out like a major album, with names like Kanye West, Justin Bieber, and Future on the guest list.")
+
+Album.create!(title: "Love Streams",
+             artist: "Tim Hecker",
+             year: "2016",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478394554/lovestreams_nrwqay.jpg",
+             description:
+             "Love Streams is easily Hecker's most accessible work to date, yet it's also one of his most challenging, as it finds him pushing his sound into new directions while he explores the possibilities of the human voice.")
+
+Album.create!(title: "OK Computer",
+             artist: "Radiohead",
+             year: "1997",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478394554/okcomputer_ys95in.jpg",
+             description:
+             "Using the textured soundscapes of The Bends as a launching pad, Radiohead delivered another startlingly accomplished set of modern guitar rock with OK Computer. The anthemic guitar heroics present on Pablo Honey and even The Bends are nowhere to be heard here. Radiohead have stripped away many of the obvious elements of guitar rock, creating music that is subtle and textured yet still has the feeling of rock & roll.")
+
+Album.create!(title: "Monk's Music",
+             artist: "Thelonious Monk Septet",
+             year: "1992",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478394554/monksmusic_wdfym6.jpg",
+             description:
+             "Monk's Music is often cited as one of the focal points of Thelonious Monk's six-year affiliation (1955-1961) with the Riverside label. Although the original disc clocked in at slightly over 30 minutes, packed into that half hour are not only the introduction of a few of Monk's signature compositions, but also some amazing interactions from the assembled ensemble.")
 
 
 
