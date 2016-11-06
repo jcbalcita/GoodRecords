@@ -3,7 +3,6 @@ import { requestAllAlbums } from '../../actions/album_actions';
 import AlbumIndex from './album_index';
 
 const mapStateToProps = state => {
-  //debugger
   return (
     {
       albums: Object.keys(state.albums.albums).map(idx => state.albums.albums[idx]),

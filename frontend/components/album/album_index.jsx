@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, Route, Router } from 'react-router';
 import AlbumIndexItem from './album_index_item';
 
 class AlbumIndex extends React.Component {
@@ -7,7 +7,7 @@ class AlbumIndex extends React.Component {
   componentDidMount() {
     if (!this.props.specificRender) {
       this.props.requestAllAlbums();
-    }
+    } 
   }
 
   render() {

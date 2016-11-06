@@ -3,7 +3,7 @@ import { RECEIVE_ALL_ALBUMS,
 
 import merge from 'lodash/merge';
 
-const defaultState = { albums: {}, specificRender: false }
+const defaultState = { albums: {}, specificRender: "" }
 
 const AlbumsReducer = (state = defaultState, action) => {
   Object.freeze(state);
