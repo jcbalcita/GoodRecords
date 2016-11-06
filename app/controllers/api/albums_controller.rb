@@ -3,11 +3,12 @@ class Api::AlbumsController < ApplicationController
   def index
     if (params[:status])
       @albums = Album.find_by_status(current_user.id, params[:status])
+      @filter = params[:status]
     else
       @albums = Album.all
+      @filter = false
     end
 
-    render json: @albums
   end
 
   def show

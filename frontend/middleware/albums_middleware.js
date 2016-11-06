@@ -18,9 +18,16 @@ import { fetchAllAlbums,
          updateStatus,
          removeStatus } from '../util/album_api_util';
 
+import { hashHistory } from 'react-router';
+
 export default ({ getState, dispatch }) => next => action => {
-  const fetchAlbumsSuccess = albums => dispatch(receiveAllAlbums(albums));
-  const fetchAlbumSuccess = album => dispatch(receiveAlbum(album));
+  const fetchAlbumsSuccess = albums => {
+    dispatch(receiveAllAlbums(albums));
+    hashHistory.push('/home');
+  }
+  const fetchAlbumSuccess = album => {
+    dispatch(receiveAlbum(album));
+  }
 
   switch (action.type) {
     case REQUEST_ALL_ALBUMS:

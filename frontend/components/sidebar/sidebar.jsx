@@ -13,14 +13,12 @@ class Sidebar extends React.Component {
 
   handleBrowseClick(e) {
     e.preventDefault();
-    this.props.router.push("/home");
     this.props.requestAllAlbums();
   }
 
   handleCollectionClick(status, e) {
     // debugger
     e.preventDefault();
-    this.props.router.push("/home");
     this.props.requestUserAlbums(status);
   }
 

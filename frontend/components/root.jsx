@@ -39,7 +39,7 @@ const Root = ({store}) => {
           <Route path="login" component={AuthFormContainer} onEnter={_redirect} />
           <Route path="signup" component={AuthFormContainer} onEnter={_redirect} />
           <Route path="home" component={HomeContainer} onEnter={_ensureLoggedIn}>
-            <IndexRoute component={AlbumIndexContainer} onEnter={_requestOnEnter} />
+            <IndexRoute component={AlbumIndexContainer} />
             <Route path="albums/:albumId" component={AlbumDetailContainer} onEnter={_ensureLoggedIn} />
           </Route>
         </Route>

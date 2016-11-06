@@ -9,7 +9,11 @@ class AlbumIndex extends React.Component {
 			<AlbumIndexItem key={idx} album={album} />
 		);
 
+    // debugger
+
     return (
+
+
       <div className="album-index-container">
         {albums}
       </div>
