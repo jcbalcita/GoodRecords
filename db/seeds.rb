@@ -170,10 +170,95 @@ Album.create!(title: "OK Computer",
 
 Album.create!(title: "Monk's Music",
              artist: "Thelonious Monk Septet",
-             year: "1992",
+             year: "1957",
              image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478394554/monksmusic_wdfym6.jpg",
              description:
              "Monk's Music is often cited as one of the focal points of Thelonious Monk's six-year affiliation (1955-1961) with the Riverside label. Although the original disc clocked in at slightly over 30 minutes, packed into that half hour are not only the introduction of a few of Monk's signature compositions, but also some amazing interactions from the assembled ensemble.")
+
+Album.create!(title: "Louder Than Bombs",
+             artist: "The Smiths",
+             year: "1987",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478407236/louderthanbombs_ajzwwo.jpg",
+             description:
+             "A compilation of singles, B-sides, album tracks, and BBC sessions assembled for the American market, Louder Than Bombs is an overlong and unfocused collection that nevertheless boasts a wealth of brilliant material. ")
+
+Album.create!(title: "In the Aeroplane Over the Sea",
+             artist: "Neutral Milk Hotel",
+             year: "1998",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478407236/neutralmilkhotel_ov3hcv.jpg",
+             description:
+             "Perhaps best likened to a marching band on an acid trip, Neutral Milk Hotel's second album is another quixotic sonic parade; lo-fi yet lush, impenetrable yet wholly accessible, In the Aeroplane Over the Sea is either the work of a genius or an utter crackpot, with the truth probably falling somewhere in between.")
+
+Album.create!(title: "Loud",
+             artist: "Rihanna",
+             year: "2010",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478407237/rihannaloudcover_ucmtmn.jpg",
+             description:
+             "Loud would not sound quite so slapdash if it did not follow Good Girl Gone Bad, one of the best pop albums of its decade, and Rated R, one of the most fascinating pop albums of the same time frame. This album, released less than a year after the latter, also has the misfortune of arriving with no fanfare.")
+
+Album.create!(title: "Stranger Things, Vol. 1",
+             artist: "Kyle Dixon and Michael Stein",
+             year: "2016",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478407236/stangerthings_dsbca1.jpg",
+             description:
+             "While the show itself is clear about its influences, its soundtrack manages to do this too, while ultimately culminating as an in-depth and invigorating piece of atmospheric electronic music.")
+
+Album.create!(title: "Lucky Cat",
+             artist: "ISAN",
+             year: "2001",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478407236/isan_wizun5.jpg",
+             description:
+             "Long-distance collaborators Antony Ryan and Robin Saville present 11 perfectly fragile slices of electronic tone poetry with Lucky Cat. The cute kitty cat cover is entirely indicative of the gentle, sprightly melodies of the album. Analog synths and keyboards linger patiently in the air as slow-percolating beats rise from the ether and then dissipate.")
+
+Album.create!(title: "Suddenly",
+             artist: "Billy Ocean",
+             year: "1984",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478407238/billyocean_jkxxqe.jpg",
+             description:
+             "Billy Ocean vaulted into international stardom with this album in 1984. The album peaked at number nine, was on the charts for over a year and a half, and yielded three R&B hits that were all also pop smashes.")
+
+Album.create!(title: "Man or Astro-Man?",
+             artist: "Destroy All Astromen!!",
+             year: "1994",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478407238/manorastroman_pnz3xs.jpg",
+             description:
+             "Only Man or Astro-man? could incorporate NASA samples into their music and make them sound exciting, with their hypnotic surf rock and infatuation with cheesy, low-grade sci-fi flicks. With Destroy All Astromen!!, their plans of eventually conquering Earth are carried through with this live recording that not only pays tribute to the aforementioned influences, but also to their musical inspirations. ")
+
+Album.create!(title: "Slanted and Enchanted",
+             artist: "Pavement",
+             year: "1992",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478407236/slantedandenchanted_kfz7d2.jpg",
+             description:
+             "Two smart young college guys with a bunch of catchy, cryptic songs and a taste for peculiar sonics go into a studio with a showboating older drummer and come out with one of the definitive indie-rock albums. Beneath its coils of raw distortion and screaming-for-the-hell-of-it, Pavement's first full-length disc gets over on the strength of stellar songwriting and ingenious melodicism.")
+
+Album.create!(title: "Loveless",
+             artist: "My Bloody Valentine",
+             year: "1992",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478407237/loveless_fp2qti.jpg",
+             description:
+             "Isn't Anything was good enough to inspire an entire scene of My Bloody Valentine soundalikes, but Loveless' greatness proved that the band was inimitable. After two painstaking years in the studio and nearly bankrupting their label Creation in the process, the group emerged with their masterpiece, which fulfilled all of the promise of their previous albums.")
+
+Album.create!(title: "Bury Me At Makout Creek",
+             artist: "Mitski",
+             year: "2016",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478407237/burymeatmakeoutcreek_duzt6a.jpg",
+             description:
+             "Isn't Anything was good enough to inspire an entire scene of My Bloody Valentine soundalikes, but Loveless' greatness proved that the band was inimitable. After two painstaking years in the studio and nearly bankrupting their label Creation in the process, the group emerged with their masterpiece, which fulfilled all of the promise of their previous albums.")
+
+Album.create!(title: "Is This It",
+             artist: "The Strokes",
+             year: "2001",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478407236/isthisit_iukpj6.jpg",
+             description:
+             "Blessed and cursed with an enormous amount of hype from the British press, the Strokes prove to be one of the few groups deserving of their glowing reviews.")
+
+Album.create!(title: "Boxer",
+             artist: "The National",
+             year: "2007",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478408089/TheNational-Boxer_ous7xv.jpg",
+             description:
+             "The National don't do anything radically different on Boxer, but then again, they don't really need to: their literate, quietly anthemic take on indie rock seemed to have arrived fully formed on their 2001 self-titled debut.")
+
 
 AlbumStatus.create!(user_id: 1, album_id: 1, status: "owned")
 AlbumStatus.create!(user_id: 1, album_id: 2, status: "owned")

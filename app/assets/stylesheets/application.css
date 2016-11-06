@@ -204,7 +204,6 @@ a:link {
 .sidebar {
   float: left;
   background-color: white;
-  margin-left: 20px;
   margin-top: 35px;
   width: 280px;
 }
@@ -296,14 +295,15 @@ a:link {
 }
 
 .album-description-container {
-  text-align: left;
+  text-align: justify;;
   width: 400px;
 }
 
 .status-button-container {
   display: none;
-  width: 300px;
-  height: 300px;
+  left: 1px;
+  width: 301px;
+  height: 301px;
   opacity: 0.85;
   background-color: black;
 }
