@@ -4,16 +4,18 @@ import AlbumIndexItem from './album_index_item';
 
 class AlbumIndex extends React.Component {
 
+  componentDidMount() {
+    if (!this.props.specificRender) {
+      this.props.requestAllAlbums();
+    }
+  }
+
   render() {
 		let albums = this.props.albums.map((album, idx) =>
 			<AlbumIndexItem key={idx} album={album} />
 		);
 
-    // debugger
-
     return (
-
-
       <div className="album-index-container">
         {albums}
       </div>
