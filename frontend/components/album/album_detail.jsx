@@ -12,9 +12,9 @@ class AlbumDetail extends React.Component {
   render() {
     const album = this.props.album;
     if (!album.title) {
-      return <div>Loading...</div>;
+      return <div className="album-detail-container"><div className="loader">Loading...</div></div>;
     } else if (this.props.album.id.toString() !== this.props.router.params.albumId) {
-      return <div>Loading...</div>;
+      return <div className="album-detail-container"><div className="loader">Loading...</div></div>;
     } else {
       let statuses = ["owned", "wishlist", "want to listen", "remove"]
       let statusButtons = statuses.map((status, id) => (

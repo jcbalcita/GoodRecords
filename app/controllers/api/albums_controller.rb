@@ -8,7 +8,6 @@ class Api::AlbumsController < ApplicationController
       @albums = Album.all
       @filter = false
     end
-
   end
 
   def show
