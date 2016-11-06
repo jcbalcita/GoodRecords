@@ -240,6 +240,14 @@ a:link {
   vertical-align: top;
 }
 
+.album-index-item:hover .album-title{
+  font-weight: 700;
+}
+
+.album-index-item:hover img {
+  box-shadow: 3px 3px 3px gray;
+}
+
 .sidebar-item {
   border-top: 1px solid black;
   width: 190px;
