@@ -1,5 +1,4 @@
 import React from 'react';
-import Infinite from 'react-infinite';
 import { Link } from 'react-router';
 import AlbumIndexItem from './album_index_item';
 
@@ -11,11 +10,9 @@ class AlbumIndex extends React.Component {
 		);
 
     return (
-      <Infinite containerHeight={600} elementHeight={230}>
-        <div className="album-index-container">
-          {albums}
-        </div>
-      </Infinite>
+      <div className="album-index-container">
+        {albums}
+      </div>
     );
   }
 }

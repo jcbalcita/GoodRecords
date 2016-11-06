@@ -175,9 +175,6 @@ Album.create!(title: "Monk's Music",
              description:
              "Monk's Music is often cited as one of the focal points of Thelonious Monk's six-year affiliation (1955-1961) with the Riverside label. Although the original disc clocked in at slightly over 30 minutes, packed into that half hour are not only the introduction of a few of Monk's signature compositions, but also some amazing interactions from the assembled ensemble.")
 
-
-
-
 AlbumStatus.create!(user_id: 1, album_id: 1, status: "owned")
 AlbumStatus.create!(user_id: 1, album_id: 2, status: "owned")
 AlbumStatus.create!(user_id: 1, album_id: 3, status: "owned")
