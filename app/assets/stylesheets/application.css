@@ -80,6 +80,7 @@ a:link {
   padding-right: 20px;
   font-weight: 700;
   height: 35px;
+  min-width: 650px;
 }
 
 .splash-image-container {
@@ -190,8 +191,11 @@ a:link {
 .home {
   background-color: white;
   margin: 0 auto;
-  width: 960px;
-  height: 600px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  min-width: 600px;
+  max-width: 1800px;
 }
 
 .input-search {
@@ -202,17 +206,16 @@ a:link {
 }
 
 .sidebar {
-  float: left;
-  background-color: white;
   margin-top: 35px;
-  width: 280px;
+  width: 30%;
+  min-width: 220px;
 }
 
 .sidebar-box {
   border: 3px solid black;
   width: 200px;
   margin: 0 auto;
-  height: 300px;
+  height: 250px;
   border-radius: 10px;
 }
 
@@ -224,11 +227,17 @@ a:link {
 
 .album-index-container {
   width: 660px;
+  flex-wrap: wrap;
   background-color: white;
-  float: left;
+  display: flex;
   margin-top: 20px;
   overflow-y: scroll;
-  height: 600px;
+  justify-content: space-around;
+  flex-wrap: ;
+  width: 65%;
+  min-width: 500px;
+  min-height: 500px;
+  max-height: 1000px;
 }
 
 .album-index-item {
@@ -268,12 +277,13 @@ a:link {
 }
 
 .album-detail-container {
-  width: 640px;
   background-color: white;
-  float: left;
   text-align: center;
   padding: 10px;
+  margin-right: 10px;
   margin-top: 20px;
+  min-width: 420px;
+  max-width: 600px;
 }
 
 .album-show-image {

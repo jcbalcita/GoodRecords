@@ -10,7 +10,6 @@ class Api::AlbumsController < ApplicationController
       @albums = Album.all
       @filter = false
     end
-
   end
 
   def show
@@ -20,4 +19,5 @@ class Api::AlbumsController < ApplicationController
     @status = status ? status.status : ""
     @id = status ? status.id : ""
   end
+
 end
