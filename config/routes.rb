@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :albums, only: [:index, :show]
     resources :album_statuses, only: [:create, :update, :destroy]
+    resources :reviews, only: [:index, :create, :edit, :update, :destroy]
   end
 
   root to: "static_pages#root"

@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   attr_reader :password
 
   has_many :album_statuses
+  has_many :reviews
   has_many :albums,
     through: :album_statuses,
     source: :albums

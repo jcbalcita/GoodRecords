@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter, Route, Router } from 'react-router';
 import StatusContainer from '../status/status_container';
+import ReviewsContainer from '../reviews/reviews_container';
 
 class AlbumDetail extends React.Component {
 
@@ -36,12 +37,11 @@ class AlbumDetail extends React.Component {
           <h3>{album.title}</h3>
           <h4>{album.artist}</h4>
 
-          <span className="album-description-container">
+          <div className="album-description-container">
             <p>{album.description}</p>
-          </span>
-
+          </div>
           <br></br>
-          <Link to="/home">Back to Index</Link>
+          <ReviewsContainer />
         </div>
       );
     }

@@ -27,7 +27,7 @@ Album.create!(title: "The Stone Roses",
              year: "1989",
              image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478211030/stone_roses_i4brss.jpg",
              description:
-             "Even compared to their already excellent and forward-looking catalog, OutKast's sprawling third album, Aquemini, was a stroke of brilliance. The chilled-out space-funk of ATLiens had already thrown some fans for a loop, and Aquemini made it clear that its predecessor was no detour, but a stepping stone for even greater ambitions.")
+             "Since the Stone Roses were the nominal leaders of Britain's \"Madchester\" scene -- an indie rock phenomenon that fused guitar pop with drug-fueled rave and dance culture -- it's rather ironic that their eponymous debut only hints at dance music. What made the Stone Roses important was how they welcomed dance and pop together, treating them as if they were the same beast.")
 
 Album.create!(title: "Boy in da Corner",
              artist: "Dizzee Rascal",
@@ -292,7 +292,7 @@ Album.create!(title: "Lonerism",
              year: "2007",
              image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478493005/lonerism_mboouv.jpg",
              description:
-             "TDiving headfirst into the realm of pop music, the way Parker uses keyboards to explore more traditional melodies makes the album feel like the McCartney to Innerspeaker's Lennon, blending the familiar with the far out to craft a Revolver-esque psych-pop experience.")
+             "Diving headfirst into the realm of pop music, the way Parker uses keyboards to explore more traditional melodies makes the album feel like the McCartney to Innerspeaker's Lennon, blending the familiar with the far out to craft a Revolver-esque psych-pop experience.")
 
 Album.create!(title: "Ronald Dregan: Dreganomics",
              artist: "Mac Dre",
@@ -358,3 +358,25 @@ AlbumStatus.create!(user_id: 1, album_id: 10, status: "wishlist")
 AlbumStatus.create!(user_id: 1, album_id: 13, status: "want to listen")
 AlbumStatus.create!(user_id: 1, album_id: 12, status: "wishlist")
 AlbumStatus.create!(user_id: 2, album_id: 11, status: "want to listen")
+
+
+Review.create!(user_id: 1, album_id: 1, body: "I love this album.", rating: 5)
+Review.create!(user_id: 1, album_id: 2, body: "I love this album.", rating: 5)
+Review.create!(user_id: 1, album_id: 3, body: "I love this album.", rating: 5)
+Review.create!(user_id: 1, album_id: 4, body: "I love this album.", rating: 5)
+Review.create!(user_id: 1, album_id: 5, body: "I love this album.", rating: 5)
+Review.create!(user_id: 1, album_id: 6, body: "I love this album.", rating: 5)
+Review.create!(user_id: 1, album_id: 7, body: "I love this album.", rating: 5)
+Review.create!(user_id: 1, album_id: 8, body: "I love this album.", rating: 5)
+Review.create!(user_id: 1, album_id: 9, body: "I love this album.", rating: 5)
+Review.create!(user_id: 1, album_id: 10, body: "I love this album.", rating: 5)
+Review.create!(user_id: 1, album_id: 11, body: "I love this album.", rating: 5)
+Review.create!(user_id: 1, album_id: 12, body: "I love this album.", rating: 5)
+Review.create!(user_id: 1, album_id: 13, body: "I love this album.", rating: 5)
+Review.create!(user_id: 1, album_id: 14, body: "I love this album.", rating: 5)
+Review.create!(user_id: 1, album_id: 15, body: "I love this album.", rating: 5)
+Review.create!(user_id: 1, album_id: 16, body: "I love this album.", rating: 5)
+Review.create!(user_id: 1, album_id: 17, body: "I love this album.", rating: 5)
+Review.create!(user_id: 1, album_id: 18, body: "I love this album.", rating: 5)
+Review.create!(user_id: 1, album_id: 19, body: "I love this album.", rating: 5)
+Review.create!(user_id: 1, album_id: 20, body: "I love this album.", rating: 5)

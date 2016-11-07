@@ -17,7 +17,7 @@ class AlbumIndex extends React.Component {
 
     return (
       <div className="album-index-container">
-        {albums}
+        {albums.length > 0 ? albums : `List empty -- browse albums and add to your lists!`}
       </div>
     );
   }

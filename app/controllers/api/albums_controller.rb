@@ -5,9 +5,9 @@ class Api::AlbumsController < ApplicationController
       @albums = Album.find_by_status(current_user.id, params[:status])
       @filter = params[:status]
 
-      render json: { albums: {}, specificRender: true } if @albums.empty?
+      render json: Album.no_results if @albums.empty?
     else
-      @albums = Album.all
+      @albums = Album.all.shuffle[0..27]
       @filter = false
     end
   end

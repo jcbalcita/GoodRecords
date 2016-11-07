@@ -17,6 +17,7 @@
  **AlbumDetailContainer**
  - StatusContainer
  - ReviewsContainer
+  + ReviewFormContainer
 
 
 ## Routes

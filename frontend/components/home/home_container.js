@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { requestAllAlbums } from '../../actions/album_actions';
 import Home from './home';
 
-const mapStateToProps = state => {  
+const mapStateToProps = state => {
   return (
     {
       albums: Object.keys(state.albums.albums).map(idx => state.albums.albums[idx]),
@@ -16,5 +16,5 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(
-  mapStateToProps
+  mapStateToProps, mapDispatchToProps
 )(Home);
