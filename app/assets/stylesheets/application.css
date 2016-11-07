@@ -307,9 +307,10 @@ a:link {
   color: red;
 }
 
-.album-description-container {
+.album-description-container p {
   text-align: justify;
-  width: 400px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 
