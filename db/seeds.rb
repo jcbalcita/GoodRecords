@@ -243,7 +243,7 @@ Album.create!(title: "Bury Me At Makout Creek",
              year: "2016",
              image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478407237/burymeatmakeoutcreek_duzt6a.jpg",
              description:
-             "Isn't Anything was good enough to inspire an entire scene of My Bloody Valentine soundalikes, but Loveless' greatness proved that the band was inimitable. After two painstaking years in the studio and nearly bankrupting their label Creation in the process, the group emerged with their masterpiece, which fulfilled all of the promise of their previous albums.")
+             "Though not necessarily nostalgia, the sound of Bury Me at Makeout Creek is inventive and resourceful in a '90s-indie way. The choruses here soar like power pop, but are subdued by tempo and fidelity, while cheap drum machines are deployed as much for their tone as their rhythm.")
 
 Album.create!(title: "Is This It",
              artist: "The Strokes",
@@ -258,6 +258,90 @@ Album.create!(title: "Boxer",
              image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478408089/TheNational-Boxer_ous7xv.jpg",
              description:
              "The National don't do anything radically different on Boxer, but then again, they don't really need to: their literate, quietly anthemic take on indie rock seemed to have arrived fully formed on their 2001 self-titled debut.")
+
+Album.create!(title: "Donuts",
+             artist: "J Dilla",
+             year: "2006",
+             image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478493005/dilla_czfv1j.jpg",
+             description:
+             "Donuts was made on a hospital bed and in a home studio, on a stripped-down setup with a stack of vinyl. Released on its maker's 32nd birthday, three days before he passed away, the album has a resonance deeper than anyone could've hoped for or even imagined.")
+
+Album.create!(title: "You're Living All Over Me",
+             artist: "Dinosaur Jr.",
+             year: "1987",
+             image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478493005/dinosaurjr_cunjso.jpg",
+             description:
+             "A blitzkrieg fusion of hardcore punk, Sonic Youth-style noise freak-outs, heavy metal, and melodic hard rock in the vein of Neil Young, You're Living All Over Me was a turning point in American underground rock & roll.")
+
+Album.create!(title: "Contemporary Movement",
+             artist: "Duster",
+             year: "2000",
+             image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478493005/duster_ywkywb.jpg",
+             description:
+             "In the context of what's popular in music at the turn of the century, the title of Duster's second full-length, Contemporary Movement, reveals this San Jose band's wry sense of their place in pop/rock's ecosystem. Their often sparse and laconic delivery (especially on tracks like "Auto-mobile") guarantees Duster a place outside contemporary music's mainstream. But in a more perfect world there would be at least three radio hits from this, their most accessible release to date.")
+
+Album.create!(title: "Piñata",
+             artist: "Freddie Gibbs / Madlib",
+             year: "2014",
+             image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478493004/freddie-gibbs_q0znrg.jpg",
+             description:
+             "With a delivery that sounds like 2Pac pitched down a notch, and a technical, streetwise proficiency that's Scarface-styled and just as solid, Gary, Indiana rapper Freddie Gibbs is a rare find, but his odd come-up is arguably even more interesting.")
+
+Album.create!(title: "Lonerism",
+             artist: "Tame Impala",
+             year: "2007",
+             image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478493005/lonerism_mboouv.jpg",
+             description:
+             "TDiving headfirst into the realm of pop music, the way Parker uses keyboards to explore more traditional melodies makes the album feel like the McCartney to Innerspeaker's Lennon, blending the familiar with the far out to craft a Revolver-esque psych-pop experience.")
+
+Album.create!(title: "Ronald Dregan: Dreganomics",
+             artist: "Mac Dre",
+             year: "2004",
+             image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478493005/macdre_hc3o2w.jpg",
+             description:
+             "Mac Dre albums keep comin', faster than the quality would make you believe. Not that Ronald Dregan: Dreganomics is a masterpiece, but if you get a chuckle from the cover, you'll get a chuckle from the lighthearted album -- that being the hood version of \"lighthearted.\"")
+
+Album.create!(title: "Gettin' It (Album Number Ten)",
+             artist: "Too Short",
+             year: "1996",
+             image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478493005/tooshort_f4obqe.jpg",
+             description:
+             "At the time of its release, Too Short claimed that Gettin' It was his retirement album. If that is indeed the case, he picked the perfect moment to drop out of the hip-hop business -- as the album shows, he's already beginning to border on self-parody.")
+
+Album.create!(title: "Burnin'",
+             artist: "The Wailers",
+             year: "1973",
+             image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478493005/wailers_zmkxqa.jpg",
+             description:
+             "The Wailers' fourth album overall, Burnin', was their second for Island Records, released only six months after its predecessor, Catch a Fire.")
+
+Album.create!(title: "Anodyne",
+             artist: "Uncle Tupelo",
+             year: "1993",
+             image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478493005/tupelo_aqaxia.jpg",
+             description:
+             "Uncle Tupelo never struck a finer balance between rock and country than on Anodyne, their major-label debut and parting shot. For all of the ill will undoubtedly simmering throughout these sessions, Jay Farrar and Jeff Tweedy have never before been more attuned to each other musically.")
+
+Album.create!(title: "Awake",
+             artist: "Tycho",
+             year: "2014",
+             image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478493005/tychoawake_ssozfi.jpg",
+             description:
+             "The variations within Tycho's music have always been subtle, hovering between ambient introspection and more active synth pop and post-rock elements. On Awake, Scott Hansen breaks the mold a bit, crafting a set of songs with more prominent peaks and valleys than his previous work.")
+
+Album.create!(title: "I Can Hear the Heart Beating as One",
+             artist: "Yo La Tengo",
+             year: "1997",
+             image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478493007/yolatengo_h146io.jpg",
+             description:
+             "New Jersey indie rockers Yo La Tengo had already been slowly growing into their sound for over a decade by the 1997 release of their revelational eighth album, I Can Hear the Heart Beating as One. Their guitar-based pop was steadily finding its legs before this, as the band moved toward increasingly dreamy productions on albums like Painful and Electr-O-Pura. The 16 tracks that made up the ambitious and epic I Can Hear the Heart found the group stretching out their whispery vocals and deceptively straightforward pop approach to encompass a variety of unexpected styles.")
+
+Album.create!(title: "Vignetting the Compost",
+             artist: "Bibio",
+             year: "2009",
+             image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478493005/bibio_iqruvl.jpg",
+             description:
+             "Like Stephen Wilkinson's other Bibio albums, Vignetting the Compost is as literal as it is charming. Blending and transforming parts and pieces so they become a whole is equally vital to making compost and making music, and this is especially true in Bibio's world, where folk meets electronica and recognizable instruments mesh with undefinable but oddly comforting textures and field recordings.")
 
 
 AlbumStatus.create!(user_id: 1, album_id: 1, status: "owned")

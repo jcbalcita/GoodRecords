@@ -7,19 +7,24 @@ class AlbumIndex extends React.Component {
   componentDidMount() {
     if (!this.props.specificRender) {
       this.props.requestAllAlbums();
-    } 
+    }
   }
 
   render() {
-		let albums = this.props.albums.map((album, idx) =>
-			<AlbumIndexItem key={idx} album={album} />
-		);
+    if (!this.props.specificRender) {
+      return <div className="album-index-container"><div className="loader">Loading...</div></div>;
+    } else {
+      let albums = this.props.albums.map((album, idx) =>
+        <AlbumIndexItem key={idx} album={album} />
+      );
 
-    return (
-      <div className="album-index-container">
-        {albums}
-      </div>
-    );
+      return (
+        <div className="album-index-container">
+          {albums}
+        </div>
+      );
+    }
+
   }
 }
 
