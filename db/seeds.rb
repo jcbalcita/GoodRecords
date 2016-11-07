@@ -278,7 +278,7 @@ Album.create!(title: "Contemporary Movement",
              year: "2000",
              image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478493005/duster_ywkywb.jpg",
              description:
-             "In the context of what's popular in music at the turn of the century, the title of Duster's second full-length, Contemporary Movement, reveals this San Jose band's wry sense of their place in pop/rock's ecosystem. Their often sparse and laconic delivery (especially on tracks like "Auto-mobile") guarantees Duster a place outside contemporary music's mainstream. But in a more perfect world there would be at least three radio hits from this, their most accessible release to date.")
+             "In the context of what's popular in music at the turn of the century, the title of Duster's second full-length, Contemporary Movement, reveals this San Jose band's wry sense of their place in pop/rock's ecosystem. Their often sparse and laconic delivery (especially on tracks like \"Auto-mobile\") guarantees Duster a place outside contemporary music's mainstream. But in a more perfect world there would be at least three radio hits from this, their most accessible release to date.")
 
 Album.create!(title: "Piñata",
              artist: "Freddie Gibbs / Madlib",
