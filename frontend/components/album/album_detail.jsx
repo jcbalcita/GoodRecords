@@ -34,7 +34,7 @@ class AlbumDetail extends React.Component {
             </div>
           </div>
 
-          <h3>{album.title}</h3>
+          <h3 className="album-title">{album.title}</h3>
           <h4>{album.artist}</h4>
 
           <div className="album-description-container">

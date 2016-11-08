@@ -3,4 +3,3 @@ json.currentAlbumReviews do
     json.set! review.id, review
   end
 end
-json.set! :fetched, true

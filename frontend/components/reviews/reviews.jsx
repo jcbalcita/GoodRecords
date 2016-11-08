@@ -9,7 +9,8 @@ class Reviews extends React.Component {
     let reviewItems = reviewArray.map((review, idx) => <ReviewItem review={review} key={idx} />);
 
     return (
-      <main className="reviews-container">Reviews go here.
+      <main className="reviews-container">
+        <h3 className="reviews-header">Community Reviews</h3>
         {reviewItems}
       </main>
     );

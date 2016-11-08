@@ -4,8 +4,7 @@ import Reviews from './reviews';
 
 const mapStateToProps = state => ({
   albumId: state.album.id,
-  reviews: state.reviews,
-  fetched: state.reviews.fetched
+  reviews: state.reviews
 });
 
 const mapDispatchToProps = (dispatch) => ({

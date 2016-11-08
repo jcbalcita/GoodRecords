@@ -3,12 +3,12 @@ class Api::AlbumsController < ApplicationController
   def index
     if (params[:status])
       @albums = Album.find_by_status(current_user.id, params[:status])
-      @filter = params[:status]
+      @render = params[:status]
 
       render json: Album.no_results if @albums.empty?
     else
       @albums = Album.all.shuffle[0..27]
-      @filter = false
+      @render = false
     end
   end
 

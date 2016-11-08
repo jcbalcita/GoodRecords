@@ -3,4 +3,4 @@ json.albums do
     json.set! album.id, album
   end
 end
-json.set! :specificRender, @filter
+json.set! :specificRender, @render

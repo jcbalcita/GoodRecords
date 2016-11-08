@@ -68,10 +68,39 @@ a:link {
    color: black;
    padding: 5px;
    border-radius: 10px;
+   outline: none;
  }
 
  button:hover {
    cursor: pointer;
+ }
+
+ .loader {
+   color: black;
+   font-size: 10px;
+   margin: 80px auto;
+   position: relative;
+   text-indent: -9999em;
+   -webkit-transform: translateZ(0);
+   -ms-transform: translateZ(0);
+   transform: translateZ(0);
+   -webkit-animation-delay: -0.16s;
+   animation-delay: -0.16s;
+ }
+
+ .loader:before,
+ .loader:after {
+   content: '';
+   position: absolute;
+   top: 0;
+ }
+ .loader:before {
+   left: -3.5em;
+   -webkit-animation-delay: -0.32s;
+   animation-delay: -0.32s;
+ }
+ .loader:after {
+   left: 3.5em;
  }
 
  .login-button {
@@ -217,6 +246,7 @@ a:link {
   flex-wrap: nowrap;
   min-width: 600px;
   max-width: 1800px;
+  padding-bottom: 50px;
 }
 
 .input-search {
@@ -332,7 +362,7 @@ a:link {
   margin: 0, auto;
 }
 
-.album-detail-container h3 {
+.album-title {
   color: red;
 }
 
@@ -341,7 +371,6 @@ a:link {
   max-width: 700px;
   margin: 0 auto;
 }
-
 
 .status-button-container {
   display: none;
@@ -406,35 +435,30 @@ a:link {
   -webkit-animation: load7 1.8s infinite ease-in-out;
   animation: load7 1.8s infinite ease-in-out;
 }
-.loader {
-  color: black;
-  font-size: 10px;
-  margin: 80px auto;
-  position: relative;
-  text-indent: -9999em;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
+
+.review-item-box {
+  padding-bottom: 15px;
 }
 
-.loader:before,
-.loader:after {
-  content: '';
-  position: absolute;
-  top: 0;
-}
-.loader:before {
-  left: -3.5em;
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
-}
-.loader:after {
-  left: 3.5em;
+.reviews-header {
+  font-size: 16px;
+  color: red;
 }
 
-.reviews-container {
-  border: 1px solid red;
-  background: #f5f8fa;
+.review-index-item {
+  text-align: justify;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #f5f8fa;
+}
+
+.review-item-header {
+
+}
+
+.review-body {
+  padding-top: 10px;
 }
