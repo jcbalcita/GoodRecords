@@ -1,6 +1,7 @@
 class Api::ReviewsController < ApplicationController
   def index
-    @reviews = Review.where('album_id = ?', params[:album_id])
+    @reviews = Review.where('album_id = ?', params[:album_id]).where('user_id != ?', current_user.id)
+    @current_user_review = Review.where('album_id = ?', params[:album_id]).where('user_id = ?', current_user.id)
   end
 
   def create
