@@ -5,15 +5,25 @@ import ReviewItem from './review_item';
 class Reviews extends React.Component {
 
   render() {
-    let reviewArray = Object.keys(this.props.reviews.currentAlbumReviews).map(idx => this.props.reviews.currentAlbumReviews[idx]);
-    let reviewItems = reviewArray.map((review, idx) => <ReviewItem review={review} key={idx} />);
+    if (this.props.hasReviews) {
+      let reviewArray = Object.keys(this.props.reviews.currentAlbumReviews).map(idx => this.props.reviews.currentAlbumReviews[idx]);
+      let reviewItems = reviewArray.map((review, idx) => <ReviewItem review={review} key={idx} />);
 
-    return (
-      <main className="reviews-container">
-        <h3 className="reviews-header">Community Reviews</h3>
-        {reviewItems}
-      </main>
-    );
+      return (
+        <main className="reviews-container">
+          <h3 className="reviews-header">Community Reviews</h3>
+          {reviewItems}
+        </main>
+      );
+    } else {
+      return (
+        <main className="reviews-container">
+          <h3 className="reviews-header">Community Reviews</h3>
+          This album has not yet been reviewed.
+        </main>
+      );
+    }
+
   }
 
 }

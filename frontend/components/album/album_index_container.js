@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { requestAllAlbums } from '../../actions/album_actions';
 import AlbumIndex from './album_index';
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, { reviews }) => {
   return (
     {
       albums: Object.keys(state.albums.albums).map(idx => state.albums.albums[idx]),

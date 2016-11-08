@@ -3,7 +3,7 @@ import { RECEIVE_ALBUM,
 
 import merge from 'lodash/merge';
 
-const defaultState = { album: {reviews: [], id: 0, title: "", description: "", year: "", image_url: "", status: ""}};
+const defaultState = {};
 
 const AlbumDetailReducer = (state = defaultState, action) => {
   Object.freeze(state);

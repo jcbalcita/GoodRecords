@@ -5,11 +5,6 @@ import ReviewsContainer from '../reviews/reviews_container';
 
 class AlbumDetail extends React.Component {
 
-  componentDidMount() {
-    // debugger
-    this.props.requestAlbum(this.props.params.albumId);
-  }
-
   render() {
     const album = this.props.album;
     if (!album.title) {
