@@ -451,14 +451,13 @@ a:link {
   text-align: justify;
   max-width: 700px;
   margin: 0 auto;
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 10px;
+  padding: 8px;
+  border-radius: 8px;
   background-color: #f5f8fa;
 }
 
 .review-item-header {
-
+  border-bottom: 1px solid #808080;
 }
 
 .review-body {
