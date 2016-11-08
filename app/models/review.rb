@@ -5,4 +5,12 @@ class Review < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :album
+
+  def self.other_users_reviews(user_id, album_id)
+    Review.where('album_id = ?', album_id).where('user_id != ?', user_id)
+  end
+
+  def self.current_user_review(user_id, album_id)
+    Review.where('album_id = ?', album_id).where('user_id = ?', user_id)
+  end
 end

@@ -1,21 +1,22 @@
 import { connect } from 'react-redux';
+
 import { requestCreateReview,
          requestUpdateReview,
          requestRemoveReview } from '../../actions/review_actions';
 
 import ReviewForm from './review_form';
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state, ownProps) => ({
   albumId: state.album.id,
-  reviews: state.reviews,
-  hasReviews: Boolean(state.reviews.currentAlbumReviews || state.reviews.currentUserReview),
-  hasCurrentUserReview: Boolean(state.reviews.currentUserReview)
+  review: ownProps.review
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  requestReviews: albumId => dispatch(requestReviews(albumId)),
+const mapDispatchToProps = dispatch => ({
+  requestCreateReview: review => dispatch(requestCreateReview(review)),
+  requestUpdateReview: review => dispatch(requestUpdateReview(review)),
+  requestRemoveReview: id => dispatch(requestRemoveReview(id))
 });
 
 export default connect(
   mapStateToProps, mapDispatchToProps
-)(Reviews);
+)(ReviewForm);

@@ -149,7 +149,8 @@ a:link {
 .splash-greeting {
   position: absolute;
   font-weight: 700;
-  color: white;
+  color: #DCDCDC;
+  text-shadow: 3px 3px  3px black;
 }
 
 .greeting-message {
@@ -372,16 +373,20 @@ a:link {
 
 .album-title {
   color: red;
-  font-size: 30px;
+  font-size: 28px;
   margin-bottom: 20px;
   font-weight: 400;
 }
 
 .album-artist {
   color: black;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 400;
   margin-bottom: 15px;
+}
+
+.album-year {
+  font-size: 18px;
 }
 
 .album-show-image {
@@ -478,14 +483,12 @@ a:link {
   animation: load7 1.8s infinite ease-in-out;
 }
 
-/*.review-item-box {
-  padding-bottom: 15px;
-  border: 1px solid #808080;
-  border-radius: 5px;
-  background-color: #f5f8fa
-  max-width: 700px
-}*/
-
+.reviews-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 8px;
+  border-radius: 8px;
+}
 .reviews-header {
   font-size: 16px;
   color: black;
@@ -511,6 +514,20 @@ a:link {
   margin-bottom: 0;
 }
 
+.review-body-input {
+  width: 450px;
+  min-width 400px;
+  border: 1px solid #808080;
+  padding-bottom: 90px;
+  text-align: justify;
+}
+
 .review-edit-bar {
   margin-top: 10px;
+}
+
+.review-form {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 30px;
 }

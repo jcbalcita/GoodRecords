@@ -24,7 +24,7 @@ const Greeting = ({ currentUser, logout }) => (
       <h2 className="greeting-subhead">Keep track of your record collection, and find new music!</h2>
     </div>
     <img className="splash-image"
-      src="http://res.cloudinary.com/jcbalcita/image/upload/c_scale,q_71,w_900/v1478043095/splash_lm8asd.gif">
+      src="http://res.cloudinary.com/jcbalcita/image/upload/v1478649039/vinyl_record_player__ffrvjh.jpg">
     </img>
     { currentUser ? personalGreeting(currentUser, logout) : sessionLinks() }
   </div>

@@ -1,16 +1,16 @@
 class Api::ReviewsController < ApplicationController
   def index
-    @reviews = Review.where('album_id = ?', params[:album_id]).where('user_id != ?', current_user.id)
-    @current_user_review = Review.where('album_id = ?', params[:album_id]).where('user_id = ?', current_user.id)[0]
+    @reviews = Review.other_users_reviews(current_user.id, params[:album_id])
+    @current_user_review = Review.current_user_review(current_user.id, params[:album_id])[0]
   end
 
   def create
     @review = Review.new(reviews_params)
-    review.user_id = current_user.id
+    @review.user_id = current_user.id
 
     if @review.save
-      @reviews = review.album.reviews
-      @current_user_review = review
+      @reviews = Review.other_users_reviews(current_user.id, @review.album_id)
+      @current_user_review = @review
 
       render '/api/reviews/index'
     else
