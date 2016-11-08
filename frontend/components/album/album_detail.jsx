@@ -41,7 +41,7 @@ class AlbumDetail extends React.Component {
             <p>{album.description}</p>
           </div>
           <br></br>
-          <ReviewsContainer />
+          <ReviewsContainer albumId={this.props.albumId}/>
         </div>
       );
     }

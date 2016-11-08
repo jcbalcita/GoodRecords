@@ -4,11 +4,12 @@ import Reviews from './reviews';
 
 const mapStateToProps = state => ({
   albumId: state.album.id,
-  reviews: state.reviews
+  reviews: state.reviews,
+  fetched: state.reviews.fetched
 });
 
-const mapDispatchToProps = dispatch => ({
-  requestReviews: albumId => dispatch(requestReviews(albumId))
+const mapDispatchToProps = (dispatch) => ({
+  requestReviews: albumId => dispatch(requestReviews(albumId)),
 });
 
 export default connect(

@@ -3,7 +3,7 @@ import { RECEIVE_REVIEWS,
 
 import merge from 'lodash/merge';
 
-const defaultState = {}
+const defaultState = { currentAlbumReviews: {}, fetched: false}
 
 const ReviewsReducer = (state = defaultState, action) => {
   Object.freeze(state);

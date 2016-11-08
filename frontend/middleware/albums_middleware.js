@@ -11,6 +11,8 @@ import { requestAllAlbums,
          REQUEST_REMOVE_STATUS,
          requestRemoveStatus } from '../actions/album_actions';
 
+import { requestReviews } from '../actions/review_actions';
+
 import { fetchAllAlbums,
          fetchUserAlbums,
          fetchAlbum,
@@ -27,6 +29,7 @@ export default ({ getState, dispatch }) => next => action => {
   }
   const fetchAlbumSuccess = album => {
     dispatch(receiveAlbum(album));
+    dispatch(requestReviews(album.id));
   }
 
   switch (action.type) {

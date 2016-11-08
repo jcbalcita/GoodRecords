@@ -19,12 +19,12 @@ export const requestUpdateReview = review => ({
   review
 });
 
-export const requestRemoveReview = id => {(
+export const requestRemoveReview = id => ({
   type: REQUEST_REMOVE_REVIEW,
   id
-)};
+});
 
-export const receiveReviews = reviews => {(
-  type: receiveReviews,
+export const receiveReviews = reviews => ({
+  type: RECEIVE_REVIEWS,
   reviews
-)}
+});

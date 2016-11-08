@@ -15,7 +15,7 @@ import { fetchReviews,
          removeReview } from '../util/review_api_util.js';
 
 export default ({ getState, dispatch }) => next => action => {
-  const reviewSuccess = reviews => dispatch(receiveReviews(reviews));
+  const reviewSuccess = reviews => dispatch(receiveReviews(reviews))
 
   switch (action.type) {
     case REQUEST_REVIEWS:
@@ -23,4 +23,4 @@ export default ({ getState, dispatch }) => next => action => {
     default:
       return next(action)
   }
-}
+};

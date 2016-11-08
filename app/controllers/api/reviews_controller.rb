@@ -1,8 +1,6 @@
 class Api::ReviewsController < ApplicationController
-
   def index
-    @reviews = Review.find_by(album_id: params[:album_id])
-    render json: @reviews
+    @reviews = Review.where('album_id = ?', params[:album_id])
   end
 
   def create
