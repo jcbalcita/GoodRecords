@@ -154,16 +154,18 @@ a:link {
 
 .greeting-message {
   font-size: 36px;
+  padding: 40px;
 }
 
 .greeting-subhead {
   margin-top: 20px;
   font-size: 20px;
+  padding-left: 40px;
 }
 
 .login-signup {
   position: absolute;
-  top: 125px;
+  top: 180px;
   right: 380px;
   color: white;
   background-color: black;
@@ -178,7 +180,7 @@ a:link {
 .login-form-container {
   position: absolute;
   padding: 10px;
-  top: 220px;
+  top: 270px;
   right: 100px;
   color: white;
   background-color: black;
@@ -403,7 +405,7 @@ a:link {
 
 .status-button-freeze {
   margin-top: 20px;
-  background-color: red;
+  background-color: #8B0000;
   color: white;
   padding: 5px;
   border-radius: 0px;
