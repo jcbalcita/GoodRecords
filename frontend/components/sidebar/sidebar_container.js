@@ -3,8 +3,9 @@ import { requestAllAlbums,
          requestUserAlbums } from '../../actions/album_actions';
 import Sidebar from './sidebar';
 
-const mapStateToProps = ({session}) => ({
-  currentUser: session.currentUser
+const mapStateToProps = state => ({
+  currentUser: state.session.currentUser,
+  section: state.albums.specificRender
 });
 
 const mapDispatchToProps = dispatch => ({

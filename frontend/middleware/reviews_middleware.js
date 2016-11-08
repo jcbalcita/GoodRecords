@@ -20,6 +20,12 @@ export default ({ getState, dispatch }) => next => action => {
   switch (action.type) {
     case REQUEST_REVIEWS:
       return fetchReviews(action.albumId, reviewSuccess);
+    case REQUEST_CREATE_REVIEW:
+      return createReview(action.review, reviewSuccess);
+    case REQUEST_UPDATE_REVIEW:
+      return updateReview(action.review, reviewSuccess);
+    case REQUEST_REMOVE_REVIEW:
+      return removeReview(action.id, reviewSuccess);
     default:
       return next(action)
   }

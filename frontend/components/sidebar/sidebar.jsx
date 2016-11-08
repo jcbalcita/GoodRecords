@@ -23,6 +23,7 @@ class Sidebar extends React.Component {
   }
 
   render() {
+
     return (
       <div className="sidebar col-1-3">
 				<div className="sidebar-box">
@@ -30,15 +31,15 @@ class Sidebar extends React.Component {
                   onClick={this.handleBrowseClick}>
 						Browse All Albums
 					</button>
-					<button className="sidebar-item"
+					<button className={this.props.section === "owned" ? "sidebar-item-highlighted" : "side-bar-item"}
                   onClick={this.handleCollectionClick.bind(this, "owned")}>
 						My Collection
 					</button>
-					<button className="sidebar-item"
+					<button className={this.props.section === "wishlist" ? "sidebar-item-highlighted" : "side-bar-item"}
                   onClick={this.handleCollectionClick.bind(this, "wishlist")}>
 						My Wish List
 					</button>
-					<button className="sidebar-item"
+					<button className={this.props.section === "want to listen" ? "sidebar-item-highlighted" : "side-bar-item"}
                   onClick={this.handleCollectionClick.bind(this, "want to listen")}>
 						Want to Listen
 					</button>

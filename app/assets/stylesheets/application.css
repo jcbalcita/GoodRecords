@@ -268,15 +268,26 @@ a:link {
   border: 3px solid black;
   width: 200px;
   margin: 0 auto;
-  height: 240px;
+  height: 140px;
   border-radius: 10px;
 }
 
 .sidebar-item {
-  border-bottom: 1px solid black;
   width: 190px;
-  margin-bottom: 8px;
+  height: 25px;
   border-radius: 2px;
+}
+
+.sidebar-item-highlighted {
+  width: 190px;
+  border-radius: 2px;
+  background-color: red;
+  color: white;
+}
+
+.side-bar-item:hover {
+  font-weight: 700;
+  color: red;
 }
 
 .sidebar-box:nth-child(1) {
@@ -315,14 +326,13 @@ a:link {
   vertical-align: top;
 }
 
-.album-index-item:hover .album-title{
+.album-index-item:hover .album-index-title{
   font-weight: 700;
 }
 
 .album-index-item:hover img {
   box-shadow: 3px 3px 3px gray;
 }
-
 
 .sidebar-item:hover {
   color: red;
@@ -331,10 +341,6 @@ a:link {
 
 .album-title {
   color: red;
-}
-
-.album-title:hover {
-  font-weight: 700;
 }
 
 .album-detail-container {
@@ -350,6 +356,34 @@ a:link {
   text-align: center;
 }
 
+.album-art-and-info {
+  display: flex;
+  justify-content: center;;
+  margin-bottom: 30px;
+}
+
+.album-info {
+  margin-top: 20px;
+  margin-left: 30px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.album-title {
+  color: red;
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.album-artist {
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
 .album-show-image {
   height: 300px;
   width: 300px;
@@ -361,17 +395,23 @@ a:link {
   height: 300px;
   width: 300px;
   position: relative;
-  margin: 0, auto;
 }
 
-.album-title {
+.album-index-title {
   color: red;
+}
+
+.album-status {
+  margin-top: 50px;
+  font-weight: 700;
 }
 
 .album-description-container p {
   text-align: justify;
+  font-style: italic;
   max-width: 700px;
   margin: 0 auto;
+  padding-bottom: 30px;
 }
 
 .status-button-container {
@@ -438,13 +478,17 @@ a:link {
   animation: load7 1.8s infinite ease-in-out;
 }
 
-.review-item-box {
+/*.review-item-box {
   padding-bottom: 15px;
-}
+  border: 1px solid #808080;
+  border-radius: 5px;
+  background-color: #f5f8fa
+  max-width: 700px
+}*/
 
 .reviews-header {
   font-size: 16px;
-  color: red;
+  color: black;
 }
 
 .review-index-item {
@@ -458,8 +502,15 @@ a:link {
 
 .review-item-header {
   border-bottom: 1px solid #808080;
+  display: flex;
+  justify-content: space-between;
 }
 
 .review-body {
   padding-top: 10px;
+  margin-bottom: 0;
+}
+
+.review-edit-bar {
+  margin-top: 10px;
 }

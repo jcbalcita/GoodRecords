@@ -7,6 +7,15 @@ export const fetchReviews = (albumId, success) => {
   });
 };
 
+export const fetchReview = (id, success) => {
+  $.ajax({
+    method: 'GET',
+    url: `/api/review/${id}`,
+    data: { id },
+    success
+  });
+}
+
 export const createReview = (review, success) => {
   $.ajax({
     method: 'POST',

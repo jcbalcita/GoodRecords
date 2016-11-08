@@ -8,7 +8,7 @@ const AlbumIndexItem = ({album}) => (
       <p>
         <img src={album.image_url}></img>
       </p>
-      <p className="album-title">{album.title}</p>
+      <p className="album-index-title">{album.title}</p>
     </Link>
 
     <p>{album.artist}</p>

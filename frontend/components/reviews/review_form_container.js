@@ -1,6 +1,9 @@
 import { connect } from 'react-redux';
-import { requestReviews } from '../../actions/review_actions';
-import Reviews from './reviews';
+import { requestCreateReview,
+         requestUpdateReview,
+         requestRemoveReview } from '../../actions/review_actions';
+
+import ReviewForm from './review_form';
 
 const mapStateToProps = state => ({
   albumId: state.album.id,
