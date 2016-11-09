@@ -129,8 +129,9 @@ a:link {
   padding-left: 20px;
   padding-right: 20px;
   font-weight: 700;
-  height: 35px;
+  height: 20px;
   min-width: 650px;
+  overflow-y: visible;
 }
 
 .splash-image-container {
@@ -216,6 +217,7 @@ a:link {
 }
 
 .header-button {
+  font-size: 14px;
   margin-left: 15px;
 }
 
@@ -262,7 +264,10 @@ a:link {
 .sidebar {
   margin-top: 35px;
   width: 30%;
-  min-width: 220px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sidebar-box {
@@ -295,6 +300,27 @@ a:link {
   border-radius: 5px;
 }
 
+.sidebar-message {
+  margin-top: 100px;
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-message-text {
+  text-shadow: 1px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.sidebar-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
 .album-index-container img {
   width: 150px;
   height: 150px;
@@ -302,7 +328,6 @@ a:link {
 }
 
 .album-index-container {
-  width: 660px;
   flex-wrap: wrap;
   background-color: white;
   display: flex;
@@ -312,7 +337,7 @@ a:link {
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 65%;
-  min-width: 550px;
+  min-width: 400px;
   min-height: 500px;
 }
 

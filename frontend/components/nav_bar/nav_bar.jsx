@@ -36,8 +36,12 @@ handleLogoutClick() {
 
     return (
       <nav className="navbar">
-        <Link to='home'>goodrecords</Link>
-        {currentUser ? <SearchContainer /> : <span></span>}
+        <Link to='/home'>
+          <img src="http://res.cloudinary.com/jcbalcita/image/upload/c_scale,w_143/v1478708380/logos/good_records3.png">
+          </img>
+        </Link>
+
+        {currentUser ? <SearchContainer /> : ""}
         {currentUser ? this.navGreeting(currentUser.username, logout) : this.navSlogan()}
       </nav>
     );
