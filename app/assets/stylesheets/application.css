@@ -263,6 +263,7 @@ a:link {
 
 .sidebar {
   margin-top: 35px;
+  margin-right: 40px;
   width: 30%;
   min-width: 300px;
   display: flex;
@@ -511,6 +512,7 @@ a:link {
   padding: 8px;
   border-radius: 8px;
 }
+
 .reviews-header {
   font-size: 16px;
   color: black;
@@ -547,6 +549,9 @@ a:link {
 
 .review-edit-bar {
   margin-top: 10px;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .review-form {
@@ -566,7 +571,18 @@ a:link {
 
 .review-submit:hover {
   background-color: red;
-  font-weight: 700;
   color: white;
   cursor: pointer;
+}
+
+.review-edit-bar button {
+  background-color: #f5f8fa;
+  color: #808080;
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.review-edit-bar button:hover {
+  font-weight: 700;
+  color: red;
 }

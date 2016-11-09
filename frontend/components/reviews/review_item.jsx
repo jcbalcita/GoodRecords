@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, Route, Router, withRouter } from 'react-router';
+import StarRatingComponent from 'react-star-rating-component';
 
 const ReviewItem = ( { review, type, requestRemoveReview, toggleEditToTrue } ) => {
 
@@ -7,8 +8,8 @@ const ReviewItem = ( { review, type, requestRemoveReview, toggleEditToTrue } ) =
 
   const editBar =
     <div className="review-edit-bar">
-      <button onClick={handleDelete(review.id)}>Delete Review</button>
-      <button onClick={toggleEditToTrue}>Edit Review</button>
+      <button onClick={toggleEditToTrue}>Edit</button>
+      <button onClick={handleDelete(review.id)}>Delete</button>
     </div>;
 
   return (
@@ -17,7 +18,13 @@ const ReviewItem = ( { review, type, requestRemoveReview, toggleEditToTrue } ) =
 
         <p className="review-item-header">
           <span>
-            <b>{ type === 'currentUser' ? 'You' : review.author }</b> rated this album {review.rating} out of 5.
+            <b>{ type === 'currentUser' ? 'You' : review.author }</b> rated this album&nbsp;&nbsp;
+              <StarRatingComponent
+                name="rating"
+                starCount={5}
+                editing={false}
+                value={review.rating}
+                />
           </span>
           <span>
             {type === 'currentUser' ? '' : `${review.createDate} ago`}

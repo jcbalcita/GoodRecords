@@ -1,4 +1,5 @@
 import React from 'react';
+import StarRatingComponent from 'react-star-rating-component';
 
 class ReviewForm extends React.Component {
   constructor(props) {
@@ -36,20 +37,15 @@ class ReviewForm extends React.Component {
     };
   }
 
+  onStarClick(nextValue) {
+    this.setState({rating: nextValue});
+  }
 
   render() {
-    let ratingInputs = [1, 2, 3, 4, 5].map(rating =>
-      <option key={rating} value={rating} selected={rating === this.state.rating}>
-        {rating}-star Record
-      </option>
-    );
 
     return (
       <div className="review-form">
         <form onSubmit={this.handleSubmit()}>
-          <select onChange={this.update("rating")}>
-            {ratingInputs}
-          </select>
           <br/>
           <textarea className="review-body-input"
                     rows="5"
@@ -57,7 +53,15 @@ class ReviewForm extends React.Component {
                     value={this.state.body}
                     onChange={this.update("body")}>
           </textarea>
-          <br/>
+          <div>
+            <h2>Rate this album</h2>
+            <StarRatingComponent
+              name="rating"
+              starCount={5}
+              value={this.state.rating}
+              onStarClick={this.onStarClick.bind(this)}
+              />
+          </div>
           <input className="review-submit" type="submit" value="Submit Your Review"></input>
         </form>
       </div>
