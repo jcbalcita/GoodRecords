@@ -167,26 +167,26 @@ a:link {
 .login-signup {
   position: absolute;
   top: 180px;
-  right: 380px;
+  right: 390px;
   color: white;
   background-color: black;
   opacity: 1;
   padding: 10px;
   list-style: none;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 22px;
   border-radius: 10px;
 }
 
 .login-form-container {
   position: absolute;
   padding: 10px;
-  top: 270px;
-  right: 100px;
+  top: 280px;
+  right: 175px;
   color: white;
   background-color: black;
-  opacity: 0.9;
-  width: 400px;
+  opacity: 1;
+  width: 380px;
   vertical-align: middle;
   border-radius: 10px;
 }

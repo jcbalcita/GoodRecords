@@ -43,7 +43,7 @@ class ReviewForm extends React.Component {
         <form onSubmit={this.handleSubmit()}>
           <textarea className="review-body-input"
                     rows="5"
-                    placeholder="What did you think of this album?"
+                    placeholder="What do you think of this album?"
                     value={this.state.body}
                     onChange={this.update("body")}>
           </textarea>

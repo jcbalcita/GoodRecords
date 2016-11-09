@@ -17,7 +17,6 @@ class Sidebar extends React.Component {
   }
 
   handleCollectionClick(status, e) {
-    // debugger
     e.preventDefault();
     this.props.requestUserAlbums(status);
   }
