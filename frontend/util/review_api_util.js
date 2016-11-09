@@ -37,8 +37,8 @@ export const updateReview = (review, success) => {
 export const removeReview = (id, success) => {
   $.ajax({
     method: 'DELETE',
-    url: 'api/reviews',
-    data: `/api/reviews/${review.id}`,
+    url: `/api/reviews/${id}`,
+    id: { id },
     success
   });
 };

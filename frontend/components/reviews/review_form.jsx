@@ -24,7 +24,6 @@ class ReviewForm extends React.Component {
       e.preventDefault();
       let review = {
         album_id: this.state.album_id,
-        image_url: this.state.image_url,
         body: this.state.body,
         rating: this.state.rating
       };
@@ -39,17 +38,17 @@ class ReviewForm extends React.Component {
 
   render() {
 
-
     return (
       <div className="review-form">
         <form onSubmit={this.handleSubmit()}>
-          <input type="text"
-                 className="review-body-input"
-                 placeholder="What did you think of this album?"
-                 value={this.state.body}
-                 onChange={this.update("body")}></input>
-               <br/><br/>
-          <input type="submit" value="Submit"></input>
+          <textarea className="review-body-input"
+                    rows="5"
+                    placeholder="What did you think of this album?"
+                    value={this.state.body}
+                    onChange={this.update("body")}>
+          </textarea>
+          <br/>
+          <input className="review-submit" type="submit" value="Submit Your Review"></input>
         </form>
       </div>
     );

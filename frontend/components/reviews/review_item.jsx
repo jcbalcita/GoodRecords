@@ -1,10 +1,13 @@
 import React from 'react';
 import { Link, Route, Router, withRouter } from 'react-router';
 
-const ReviewItem = ( {review, type} ) => {
+const ReviewItem = ( { review, type, requestRemoveReview } ) => {
+
+  const handleDelete = id => e => requestRemoveReview(id)
+
   const editBar =
     <div className="review-edit-bar">
-      <Link to={`/home/`}>Edit your review</Link>
+      <button onClick={handleDelete(review.id)}>Delete Review</button>
     </div>;
 
   return (
@@ -25,7 +28,7 @@ const ReviewItem = ( {review, type} ) => {
           { type === 'currentUser' ? editBar : ""}
         </div>
       </div>
-  )
+  );
 };
 
 export default ReviewItem;

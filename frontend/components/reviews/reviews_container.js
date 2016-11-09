@@ -1,5 +1,8 @@
 import { connect } from 'react-redux';
-import { requestReviews } from '../../actions/review_actions';
+
+import { requestReviews,
+         requestRemoveReview } from '../../actions/review_actions';
+
 import Reviews from './reviews';
 
 const mapStateToProps = state => ({
@@ -9,8 +12,9 @@ const mapStateToProps = state => ({
   hasCurrentUserReview: Boolean(state.reviews.currentUserReview)
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = dispatch => ({
   requestReviews: albumId => dispatch(requestReviews(albumId)),
+  requestRemoveReview: id => dispatch(requestRemoveReview(id))
 });
 
 export default connect(

@@ -20,7 +20,9 @@ class Reviews extends React.Component {
 
   userReviewOrForm() {
     if (this.props.hasCurrentUserReview) {
-      return <ReviewItem review={this.props.reviews.currentUserReview} type={'currentUser'} />;
+      return <ReviewItem review={this.props.reviews.currentUserReview}
+                         type={'currentUser'}
+                         requestRemoveReview={this.props.requestRemoveReview} />;
     } else {
       return <ReviewFormContainer type={'new'} />;
     }

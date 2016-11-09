@@ -498,7 +498,7 @@ a:link {
   text-align: justify;
   max-width: 700px;
   margin: 0 auto;
-  padding: 8px;
+  padding: 15px;
   border-radius: 8px;
   background-color: #f5f8fa;
 }
@@ -512,14 +512,15 @@ a:link {
 .review-body {
   padding-top: 10px;
   margin-bottom: 0;
+  word-wrap: break-word;
 }
 
 .review-body-input {
   width: 450px;
   min-width 400px;
   border: 1px solid #808080;
-  padding-bottom: 90px;
   text-align: justify;
+  margin-bottom: 0;
 }
 
 .review-edit-bar {
@@ -529,5 +530,21 @@ a:link {
 .review-form {
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+}
+
+.review-submit {
+  border: 1px solid #808080;
+  border-radius: 10px;
+  padding: 3px;
+  margin-bottom: 10px;
+  margin: 0 auto;
+  outline: none;
+}
+
+.review-submit:hover {
+  background-color: red;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
 }

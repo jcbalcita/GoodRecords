@@ -42,8 +42,8 @@ class Api::ReviewsController < ApplicationController
     album = review.album
 
     review.destroy
-    @reviews = album.reviews
-    @current_user_review = {}
+    @reviews = Review.other_users_reviews(current_user.id, album.id)
+    @current_user_review = Review.current_user_review(current_user.id, album.id)[0]
 
     render 'api/reviews/index'
   end
