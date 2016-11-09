@@ -48,7 +48,7 @@ class Reviews extends React.Component {
         <main className="reviews-container">
           { this.userReviewOrForm() }
           <h3 className="reviews-header">Community Reviews</h3>
-          This album has not yet been reviewed.
+          This album has not yet been reviewed by other users.
         </main>
       );
     }

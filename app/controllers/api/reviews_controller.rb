@@ -9,10 +9,7 @@ class Api::ReviewsController < ApplicationController
     @review.user_id = current_user.id
 
     if @review.save
-      @reviews = Review.other_users_reviews(current_user.id, @review.album_id)
-      @current_user_review = @review
-
-      render '/api/reviews/index'
+      render json: @review
     else
       render json: @review.errors.full_messages, status: 422
     end
@@ -28,10 +25,7 @@ class Api::ReviewsController < ApplicationController
     @review = Review.find_by(id: params[:id])
 
     if @review.update_attributes(review_params)
-      @reviews = @review.album.reviews
-      @current_user_review = @review
-
-      render 'api/reviews/index'
+      render json: @review
     else
       render json: @review.errors.full_messages, status: 422
     end
@@ -39,13 +33,9 @@ class Api::ReviewsController < ApplicationController
 
   def destroy
     review = Review.find_by(id: params[:id])
-    album = review.album
-
     review.destroy
-    @reviews = Review.other_users_reviews(current_user.id, album.id)
-    @current_user_review = Review.current_user_review(current_user.id, album.id)[0]
 
-    render 'api/reviews/index'
+    render json: {}
   end
 
   private

@@ -4,6 +4,8 @@ export const REQUEST_UPDATE_REVIEW = "REQUEST_UPDATE_REVIEW";
 export const REQUEST_REMOVE_REVIEW = "REQUEST_REMOVE_REVIEW";
 export const RECEIVE_REVIEWS = "RECEIVE_REVIEWS";
 export const REQUEST_REVIEW = "REQUEST_REVIEW";
+export const RECEIVE_REVIEW = "RECEIVE_REVIEW";
+export const PROCESS_DELETE_REVIEW = "PROCESS_DELETE_REVIEW";
 
 export const requestReviews = albumId => ({
   type: REQUEST_REVIEWS,
@@ -33,4 +35,13 @@ export const requestRemoveReview = id => ({
 export const receiveReviews = reviews => ({
   type: RECEIVE_REVIEWS,
   reviews
+});
+
+export const receiveReview = review => ({
+  type: RECEIVE_REVIEW,
+  review
+});
+
+export const processDeleteReview = () => ({
+  type: PROCESS_DELETE_REVIEW
 });

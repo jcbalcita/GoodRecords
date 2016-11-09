@@ -28,7 +28,7 @@ class Sidebar extends React.Component {
 				<div className="sidebar-box">
 					<button className="sidebar-item"
                   onClick={this.handleBrowseClick}>
-						Browse All Albums
+						Browse Albums
 					</button>
 					<button className={this.props.section === "owned" ? "sidebar-item-highlighted" : "side-bar-item"}
                   onClick={this.handleCollectionClick.bind(this, "owned")}>
