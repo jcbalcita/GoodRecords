@@ -5,7 +5,7 @@ class ReviewForm extends React.Component {
     super(props);
     this.state = this.props.review || { album_id: this.props.albumId,
                    body: '',
-                   rating: 1
+                   rating: 0
                  };
 
     this.update = this.update.bind(this);
@@ -23,6 +23,7 @@ class ReviewForm extends React.Component {
     return (e) => {
       e.preventDefault();
       let review = {
+        id: this.state.id,
         album_id: this.state.album_id,
         body: this.state.body,
         rating: this.state.rating
@@ -37,10 +38,19 @@ class ReviewForm extends React.Component {
 
 
   render() {
+    let ratingInputs = [1, 2, 3, 4, 5].map(rating =>
+      <option key={rating} value={rating} selected={rating === this.state.rating}>
+        {rating}-star Record
+      </option>
+    );
 
     return (
       <div className="review-form">
         <form onSubmit={this.handleSubmit()}>
+          <select onChange={this.update("rating")}>
+            {ratingInputs}
+          </select>
+          <br/>
           <textarea className="review-body-input"
                     rows="5"
                     placeholder="What do you think of this album?"

@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link, Route, Router, withRouter } from 'react-router';
 
-const ReviewItem = ( { review, type, requestRemoveReview } ) => {
+const ReviewItem = ( { review, type, requestRemoveReview, toggleEditToTrue } ) => {
 
   const handleDelete = id => e => requestRemoveReview(id)
 
   const editBar =
     <div className="review-edit-bar">
       <button onClick={handleDelete(review.id)}>Delete Review</button>
+      <button onClick={toggleEditToTrue}>Edit Review</button>
     </div>;
 
   return (
