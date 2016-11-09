@@ -129,7 +129,7 @@ Album.create!(title: "Super Tight",
 
 Album.create!(title: "The Lost Tapes",
              artist: "Nas",
-             year: "1992",
+             year: "2002",
              image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478372680/losttapes_pqkzsq.jpg",
              description:
              "Leading up to the release of God's Son, the second new Nas album in less than a year, Ill Will dropped a collection of \"lost recordings\" -- basically, tracks recorded for I Am and Stillmatic that just didn't make it. No cameos. No hype. No BS.")
@@ -343,6 +343,76 @@ Album.create!(title: "Vignetting the Compost",
              image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478493005/bibio_iqruvl.jpg",
              description:
              "Like Stephen Wilkinson's other Bibio albums, Vignetting the Compost is as literal as it is charming. Blending and transforming parts and pieces so they become a whole is equally vital to making compost and making music, and this is especially true in Bibio's world, where folk meets electronica and recognizable instruments mesh with undefinable but oddly comforting textures and field recordings.")
+
+Album.create!(title: "American Water",
+             artist: "Silver Jews",
+             year: "1998",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478672412/silverjews_pvn4vx.png",
+             description:
+             "As with all of the Jews' best work, American Water sounds like it was made for the band's own enjoyment, and the listener is just eavesdropping on their fun.")
+
+Album.create!(title: "Black on Both Sides",
+             artist: "Mos Def",
+             year: "1999",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478672192/bobs_btfb3u.jpg",
+             description:
+             "Black on Both Sides is a tour de force by an artist out to prove he can do it all. Its ambition and execution rank it as one of the best albums of 1999, and it consolidates Mos Def's position as one of hip-hop's brightest hopes entering the 21st century.")
+
+Album.create!(title: "7 Days of Funk",
+             artist: "Dâm-Funk / Snoop Dogg",
+             year: "2013",
+             image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478672192/sevendaysfunk_kodpel.jpg",
+             description:
+             "Even after a trip to Jamaica changed his life forever and gave him the permanent name change to Snoop Lion, veteran rapper Snoop Dogg leaves the rasta lifestyle behind and becomes Snoopzilla for 7 Days of Funk, a nostalgic project with modern funkateer Dâm-Funk.")
+
+Album.create!(title: "Dissolver",
+             artist: "Iran",
+             year: "2009",
+             image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478672191/iran_lmxwia.jpg",
+             description:
+             "Nearly six years passed between Aaron Aites' second noise pop opus as Iran, The Moon Boys, and Dissolver, during which time guitarist Kyp Malone became a member of one of the most acclaimed bands of the 2000s, TV on the Radio. Maybe that's why Dissolver strips away most of the confrontational side of Iran's music in favor of the pop that was underneath the noise all along.")
+
+Album.create!(title: "Distortion",
+             artist: "Magnetic Fields",
+             year: "2008",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478672191/disortion_mjftei.jpg",
+             description:
+             "Stephin Merritt celebrates all that is fuzzy, sexy, and drenched in reverb on Distortion, a 13-track rendering of the Jesus and Mary Chain's Psychocandy through the barbed sieve of the Magnetic Fields mastermind's seemingly endless notebook of relationship dos and don'ts and self-effacing cognitive therapy sessions.")
+
+Album.create!(title: "Fantastic Vol. 2",
+             artist: "Slum Village",
+             year: "2000",
+             image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478672193/slumvill_ayz3ur.jpg",
+             description:
+             "After being talked about and awaited for months, Slum Village's Fantastic, Vol. 2 finally reached the public's ears, reinforcing the fact that the group -- and particularly producer Jay Dee -- planned to continue where A Tribe Called Quest left off.")
+
+Album.create!(title: "Things Fall Apart",
+             artist: "The Roots",
+             year: "1999",
+             image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478672191/thingsfallapart_wxil6i.jpg",
+             description:
+             "One of the cornerstone albums of alternative rap's second wave, Things Fall Apart was the point where the Roots' tremendous potential finally coalesced into a structured album that maintained its focus from top to bottom.")
+
+Album.create!(title: "Me Against the World",
+             artist: "2Pac",
+             year: "1995",
+             image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478672192/meagainsttheworld_pvgrp3.jpg",
+             description:
+             "Recorded following his near-fatal shooting in New York, and released while he was in prison, Me Against the World is the point where 2Pac really became a legendary figure. Having stared death in the face and survived, he was a changed man on record, displaying a new confessional bent and a consistent emotional depth.")
+
+Album.create!(title: "Lesser Matters",
+             artist: "The Radio Dept.",
+             year: "2003",
+             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478672191/lessermatters_zxuw3y.jpg",
+             description:
+             "The Radio Dept. are an indie rock band who play fuzzed-out, ramshackle pop songs, and Lesser Matters, their debut full-length, was self-recorded in homes and small studios with unabashedly lo-fi production values, but it somehow manages to project a timeless elegance and aplomb that belie this unassuming provenance.")
+
+Album.create!(title: "Siamese Dream",
+             artist: "Smashing Pumpkins",
+             year: "1993",
+             image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478672193/siamesedream_q6ewvz.png",
+             description:
+             "The sessions for the Pumpkins' sophomore effort, Siamese Dream, were wrought with friction -- Corgan eventually played almost all the instruments himself (except for percussion). Some say strife and tension produces the best music, and it certainly helped make Siamese Dream one of the finest alt-rock albums of all time.")
 
 
 AlbumStatus.create!(user_id: 1, album_id: 1, status: "owned")
