@@ -310,7 +310,7 @@ a:link {
 
 .sidebar-message-text {
   text-shadow: 1px;
-  text-align: left;
+  text-align: justify;
   padding-left: 20px;
 }
 

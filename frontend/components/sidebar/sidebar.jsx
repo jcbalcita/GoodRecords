@@ -51,9 +51,9 @@ class Sidebar extends React.Component {
           <p className="sidebar-message-text">
             <p className="sidebar-title">Welcome to Goodrecords!</p>
             <br/>
-            Having trouble remembering all the records you own? <br/><br/>Keep track of them here by adding them to your <b>My Collection</b> list.
+            Having trouble remembering all the records you own? Keep track of them here by adding them to your <b>My Collection</b> list.
             <br/><br/><br/>
-            Always draw a blank when shopping at the record store, putting together a playlist, or giving music recommendations to friends?
+            Always draw a blank when shopping at the record store, putting together a playlist, or giving new music recommendations to friends?
             <br/><br/>Never again! Keep track of your <b>wish list</b> and albums you <b>want to listen</b> to with the simple click of a button.
           </p>
         </div>
