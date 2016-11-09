@@ -7,7 +7,7 @@ class Api::AlbumsController < ApplicationController
 
       render json: Album.no_results if @albums.empty?
     else
-      @albums = Album.all.shuffle[0..26]
+      @albums = Album.all
       @render = false
     end
   end
