@@ -46,6 +46,13 @@ class ReviewForm extends React.Component {
     return (
       <div className="review-form">
         <form onSubmit={this.handleSubmit()}>
+          <h2>Rate this album</h2>
+          <StarRatingComponent
+            name="rating"
+            starCount={5}
+            value={this.state.rating}
+            onStarClick={this.onStarClick.bind(this)}
+            />
           <br/>
           <textarea className="review-body-input"
                     rows="5"
@@ -54,13 +61,6 @@ class ReviewForm extends React.Component {
                     onChange={this.update("body")}>
           </textarea>
           <div>
-            <h2>Rate this album</h2>
-            <StarRatingComponent
-              name="rating"
-              starCount={5}
-              value={this.state.rating}
-              onStarClick={this.onStarClick.bind(this)}
-              />
           </div>
           <input className="review-submit" type="submit" value="Submit Your Review"></input>
         </form>
