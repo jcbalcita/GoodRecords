@@ -3,6 +3,7 @@ class Crate < ActiveRecord::Base
 
   belongs_to :user
   has_many :cratings, dependent: :destroy
+  
   has_many :albums,
     through: :cratings,
     source: :album

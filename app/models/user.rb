@@ -13,6 +13,10 @@ class User < ActiveRecord::Base
     through: :album_statuses,
     source: :albums
 
+  has_many :crated_albums,
+    through: :crates,
+    source: :albums
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     return nil unless user && user.is_password?(password)
