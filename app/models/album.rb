@@ -3,6 +3,12 @@ class Album < ActiveRecord::Base
 
   has_many :album_statuses
   has_many :reviews
+  has_many :cratings, dependent: :destroy
+
+  has_many :crates,
+    through: :cratings,
+    source: :crate
+
   has_many :users,
     through: :album_statuses,
     source: :user

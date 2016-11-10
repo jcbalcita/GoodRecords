@@ -16,7 +16,7 @@ const ReviewItem = ( { review, type, requestRemoveReview, toggleEditToTrue } ) =
     <div className="review-item-box">
       <div className="review-index-item">
 
-        <p className="review-item-header">
+        <div className="review-item-header">
           <span>
             <b>{ type === 'currentUser' ? 'You' : review.author }</b> rated this album&nbsp;&nbsp;
               <StarRatingComponent
@@ -29,7 +29,7 @@ const ReviewItem = ( { review, type, requestRemoveReview, toggleEditToTrue } ) =
           <span>
             {type === 'currentUser' ? '' : `${review.createDate} ago`}
           </span>
-        </p>
+        </div>
 
           <p className="review-body">{review.body}</p>
 

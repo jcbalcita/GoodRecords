@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161107165442) do
+ActiveRecord::Schema.define(version: 20161109222813) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,9 +19,9 @@ ActiveRecord::Schema.define(version: 20161107165442) do
   create_table "album_statuses", force: :cascade do |t|
     t.integer  "user_id",    null: false
     t.integer  "album_id",   null: false
-    t.string   "status",     null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "status"
   end
 
   add_index "album_statuses", ["album_id"], name: "index_album_statuses_on_album_id", using: :btree
@@ -39,6 +39,25 @@ ActiveRecord::Schema.define(version: 20161107165442) do
 
   add_index "albums", ["artist"], name: "index_albums_on_artist", using: :btree
   add_index "albums", ["title"], name: "index_albums_on_title", using: :btree
+
+  create_table "crates", force: :cascade do |t|
+    t.integer  "user_id",    null: false
+    t.string   "name",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "crates", ["user_id", "name"], name: "index_crates_on_user_id_and_name", unique: true, using: :btree
+
+  create_table "cratings", force: :cascade do |t|
+    t.integer  "album_id",   null: false
+    t.integer  "crate_id",   null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "cratings", ["album_id", "crate_id"], name: "index_cratings_on_album_id_and_crate_id", unique: true, using: :btree
+  add_index "cratings", ["crate_id"], name: "index_cratings_on_crate_id", using: :btree
 
   create_table "reviews", force: :cascade do |t|
     t.integer  "user_id",    null: false

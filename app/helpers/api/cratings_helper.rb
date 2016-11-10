@@ -1,0 +1,2 @@
+module Api::CratingsHelper
+end

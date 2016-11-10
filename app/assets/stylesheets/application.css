@@ -31,6 +31,7 @@
  background-color: transparent;
  font-family: Roboto, sans-serif;
  list-style: none;
+ outline: none;
  }
 
  @-webkit-keyframes load7 {
@@ -68,7 +69,6 @@ a:link {
    color: black;
    padding: 5px;
    border-radius: 10px;
-   outline: none;
  }
 
  button:hover {
@@ -282,6 +282,10 @@ a:link {
   width: 190px;
   height: 25px;
   border-radius: 2px;
+}
+
+.sidebar button {
+  width: 190px;
 }
 
 .sidebar-item-highlighted {
@@ -565,7 +569,6 @@ a:link {
   padding: 3px;
   margin-bottom: 10px;
   margin: 0 auto;
-  outline: none;
 }
 
 .review-submit:hover {

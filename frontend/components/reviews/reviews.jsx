@@ -50,6 +50,8 @@ class Reviews extends React.Component {
       );
 
     } else {
+      const editForm = <ReviewFormContainer type={'edit'} review={this.props.reviews.currentUserReview} />
+      
       return (
         <main className="reviews-container">
           { this.state.edit ? editForm : this.userReviewOrForm() }

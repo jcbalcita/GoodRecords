@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
 
   has_many :album_statuses
   has_many :reviews
+  has_many :crates, dependent: :destroy
+
   has_many :albums,
     through: :album_statuses,
     source: :albums
