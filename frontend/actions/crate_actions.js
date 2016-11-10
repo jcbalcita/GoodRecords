@@ -3,7 +3,8 @@ export const RECEIVE_CRATES = "RECEIVE_CRATES";
 export const REQUEST_DELETE_CRATE = "REQUEST_DELETE_CRATE";
 export const REQUEST_ADD_CRATE = "REQUEST_ADD_CRATE";
 export const PROCESS_DELETE_CRATE = "PROCESS_DELETE_CRATE";
-export const RECEIVE_CRATE = "RECEIVE_CRATE"
+export const RECEIVE_CRATE = "RECEIVE_CRATE";
+export const REQUEST_CRATE_ALBUMS = "REQUEST_CRATE_ALBUMS";
 
 export const REQUEST_ADD_CRATING = "REQUEST_ADD_CRATING";
 export const REQUEST_DELETE_CRATING = "REQUEST_DELETE_CRATING";
@@ -14,7 +15,12 @@ export const PROCESS_DELETE_CRATING = "PROCESS_DELETE_CRATING";
 
 // CRATE ACTIONS
 export const requestCrates = () => ({
-  type: REQUEST_ALL_ALBUMS
+  type: REQUEST_CRATES
+});
+
+export const requestCrateAlbums = id => ({
+  type: REQUEST_CRATE_ALBUMS,
+  id
 });
 
 export const requestAddCrate = crate => ({

@@ -252,7 +252,6 @@ a:link {
   min-width: 600px;
   max-width: 1800px;
   padding-bottom: 50px;
-  height: 100vh;
 }
 
 .input-search {
@@ -276,17 +275,20 @@ a:link {
   border: 3px solid black;
   width: 200px;
   margin: 0 auto;
-  border-radius: 10px;
 }
 
-.sidebar-item {
+.side-bar-item {
   width: 190px;
   height: 25px;
   border-radius: 2px;
 }
 
-.sidebar button {
-  width: 190px;
+.sidebar-crate-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #808080;
 }
 
 .sidebar-item-highlighted {
@@ -324,6 +326,49 @@ a:link {
   font-weight: 700;
   font-size: 18px;
   margin-top: 10px;
+}
+
+.sidebar-crate-container {
+  border: 3px solid black;
+  width: 200px;
+  margin: 0 auto;
+  border-radius: 5px;
+  margin-top: 40px;
+  background: white;
+  padding: 10px;
+}
+
+.crate-button {
+  width: 10px;
+  color: red;
+}
+
+.crate-button:hover {
+  font-weight: 700;
+}
+
+.crate-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.submit-crate:hover {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.new-crate {
+  border-bottom: 1px solid #808080;
+}
+
+.crate-text {
+  max-width: 150px;
+  word-wrap: break-word;
+}
+
+.sidebar-crate-container a:hover {
+  font-weight: 700;
 }
 
 .album-index-container img {
@@ -373,7 +418,6 @@ a:link {
   background-color: #f5f8fa;
   margin-top: 40px;
   margin-right: 40px;
-  overflow-y: scroll;
   justify-content: flex-start;
   width: 65%;
   min-width: 500px;

@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { requestAllAlbums,
          requestUserAlbums } from '../../actions/album_actions';
+import { requestCrates } from '../../actions/crate_actions';
 import Sidebar from './sidebar';
 
 const mapStateToProps = state => ({
@@ -10,7 +11,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
    requestAllAlbums: () => dispatch(requestAllAlbums()),
-   requestUserAlbums: status => dispatch(requestUserAlbums(status))
+   requestUserAlbums: status => dispatch(requestUserAlbums(status)),
+   requestCrates: () => dispatch(requestCrates())
 });
 
 export default connect(

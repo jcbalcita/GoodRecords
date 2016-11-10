@@ -7,7 +7,7 @@ import { PROCESS_DELETE_CRATE,
 
 import merge from 'lodash/merge';
 
-const defaultState = { crates: { userCrates: {}, albumCratings: {} }}
+const defaultState = { userCrates: {}, albumCratings: {} }
 
 const CratesReducer = (state = defaultState, action) => {
   Object.freeze(state);
@@ -17,8 +17,8 @@ const CratesReducer = (state = defaultState, action) => {
     case RECEIVE_CRATES:
       return merge({}, state, { userCrates: action.crates });
     case RECEIVE_CRATE:
-      newState.userCrates[action.crate.id] = action.crate;
-      return newState
+      newState.userCrates = merge(newState.userCrates, action.crate);
+      return newState;
     case PROCESS_DELETE_CRATE:
       delete newState.userCrates[action.id];
       return newState;
@@ -29,6 +29,7 @@ const CratesReducer = (state = defaultState, action) => {
       return newState;
     case PROCESS_DELETE_CRATING:
       delete newState.albumCratings[action.id]
+      return newState;
     default:
       return state;
   }

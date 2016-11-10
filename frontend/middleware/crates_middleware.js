@@ -12,31 +12,42 @@ import { REQUEST_CRATES,
          RECEIVE_CRATING,
          receiveCrating,
          PROCESS_DELETE_CRATING,
-         processDeleteCrating }
+         processDeleteCrating,
+         REQUEST_CRATINGS,
+         REQUEST_ADD_CRATING,
+         REQUEST_DELETE_CRATING,
+         receiveCratings,
+         REQUEST_CRATE_ALBUMS } from '../actions/crate_actions';
+
+import { receiveAllAlbums } from '../actions/album_actions';
 
 import { fetchCrates,
          createCrate,
          deleteCrate,
          fetchCratings,
          createCrating,
-         deleteCrating } from '../util/crate_api_util.js';
+         deleteCrating,
+         fetchCrateAlbums } from '../util/crate_api_util';
 
 export default ({ getState, dispatch }) => next => action => {
   const cratesSuccess = crates => dispatch(receiveCrates(crates));
-  const crateSuccess = crate => dispatch(receiveCrates(crate));
+  const crateSuccess = crate => dispatch(receiveCrate(crate));
   const deleteCrateSuccess = id => dispatch(processDeleteCrate(id));
+  const albumCratesSuccess = albums => dispatch(receiveAllAlbums(albums));
 
-  const cratingsSuccess = cratings => dispatch(receiveCratings(crating));
+  const cratingsSuccess = cratings => dispatch(receiveCratings(cratings));
   const cratingSuccess = crating => dispatch(receiveCrating(crating));
   const deleteCratingSuccess = id => dispatch(processDeleteCrating(id));
 
   switch (action.type) {
     case REQUEST_CRATES:
       return fetchCrates(cratesSuccess);
+    case REQUEST_CRATE_ALBUMS:
+      return fetchCrateAlbums(action.id, albumCratesSuccess)
     case REQUEST_ADD_CRATE:
       return createCrate(action.crate, crateSuccess);
     case REQUEST_DELETE_CRATE:
-      return delteCrate(action.id, deleteCrateSuccess);
+      return deleteCrate(action.id, deleteCrateSuccess);
     case REQUEST_CRATINGS:
       return fetchCratings(action.albumId, cratingsSuccess);
     case REQUEST_ADD_CRATING:

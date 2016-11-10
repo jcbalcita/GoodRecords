@@ -19,7 +19,7 @@ class Album < ActiveRecord::Base
   end
 
   def self.no_results
-    { albums: {}, specificRender: true }
+    { albums: {}, specificRender: false }
   end
 
   def self.filter_out_listed_albums(id)

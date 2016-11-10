@@ -1,1 +1,1 @@
-json.set! @crate.id, crate
+json.set! @crate.id, @crate

@@ -4,3 +4,4 @@ json.albums do
   end
 end
 json.set! :specificRender, @render
+json.set! :crateRender, @crate_name

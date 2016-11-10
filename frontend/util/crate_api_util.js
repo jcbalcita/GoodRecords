@@ -1,5 +1,5 @@
 // CRATE AJAX REQUESTS
-export const fetchCrates = () => {
+export const fetchCrates = success => {
   $.ajax({
     method: 'GET',
     url: '/api/crates',
@@ -7,16 +7,24 @@ export const fetchCrates = () => {
   });
 };
 
-export const createCrate = crate => {
+export const fetchCrateAlbums = (id, success) => {
   $.ajax({
-    method: 'POST',
-    url: '/api/crates',
-    crate,
+    method: 'GET',
+    url: `api/crates/${id}`,
     success
   });
 };
 
-export const deleteCrate = id => {
+export const createCrate = (crate, success) => {
+  $.ajax({
+    method: 'POST',
+    url: '/api/crates',
+    data: { crate },
+    success
+  });
+};
+
+export const deleteCrate = (id, success) => {
   $.ajax({
     method: 'DELETE',
     url: `/api/crates/${id}`,
@@ -25,16 +33,16 @@ export const deleteCrate = id => {
 };
 
 // CRATINGS AJAX REQUESTS
-export const fetchCratings = albumId => {
+export const fetchCratings = (albumId, success) => {
   $.ajax({
     method: 'GET',
     url: `/api/cratings`,
-    data: { album_id: albumId }
+    data: { album_id: albumId },
     success
   });
 };
 
-export const createCrating = crating => {
+export const createCrating = (crating, success) => {
   $.ajax({
     method: 'POST',
     url: `/api/cratings/`,
@@ -43,8 +51,7 @@ export const createCrating = crating => {
   });
 };
 
-
-export const deleteCrating = id => {
+export const deleteCrating = (id, success) => {
   $.ajax({
     method: 'DELETE',
     url: `/api/cratings/${id}`,
