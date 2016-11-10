@@ -244,7 +244,7 @@ a:link {
 }
 
 .home {
-  background-color: white;
+  background-color: #f5f8fa;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -252,6 +252,7 @@ a:link {
   min-width: 600px;
   max-width: 1800px;
   padding-bottom: 50px;
+  height: 100vh;
 }
 
 .input-search {
@@ -332,15 +333,13 @@ a:link {
 }
 
 .album-index-container {
-  background-color: white;
+  background-color: #f5f8fa;
   margin-top: 20px;
   margin-bottom: 30px;
   overflow-y: scroll;
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 65%;
-  min-width: 400px;
-  min-height: 500px;
 }
 
 .album-index-item {
@@ -371,7 +370,7 @@ a:link {
 }
 
 .album-detail-container {
-  background-color: white;
+  background-color: #f5f8fa;
   margin-top: 40px;
   margin-right: 40px;
   overflow-y: scroll;
@@ -401,6 +400,7 @@ a:link {
   font-size: 28px;
   margin-bottom: 20px;
   font-weight: 400;
+  text-shadow: 2px red;
 }
 
 .album-artist {
@@ -526,7 +526,7 @@ a:link {
   margin: 0 auto;
   padding: 15px;
   border-radius: 8px;
-  background-color: #f5f8fa;
+  background-color: #eff1f2;
 }
 
 .review-item-header {
@@ -578,7 +578,7 @@ a:link {
 }
 
 .review-edit-bar button {
-  background-color: #f5f8fa;
+  background-color: #eff1f2;
   color: #808080;
   margin-right: 20px;
   font-size: 14px;

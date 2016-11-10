@@ -471,7 +471,7 @@ Review.create!(user_id: 2, album_id: 17, body: "17 Lorem ipsum dolor sit amet, c
 Review.create!(user_id: 2, album_id: 18, body: "18 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", rating: 1)
 
 Crate.create!(user_id: 1, name: "Test Crate")
-Crate.create!(user_id: 1, name: "Test Crate 2")
+Crate.create!(user_id: 2, name: "Test Crate 2")
 
 Crating.create(album_id: 1, crate_id: 1)
 Crating.create(album_id: 2, crate_id: 1)
@@ -483,7 +483,7 @@ Crating.create(album_id: 7, crate_id: 1)
 Crating.create(album_id: 8, crate_id: 1)
 Crating.create(album_id: 9, crate_id: 1)
 
-Crating.create(album_id: 10, crate_id: 2)
+Crating.create(album_id: 1, crate_id: 2)
 Crating.create(album_id: 11, crate_id: 2)
 Crating.create(album_id: 12, crate_id: 2)
 Crating.create(album_id: 13, crate_id: 2)

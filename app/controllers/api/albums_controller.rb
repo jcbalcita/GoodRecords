@@ -8,7 +8,7 @@ class Api::AlbumsController < ApplicationController
       render json: Album.no_results if @albums.empty?
     else
       @albums = Album.all
-      @render = false
+      @render = 'all'
     end
   end
 

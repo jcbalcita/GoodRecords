@@ -2,7 +2,8 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import { requestAllAlbums, requestAlbum } from '../actions/album_actions';
-import { requestReviews } from '../actions/review_actions'
+import { requestReviews } from '../actions/review_actions';
+import { requestCratings } from '../actions/crate_actions';
 //components
 import App from './app';
 import AuthFormContainer from './auth_form/auth_form_container';
@@ -36,7 +37,8 @@ const Root = ({store}) => {
 
   const _requestAlbumAndReviews = ({params}) => {
     store.dispatch(requestReviews(params.albumId));
-    store.dispatch(requestAlbum(params.albumId))
+    store.dispatch(requestAlbum(params.albumId));
+    store.dispatch(requestCratings(params.albumId));
   };
 
   return (

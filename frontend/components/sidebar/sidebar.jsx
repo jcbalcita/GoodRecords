@@ -26,7 +26,7 @@ class Sidebar extends React.Component {
     return (
       <div className="sidebar col-1-3">
 				<div className="sidebar-box">
-					<button className={!this.props.section ? "sidebar-item-highlighted" : "side-bar-item"}
+					<button className={this.props.section === 'all' ? "sidebar-item-highlighted" : "side-bar-item"}
                   onClick={this.handleBrowseClick}>
 						Browse Albums
 					</button>

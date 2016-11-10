@@ -3,11 +3,13 @@ export const RECEIVE_CRATES = "RECEIVE_CRATES";
 export const REQUEST_DELETE_CRATE = "REQUEST_DELETE_CRATE";
 export const REQUEST_ADD_CRATE = "REQUEST_ADD_CRATE";
 export const PROCESS_DELETE_CRATE = "PROCESS_DELETE_CRATE";
+export const RECEIVE_CRATE = "RECEIVE_CRATE"
 
 export const REQUEST_ADD_CRATING = "REQUEST_ADD_CRATING";
 export const REQUEST_DELETE_CRATING = "REQUEST_DELETE_CRATING";
 export const REQUEST_CRATINGS = "REQUEST_CRATINGS";
 export const RECEIVE_CRATINGS = "RECEIVE_CRATINGS";
+export const RECEIVE_CRATING = "RECEIVE_CRATING";
 export const PROCESS_DELETE_CRATING = "PROCESS_DELETE_CRATING";
 
 // CRATE ACTIONS
@@ -28,6 +30,11 @@ export const requestDeleteCrate = id => ({
 export const receiveCrates = crates => ({
   type: RECEIVE_CRATES,
   crates
+});
+
+export const receiveCrate = crate => ({
+  type: RECEIVE_CRATE,
+  crate
 });
 
 export const processDeleteCrate = id => ({
@@ -54,4 +61,14 @@ export const requestDeleteCrating = id => ({
 export const processDeleteCrating = id => ({
   type: PROCESS_DELETE_CRATING,
   id
+});
+
+export const receiveCratings = cratings => ({
+  type: RECEIVE_CRATINGS,
+  cratings
+});
+
+export const receiveCrating = crating => ({
+  type: RECEIVE_CRATING,
+  crating
 });
