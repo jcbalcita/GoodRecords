@@ -5,14 +5,15 @@ import CratingButtonItem from './crating_button_item';
 class Cratings extends React.Component {
   constructor(props) {
     super(props);
-
   }
 
   render() {
 
     if (!this.props.crates && !this.props.albumCrates) {
       return (
-        <div></div>
+        <div className="cratings-container">
+          Hello.
+        </div>
       );
     } else if (this.props.crates && !this.props.albumCrates) {
       const dropDownItems = this.props.crates.map((crate, idx) =>
@@ -65,7 +66,7 @@ class Cratings extends React.Component {
           </ul>
           <br/>
           <div className="button-item-container">
-          { buttonItems }
+          <br/>{ buttonItems }
           </div>
         </div>
       )

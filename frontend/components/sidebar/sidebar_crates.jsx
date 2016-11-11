@@ -24,6 +24,7 @@ class SidebarCrates extends React.Component {
   }
 
   updateName(e) {
+    console.log(this.state);
     this.setState({name: e.target.value});
   }
 

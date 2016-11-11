@@ -1,3 +1,3 @@
 @crates.each do |crate|
-    json.partial! 'api/cratings/crating', crating: crating
+    json.partial! 'api/cratings/crating', crate: crate
 end

@@ -35,7 +35,7 @@ class Api::CratesController < ApplicationController
     if crate
       crate.destroy
     end
-    
+
     render json: params[:id]
   end
 

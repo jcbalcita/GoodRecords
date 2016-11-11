@@ -652,7 +652,7 @@ a:link {
   display: inline-block;;
   position: relative;
   border: 1px solid #808080;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-weight: 700;
   border-radius: 5px;
   padding: 5px;
@@ -728,6 +728,7 @@ a:link {
 #cratingfetch {
   background-color: transparent;
   color: black;
+  font-weight: 400;
 }
 
 #cratingfetch:hover {

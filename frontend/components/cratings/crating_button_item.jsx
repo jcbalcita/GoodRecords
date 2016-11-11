@@ -6,12 +6,6 @@ class CratingButtonItem extends React.Component {
 
     this.handleDeleteClick = this.handleDeleteClick.bind(this);
     this.handleFetch = this.handleFetch.bind(this);
-
-    this.state = this.props.crate || {}
-  }
-
-  componentWillReceiveProps(nextProps) {
-    this.setState(nextProps.crate);
   }
 
   handleDeleteClick(e) {
@@ -28,6 +22,7 @@ class CratingButtonItem extends React.Component {
     return (
       <li className="crating-buttons">
         <button id="cratingfetch" onClick={this.handleFetch}>{this.props.crate.name}</button>
+        <button id="cratingdelete" onClick={this.handleDeleteClick}>x</button>
       </li>
     );
   }

@@ -5,7 +5,7 @@ import AlbumsMiddleware from './albums_middleware';
 import ReviewsMiddleware from './reviews_middleware';
 import CratesMiddleware from './crates_middleware';
 
-import createLogger from 'redux-logger';
+// import createLogger from 'redux-logger';
 
 
 const logger = createLogger();
@@ -14,8 +14,7 @@ const RootMiddleware = applyMiddleware(
   SessionMiddleware,
   AlbumsMiddleware,
   ReviewsMiddleware,
-  CratesMiddleware,
-  logger
+  CratesMiddleware
 );
 
 export default RootMiddleware;
