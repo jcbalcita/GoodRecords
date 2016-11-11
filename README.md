@@ -18,6 +18,7 @@ It was built using:
 Albums are stored in the database, with columns for id, artist, title, image_url, description, and year.  Albums are rendered in two different components: an index page showing multiple albums, and a show page showing the details of the album.
 
 ![image of album index](docs/wireframes/album_index.png)
+
 When a user logs in, she is automatically directed to the album index page, which shows a set amount of albums in the database by default.  When a user clicks on the sidebar buttons, the album index page is re-rendered to show only those albums contained in that specific shelf.
 
 When a user clicks on a shelf, the appropriate sidebar item is highlighted, so the user knows which shelf she is currently browsing.  When the user clicks on a specific album and leaves the index page, the sidebar highlighting is removed.
@@ -36,9 +37,13 @@ The relationships between users, albums, and custom lists are stored in the data
 
 At the album detail page, the user can hover over the album art to add or remove the album from their shelves.  When an album's shelf status is changed, the buttons are re-rendered, enabled/disabled, and colored/highlighted appropriately.  The text stating the shelf status is also immediately updated.
 
+#### Reviews
+
 ![image of album index](docs/wireframes/reviews.png)
 
 Users can create reviews and view other people's reviews of the album.  Users can click on the stars to rate the album, and input their review into a text field.  Upon submit, the review is automatically rendered on the page.  A user can edit and delete the review without leaving the album detail page -- only that portion of the page changes.
+
+#### Add to list
 
 ![image of album index](docs/wireframes/addtolist.png)
 
