@@ -3,7 +3,7 @@ import React from 'react';
 const SidebarMessage = () => (
   <div className="sidebar-message">
     <img className="sidebar-logo"
-         src="http://res.cloudinary.com/jcbalcita/image/upload/c_scale,w_234/v1478708380/logos/good_records2.png">
+         src="https://res.cloudinary.com/jcbalcita/image/upload/c_scale,w_234/v1478708380/logos/good_records2.png">
     </img>
     <span className="sidebar-message-text">
       <p className="sidebar-title">Welcome to Goodrecords!</p>

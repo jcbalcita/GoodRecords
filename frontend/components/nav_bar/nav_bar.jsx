@@ -37,7 +37,7 @@ handleLogoutClick() {
     return (
       <nav className="navbar">
         <Link to='/'>
-          <img src="http://res.cloudinary.com/jcbalcita/image/upload/c_scale,w_143/v1478708380/logos/good_records3.png">
+          <img src="https://res.cloudinary.com/jcbalcita/image/upload/c_scale,w_143/v1478708380/logos/good_records3.png">
           </img>
         </Link>
 
