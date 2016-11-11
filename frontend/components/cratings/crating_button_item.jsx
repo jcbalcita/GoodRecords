@@ -22,7 +22,6 @@ class CratingButtonItem extends React.Component {
     return (
       <li className="crating-buttons">
         <button id="cratingfetch" onClick={this.handleFetch}>{this.props.crate.name}</button>
-        <button id="cratingdelete" onClick={this.handleDeleteClick}>x</button>
       </li>
     );
   }

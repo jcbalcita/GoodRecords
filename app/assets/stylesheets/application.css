@@ -706,9 +706,9 @@ a:link {
   display: block;
 }
 
-.button-item-container {
+/*.button-item-container {
   display: flex;
-}
+}*/
 
 .crating-buttons {
   display: inline-block;
@@ -727,6 +727,7 @@ a:link {
 
 #cratingfetch {
   background-color: transparent;
+  color: red;
 }
 
 #cratingfetch:hover {

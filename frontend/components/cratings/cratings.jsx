@@ -65,8 +65,8 @@ class Cratings extends React.Component {
             </div>
           </ul>
           <br/>
-          <div className="button-item-container"> 
-          { buttonItems }
+          <div className="button-item-container">
+          <b>You've listed this album under:</b> <br/>{ buttonItems }
           </div>
         </div>
       )
