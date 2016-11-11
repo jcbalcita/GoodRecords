@@ -4,8 +4,6 @@ import SidebarMessage from './sidebar_message';
 import SidebarBox from './sidebar_box';
 import SidebarCratesContainer from './sidebar_crates_container';
 
-
-
 class Sidebar extends React.Component {
   constructor(props) {
     super(props);

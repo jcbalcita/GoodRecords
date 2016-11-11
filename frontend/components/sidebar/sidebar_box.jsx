@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, withRouter, Route, Router } from 'react-router';
 
 const SidebarBox = ({ section, handleBrowseClick, handleCollectionClick }) => (
   <div className="sidebar-box">

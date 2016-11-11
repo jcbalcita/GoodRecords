@@ -10,11 +10,11 @@ class SidebarCrateItem extends React.Component {
   render() {
     let name = this.props.crate.name;
     let truncatedName = name.length > 25 ? `${name.substring(0,25)} ...` : name;
-    let cssClass = this.props.crateRender === name ? "sidebar-crate-selected" : "sidebar-crate-item"
+    let cssClass = this.props.crateRender === name ?  "crate-text-selected" : "crate-text"
 
     return (
-      <li className={cssClass}>
-        <Link className="crate-text" onClick={this.props.requestCrateAlbums.bind(this, this.props.crate.id)}>
+      <li className="sidebar-crate-item">
+        <Link className={cssClass} onClick={this.props.requestCrateAlbums.bind(this, this.props.crate.id)}>
           { truncatedName }
         </Link>
         <button className="crate-button"

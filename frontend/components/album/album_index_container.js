@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { requestAllAlbums } from '../../actions/album_actions';
+import { requestAllAlbums, requestUserAlbums } from '../../actions/album_actions';
 import AlbumIndex from './album_index';
 
 const mapStateToProps = (state, { reviews }) => {
@@ -12,7 +12,8 @@ const mapStateToProps = (state, { reviews }) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-   requestAllAlbums: () => dispatch(requestAllAlbums())
+   requestAllAlbums: () => dispatch(requestAllAlbums()),
+   requestUserAlbums: status => dispatch(requestUserAlbums(status))
 });
 
 export default connect(

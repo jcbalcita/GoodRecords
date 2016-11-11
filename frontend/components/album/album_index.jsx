@@ -5,7 +5,7 @@ import AlbumIndexItem from './album_index_item';
 class AlbumIndex extends React.Component {
 
   componentDidMount() {
-    if (!this.props.specificRender) {
+    if (this.props.specificRender === 'all' && !this.props.crateRender) {
       this.props.requestAllAlbums();
     }
   }

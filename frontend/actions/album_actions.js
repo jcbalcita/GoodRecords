@@ -6,6 +6,7 @@ export const RECEIVE_ALBUM = "RECEIVE_ALBUM";
 export const REQUEST_NEW_STATUS = "REQUEST_NEW_STATUS";
 export const REQUEST_UPDATE_STATUS = "REQUEST_UPDATE_STATUS";
 export const REQUEST_REMOVE_STATUS = "REQUEST_REMOVE_STATUS";
+export const CLEAR_ALBUMS = "CLEAR_ALBUMS"
 
 export const requestAllAlbums = () => ({
   type: REQUEST_ALL_ALBUMS
@@ -14,6 +15,11 @@ export const requestAllAlbums = () => ({
 
 export const requestUserAlbums = status => ({
   type: REQUEST_USER_ALBUMS,
+  status
+});
+
+export const clearAlbums = status => ({
+  type: CLEAR_ALBUMS,
   status
 });
 

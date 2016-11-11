@@ -29,11 +29,17 @@ import { fetchCrates,
          deleteCrating,
          fetchCrateAlbums } from '../util/crate_api_util';
 
+import { hashHistory } from 'react-router';
+
 export default ({ getState, dispatch }) => next => action => {
   const cratesSuccess = crates => dispatch(receiveCrates(crates));
   const crateSuccess = crate => dispatch(receiveCrate(crate));
   const deleteCrateSuccess = id => dispatch(processDeleteCrate(id));
-  const albumCratesSuccess = albums => dispatch(receiveAllAlbums(albums));
+
+  const albumCratesSuccess = albums => {
+    dispatch(receiveAllAlbums(albums));
+    hashHistory.push('/home');
+  };
 
   const cratingsSuccess = cratings => dispatch(receiveCratings(cratings));
   const cratingSuccess = crating => dispatch(receiveCrating(crating));

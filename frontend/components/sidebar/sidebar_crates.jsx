@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, withRouter, Route, Router } from 'react-router';
 import SidebarCrateItemContainer from './sidebar_crate_item_container';
 
 
@@ -61,4 +62,4 @@ class SidebarCrates extends React.Component {
   }
  }
 
-export default SidebarCrates;
+export default withRouter(SidebarCrates);

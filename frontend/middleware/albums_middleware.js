@@ -9,7 +9,8 @@ import { requestAllAlbums,
          REQUEST_NEW_STATUS,
          REQUEST_UPDATE_STATUS,
          REQUEST_REMOVE_STATUS,
-         requestRemoveStatus } from '../actions/album_actions';
+         requestRemoveStatus,
+         CLEAR_ALBUMS } from '../actions/album_actions';
 
 import { requestReviews } from '../actions/review_actions';
 
@@ -27,6 +28,7 @@ export default ({ getState, dispatch }) => next => action => {
     dispatch(receiveAllAlbums(albums));
     hashHistory.push('/home');
   }
+
   const fetchAlbumSuccess = album => {
     dispatch(receiveAlbum(album));
     dispatch(requestReviews(album.id));

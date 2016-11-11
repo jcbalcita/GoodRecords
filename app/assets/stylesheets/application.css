@@ -308,7 +308,7 @@ a:link {
 }
 
 .sidebar-message {
-  margin-top: 100px;
+  margin-top: 50px;
   max-width: 280px;
   display: flex;
   flex-direction: column;
@@ -341,10 +341,24 @@ a:link {
 .crate-button {
   width: 10px;
   color: red;
+  padding-left: 30px;
 }
 
 .crate-button:hover {
   font-weight: 700;
+}
+
+.crate-text {
+  max-width: 150px;
+  width: 150px;
+  word-wrap: break-word;
+}
+
+.crate-text-selected {
+  font-weight: 700;
+  color: red;
+  max-width: 150px;
+  width: 150px;
 }
 
 .crate-form {
@@ -362,10 +376,6 @@ a:link {
   border-bottom: 1px solid #808080;
 }
 
-.crate-text {
-  max-width: 150px;
-  word-wrap: break-word;
-}
 
 .sidebar-crate-container a:hover {
   font-weight: 700;

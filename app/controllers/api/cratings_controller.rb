@@ -15,7 +15,9 @@ class Api::CratingsController < ApplicationController
   end
 
   def destroy
-    @crating = Crating.find_by(id: params[:id])
+    crating = Crating.find_by(id: params[:id])
+    crating.destroy
+
     render json: { id: params[:id] }
   end
 
