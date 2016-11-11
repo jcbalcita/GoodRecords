@@ -347,14 +347,14 @@ Album.create!(title: "Vignetting the Compost",
 Album.create!(title: "American Water",
              artist: "Silver Jews",
              year: "1998",
-             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478672412/silverjews_pvn4vx.png",
+             image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478672412/silverjews_pvn4vx.png",
              description:
              "As with all of the Jews' best work, American Water sounds like it was made for the band's own enjoyment, and the listener is just eavesdropping on their fun.")
 
 Album.create!(title: "Black on Both Sides",
              artist: "Mos Def",
              year: "1999",
-             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478672192/bobs_btfb3u.jpg",
+             image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478672192/bobs_btfb3u.jpg",
              description:
              "Black on Both Sides is a tour de force by an artist out to prove he can do it all. Its ambition and execution rank it as one of the best albums of 1999, and it consolidates Mos Def's position as one of hip-hop's brightest hopes entering the 21st century.")
 
@@ -375,7 +375,7 @@ Album.create!(title: "Dissolver",
 Album.create!(title: "Distortion",
              artist: "Magnetic Fields",
              year: "2008",
-             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478672191/disortion_mjftei.jpg",
+             image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478672191/disortion_mjftei.jpg",
              description:
              "Stephin Merritt celebrates all that is fuzzy, sexy, and drenched in reverb on Distortion, a 13-track rendering of the Jesus and Mary Chain's Psychocandy through the barbed sieve of the Magnetic Fields mastermind's seemingly endless notebook of relationship dos and don'ts and self-effacing cognitive therapy sessions.")
 
@@ -403,7 +403,7 @@ Album.create!(title: "Me Against the World",
 Album.create!(title: "Lesser Matters",
              artist: "The Radio Dept.",
              year: "2003",
-             image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1478672191/lessermatters_zxuw3y.jpg",
+             image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478672191/lessermatters_zxuw3y.jpg",
              description:
              "The Radio Dept. are an indie rock band who play fuzzed-out, ramshackle pop songs, and Lesser Matters, their debut full-length, was self-recorded in homes and small studios with unabashedly lo-fi production values, but it somehow manages to project a timeless elegance and aplomb that belie this unassuming provenance.")
 
