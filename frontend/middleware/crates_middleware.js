@@ -55,11 +55,11 @@ export default ({ getState, dispatch }) => next => action => {
     case REQUEST_DELETE_CRATE:
       return deleteCrate(action.id, deleteCrateSuccess);
     case REQUEST_CRATINGS:
-      return fetchCratings(action.albumId, cratesSuccess);
+      return fetchCratings(action.albumId, cratingsSuccess);
     case REQUEST_ADD_CRATING:
       return createCrating(action.crating, cratesSuccess);
     case REQUEST_DELETE_CRATING:
-      return deleteCrating(action.crating, deleteCratingSuccess);
+      return deleteCrating(action.crating, cratesSuccess);
    default:
       return next(action)
    }

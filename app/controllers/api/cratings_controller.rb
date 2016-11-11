@@ -22,9 +22,10 @@ class Api::CratingsController < ApplicationController
     crating.destroy
 
     user = User.find_by(id: current_user.id)
-    @crates = user.crates
 
-    render 'api/crates/index'
+    @crates = user.crates
+    @id = params[:album_id]
+    render 'api/crates/delete'
   end
 
   private

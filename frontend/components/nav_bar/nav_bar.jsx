@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
-import SearchContainer from '../search/search_container';
 
 
 class NavBar extends React.Component {
@@ -40,8 +39,6 @@ handleLogoutClick() {
           <img src="http://res.cloudinary.com/jcbalcita/image/upload/c_scale,w_143/v1478708380/logos/good_records3.png">
           </img>
         </Link>
-
-        {currentUser ? <SearchContainer /> : ""}
         {currentUser ? this.navGreeting(currentUser.username, logout) : this.navSlogan()}
       </nav>
     );

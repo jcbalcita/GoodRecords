@@ -6,6 +6,12 @@ class CratingButtonItem extends React.Component {
 
     this.handleDeleteClick = this.handleDeleteClick.bind(this);
     this.handleFetch = this.handleFetch.bind(this);
+
+    this.state = this.props.crate || {}
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState(nextProps.crate);
   }
 
   handleDeleteClick(e) {

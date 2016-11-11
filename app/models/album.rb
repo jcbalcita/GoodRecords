@@ -21,8 +21,4 @@ class Album < ActiveRecord::Base
   def self.no_results
     { albums: {}, specificRender: false, crateRender: false }
   end
-
-  def self.filter_out_listed_albums(id)
-    Album.joins(:album_statuses).where('album_statuses.user_id  != ?', id)
-  end
 end

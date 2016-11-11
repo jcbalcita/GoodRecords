@@ -644,7 +644,7 @@ a:link {
 }
 
 .cratings-container {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   display: block;
 }
 
@@ -652,7 +652,7 @@ a:link {
   display: inline-block;;
   position: relative;
   border: 1px solid #808080;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
   border-radius: 5px;
   padding: 5px;
@@ -727,7 +727,7 @@ a:link {
 
 #cratingfetch {
   background-color: transparent;
-  color: red;
+  color: black;
 }
 
 #cratingfetch:hover {

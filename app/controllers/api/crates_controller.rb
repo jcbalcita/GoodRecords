@@ -19,6 +19,7 @@ class Api::CratesController < ApplicationController
   def create
     @crate = Crate.new(crate_params)
     @crate.user_id = current_user.id
+
     if @crate.save
       user = User.find_by(id: current_user.id)
       @crates = user.crates
@@ -31,8 +32,10 @@ class Api::CratesController < ApplicationController
 
   def destroy
     crate = Crate.find_by(id: params[:id])
-    crate.destroy
-
+    if crate
+      crate.destroy
+    end
+    
     render json: params[:id]
   end
 
