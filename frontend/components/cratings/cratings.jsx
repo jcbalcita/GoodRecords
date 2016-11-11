@@ -33,26 +33,41 @@ class Cratings extends React.Component {
       let dropDowns = [];
       let buttons = [];
 
+      this.props.crates.forEach(crate => {
+        if (crate.albumIds.includes(this.props.albumId)) {
+          buttons.push(crate);
+        } else {
+          dropDowns.push(crate);
+        }
+      });
 
-
-      const dropDownItems = this.props.crates.map((crate, idx) =>
+      const dropDownItems = dropDowns.map((crate, idx) =>
         <CratingDropDownItem key={idx} crate={crate} albumId={this.props.albumId} requestAddCrating={this.props.requestAddCrating} />
       );
 
-      const buttonItems = this.props.albumCrates.map((albumCrate, idx) =>
-        <CratingButtonItem key={idx} crate={ albumCrate } albumId={this.props.albumId} requestDeleteCrating={this.props.requestDeleteCrating} />
+      const buttonItems = buttons.map((albumCrate, idx) =>
+        <CratingButtonItem
+          key={idx}
+          crate={ albumCrate }
+          albumId={this.props.albumId}
+          requestDeleteCrating={this.props.requestDeleteCrating}
+          requestCrateAlbums={this.props.requestCrateAlbums} />
       );
+
+      const dropdownClass = dropDownItems.length > 0 ? "dropdown" : "dropdown-empty"
 
       return (
         <div className="cratings-container">
-          <ul className="dropdown">
-            <span>Add to your lists!</span>
+          <ul className={dropdownClass}>
+            <div className="addlist">Add to your lists!</div>
             <div className="dropdown-content">
               { dropDownItems }
             </div>
           </ul>
           <br/>
+          <div className="button-item-container"> 
           { buttonItems }
+          </div>
         </div>
       )
     }

@@ -374,8 +374,8 @@ a:link {
 
 .new-crate {
   border-bottom: 1px solid #808080;
+  length: 150px;
 }
-
 
 .sidebar-crate-container a:hover {
   font-weight: 700;
@@ -651,7 +651,25 @@ a:link {
 .dropdown {
   display: inline-block;;
   position: relative;
+  border: 1px solid #808080;
+  margin-bottom: 50px;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 5px;
 }
+
+.dropdown-empty {
+  display: none;
+  position: relative;
+  border-bottom: 1px solid #808080;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.dropdown:hover {
+  color: red;
+}
+
 
 .dropdown-content {
   display: none;
@@ -673,6 +691,8 @@ a:link {
   font-size: 14px;
   height: 20px;
   overflow-x: hidden;
+  font-weight: 400;
+  color: black;
 }
 
 .dropdown-item:hover {
@@ -684,4 +704,31 @@ a:link {
 
 .dropdown:hover .dropdown-content {
   display: block; }
+}
+
+.button-item-container {
+  display: flex;
+}
+
+.crating-buttons {
+  display: inline-block;
+  margin-right: 40px;
+  background-color: #f5f8fa;
+}
+
+#cratingdelete {
+  background-color: transparent;
+  color: red;
+}
+
+#cratingdelete:hover {
+  font-weight: 700;
+}
+
+#cratingfetch {
+  background-color: transparent;
+}
+
+#cratingfetch:hover {
+  font-weight: 700;
 }

@@ -4,19 +4,25 @@ class CratingButtonItem extends React.Component {
   constructor(props) {
     super(props);
 
-    this.handleAddClick = this.handleAddClick.bind(this);
+    this.handleDeleteClick = this.handleDeleteClick.bind(this);
+    this.handleFetch = this.handleFetch.bind(this);
   }
 
-  handleAddClick(e) {
+  handleDeleteClick(e) {
     e.preventDefault();
-
     this.props.requestDeleteCrating({ 'crate_id': this.props.crate.id, 'album_id': this.props.albumId })
+  }
+
+  handleFetch(e) {
+    e.preventDefault();
+    this.props.requestCrateAlbums(this.props.crate.id);
   }
 
   render() {
     return (
-      <li onClick={this.handleAddClick}>
-        {this.props.crate.name}
+      <li className="crating-buttons">
+        <button id="cratingfetch" onClick={this.handleFetch}>{this.props.crate.name}</button>
+        <button id="cratingdelete" onClick={this.handleDeleteClick}>x</button>
       </li>
     );
   }

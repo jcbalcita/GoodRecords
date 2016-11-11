@@ -19,11 +19,10 @@ class Api::CratingsController < ApplicationController
 
   def destroy
     crating = Crating.find_by(album_id: params[:album_id], crate_id: params[:crate_id])
+    id = crating.id
     crating.destroy
 
-    user = User.find_by(id: current_user.id)
-    @crates = user.crates
-    render 'api/crates/index'
+    render json: { id: id }
   end
 
   private

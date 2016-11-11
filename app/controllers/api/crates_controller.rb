@@ -20,7 +20,10 @@ class Api::CratesController < ApplicationController
     @crate = Crate.new(crate_params)
     @crate.user_id = current_user.id
     if @crate.save
-      render :show
+      user = User.find_by(id: current_user.id)
+      @crates = user.crates
+
+      render 'api/crates/index'
     else
       render json: @crate.errors.full_messages, status: 422
     end
