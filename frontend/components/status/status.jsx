@@ -24,7 +24,7 @@ class Status extends React.Component {
 
   render() {
     const buttonTexts = {
-      "remove": "Remove from my lists",
+      "remove": "Remove from my shelves",
       "owned": "Add to My Collection",
       "wishlist": "Add to My Wishlist",
       "want to listen": "Want to Listen"

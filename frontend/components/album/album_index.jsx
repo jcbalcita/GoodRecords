@@ -10,6 +10,10 @@ class AlbumIndex extends React.Component {
     }
   }
 
+  componentWillUnmount() {
+    this.props.receiveAllAlbums({ albums: {}, specificRender: false, crateRender: false });
+  }
+
   render() {
     let albums = this.props.albums.map((album, idx) =>
       <AlbumIndexItem key={idx} album={album} />
@@ -17,7 +21,7 @@ class AlbumIndex extends React.Component {
 
     return (
       <div className="album-index-container">
-        {albums.length > 0 ? albums : `List empty -- browse albums and add to your lists!`}
+        {albums.length > 0 ? albums : `List empty – browse albums and add to your lists!`}
       </div>
     );
   }

@@ -642,3 +642,46 @@ a:link {
   font-weight: 700;
   color: red;
 }
+
+.cratings-container {
+  margin-bottom: 30px;
+  display: block;
+}
+
+.dropdown {
+  display: inline-block;;
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  max-height: 300px;
+  width: 150px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.dropdown-item {
+  background-color: white;
+  display: block;
+  width: 149px;
+  padding: 5px;
+  border: 1px solid black;
+  margin: 0 auto;
+  font-size: 14px;
+  height: 20px;
+  overflow-x: hidden;
+}
+
+.dropdown-item:hover {
+  background-color: red;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; }
+}

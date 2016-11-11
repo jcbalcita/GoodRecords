@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter, Route, Router } from 'react-router';
 import StatusContainer from '../status/status_container';
 import ReviewsContainer from '../reviews/reviews_container';
+import CratingsContainer from '../cratings/cratings_container';
 
 class AlbumDetail extends React.Component {
 
@@ -18,15 +19,15 @@ class AlbumDetail extends React.Component {
       ));
 
       const texts = {
-        "": "This album is not currently in any of your lists.",
-        "owned": "This album is in your Collection.",
-        "wishlist": "This album is in your Wishlist.",
-        "want to listen": "You want to listen to this album."
+        "": "This album is not currently on any of your shelves.",
+        "owned": "Shelved under: My Collection.",
+        "wishlist": "Shelved under: My Wish List.",
+        "want to listen": "Shelved under: Want to Listen."
       }
 
       return (
         <div className="album-detail-container">
-          <p>Hover over the album art to add to your collections!</p>
+          <p>Hover over the album art to add to your shelves!</p>
           <br></br>
 
           <div className="album-art-and-info">
@@ -36,7 +37,6 @@ class AlbumDetail extends React.Component {
                 {this.props.album ? statusButtons : ''}
               </div>
             </div>
-
             <div className="album-info">
               <div className="album-title">{album.title}</div>
               <div className="album-artist">{album.artist}</div>
@@ -44,6 +44,8 @@ class AlbumDetail extends React.Component {
               <div className="album-status">{texts[album.status]}</div>
             </div>
           </div>
+
+          <CratingsContainer />
 
           <div className="album-description-container">
             <p>{album.description}</p>

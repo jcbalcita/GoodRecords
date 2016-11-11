@@ -1,66 +1,57 @@
-# Goodrecords
+# GoodRecords
 
-[Heroku Link][heroku link]
+[Goodrecords live][heroku]
 
-[heroku link]: http://goodrecords.heroku.com
+[heroku]: http://goodrecords.herokuapp.com'
 
-[Trello Link][trello link]
+Goodrecords is a full-stack web application that drew inspiration from Goodreads. Users can keep track of their record collection, maintain a wishlist, and keep a list of albums they would like to listen to.  Users also have the ability to create their own custom lists and add albums to those lists. In addition, users can review and rate albums, and view other users' reviews.
 
-[trello link]: https://trello.com/b/fQWrQnRx/goodrecords
+It was built using:
+- _Ruby on Rails_ on the backend,
+- _PostgreSQL_ for the database, and
+- _React.js_ with a _Redux_ framework for the frontend.  
 
-## Minimum Viable Product
+## Features and Implementation
 
-GoodRecords is a web application inspired by Goodreads, built using Ruby
-on Rails and React/Redux. By the end of Week 9, this app will, at a
-minimum, satisfy the following criteria with smooth, bug-free navigation,
-adequate seed data, and sufficient CSS styling:
+### Album Index Page
 
-- [ ] Hosting on Heroku
-- [ ] New account creation, login, and guest/demo login
-- [ ] Albums
-- [ ] User album collection
-- [ ] User album statuses
-- [ ] Reviews
-- [ ] Production ReadME
+Albums are stored in the database, with columns for id, artist, title, image_url, description, and year.  Albums are rendered in two different components: an index page showing multiple albums, and a show page showing the details of the album.
 
-## Design Docs
-* [View Wireframes][wireframes]
-* [React Components][components]
-* [API endpoints][api-endpoints]
-* [DB schema][schema]
-* [Sample State][sample-state]
+![image of album index](docs/wireframes/album_index.png)
+When a user logs in, she is automatically directed to the album index page, which shows a set amount of albums in the database by default.  When a user clicks on the sidebar buttons, the album index page is re-rendered to show only those albums contained in that specific shelf.
 
-[wireframes]: wireframes
-[components]: component-hierarchy.md
-[sample-state]: sample-state.md
-[api-endpoints]: api-endpoints.md
-[schema]: schema.md
+When a user clicks on a shelf, the appropriate sidebar item is highlighted, so the user knows which shelf she is currently browsing.  When the user clicks on a specific album and leaves the index page, the sidebar highlighting is removed.
 
-## Implementation Timeline
+#### Shelves
+A user by default has three shelves on which they can place albums -- My Collection, My Wish List, and Want to Listen.  The shelf relationship is stored in the join table "album_statuses", which joins the user and album by id, and also contains a "status" column representing which of the three shelves the album is currently on, if any.  Inclusion in the status column is limited to three specific strings representing the three shelves.
 
-### Phase 1: Backend setup and front-end user authentication (2 days)
-**Objective**: Functioning rails product with front-end authentication.
+#### Custom User Lists
+Users can also create their own custom lists which have the same functionality as the shelves described above.  The lists can be created using a form contained in the bottom sidebar box, and once created, the list immediately renders below.  The lists can similarly be deleted by clicking the "x" and the sidebar immediately rerenders to remove the list.
 
-### Phase 2: Album model, API, and components (2 days)
-**Objective**: Albums can be created, updated/destroyed (by the creating
-user), and viewed through the API.
+The relationships between users, albums, and custom lists are stored in the database via two join tables with a "tags" and "taggings" structure.
 
-### Phase 3: User album collection and wish list (2 days)
-**Objective**: Users can add albums to either their collection or wish
-list, and the aforementioned can be viewed on their respective view
-pages.
+### Album Detail Page
 
-### Phase 4: User album reviews (1.5 days)
-**Objective**: Users can view, create, update, and destroy reviews for
-albums through the API.
+![image of album index](docs/wireframes/album_show.png)
 
-### Phase 5: Album search (1 days)
-**Objective**: Users can search for albums by name or artist.
+At the album detail page, the user can hover over the album art to add or remove the album from their shelves.  When an album's shelf status is changed, the buttons are re-rendered, enabled/disabled, and colored/highlighted appropriately.  The text stating the shelf status is also immediately updated.
 
+![image of album index](docs/wireframes/reviews.png)
 
-### Bonus Features (TBD)
-- [ ] Users can "like" reviews, and the most-liked reviews appear first
-in the album show page's display.
-- [ ] Users can upload avatars
-- [ ] Albums have sample audio that can be played via bottom nav bar
-- [ ] Users can add 'friends' and see their updates in '/home'
+Users can create reviews and view other people's reviews of the album.  Users can click on the stars to rate the album, and input their review into a text field.  Upon submit, the review is automatically rendered on the page.  A user can edit and delete the review without leaving the album detail page -- only that portion of the page changes.
+
+![image of album index](docs/wireframes/addtolist.png)
+
+There is also a hover-dropdown on the album detail page where users can add the album to the custom lists they have created.  
+
+## Future Directions for the Project
+
+I plan to add the following features to the project.
+
+### Search
+
+Searching for items is a standard feature of Goodreads.  I plan to implement a search bar that creates a dropdown of the first 5 matching results.  Upon submit, the album index page will re-render with the matching albums.
+
+### Add albums
+
+I plan to implement the ability for the user to create albums in the database, with the ability to upload the album's cover art. I plan to use Cloudinary or a similar service to store these images.  
