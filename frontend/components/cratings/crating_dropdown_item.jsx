@@ -9,16 +9,21 @@ class CratingDropDownItem extends React.Component {
 
   handleAddClick(e) {
     e.preventDefault();
-
     this.props.requestAddCrating({ 'crate_id': this.props.crate.id, 'album_id': this.props.albumId })
   }
 
   render() {
-    return (
-      <li className="dropdown-item" onClick={this.handleAddClick}>
-        {this.props.crate.name}
-      </li>
-    );
+    if (this.props.crate) {
+      return (
+        <li className="dropdown-item" onClick={this.handleAddClick}>
+          {this.props.crate.name}
+        </li>
+      );
+    } else {
+      return (
+        <div></div>
+      )
+    }
   }
 }
 

@@ -59,9 +59,9 @@ export const requestAddCrating = crating => ({
   crating
 });
 
-export const requestDeleteCrating = crating => ({
+export const requestDeleteCrating = id => ({
   type: REQUEST_DELETE_CRATING,
-  crating
+  id
 });
 
 export const processDeleteCrating = id => ({

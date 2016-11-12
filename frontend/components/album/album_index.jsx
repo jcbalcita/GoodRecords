@@ -11,7 +11,7 @@ class AlbumIndex extends React.Component {
   }
 
   componentWillUnmount() {
-    this.props.receiveAllAlbums({ albums: {}, specificRender: false, crateRender: false });
+    this.props.receiveAllAlbums({ albums: this.props.albums, specificRender: false, crateRender: false });
   }
 
   render() {

@@ -9,13 +9,13 @@ class Cratings extends React.Component {
 
   render() {
 
-    if (!this.props.crates && !this.props.albumCrates) {
+    if (!this.props.crates) {
       return (
         <div className="cratings-container">
           Hello.
         </div>
       );
-    } else if (this.props.crates && !this.props.albumCrates) {
+    } else if (this.props.userCrates && !this.props.cratings) {
       const dropDownItems = this.props.crates.map((crate, idx) =>
         <CratingDropDownItem key={idx} crate={crate} albumId={this.props.albumId} requestAddCrating={this.props.requestAddCrating} />
       );
@@ -29,14 +29,13 @@ class Cratings extends React.Component {
           You haven't placed this album in any of your lists.
         </div>
       );
-    } else {
+    } else if (this.props.crates && this.props.cratings) {
+
+      let cratedNames = this.props.cratings.map(crating => crating.crate.name);
       let dropDowns = [];
-      let buttons = [];
 
       this.props.crates.forEach(crate => {
-        if (crate.albumIds.includes(this.props.albumId)) {
-          buttons.push(crate);
-        } else {
+        if (!cratedNames.includes(crate.name)) {
           dropDowns.push(crate);
         }
       });
@@ -45,10 +44,11 @@ class Cratings extends React.Component {
         <CratingDropDownItem key={idx} crate={crate} albumId={this.props.albumId} requestAddCrating={this.props.requestAddCrating} />
       );
 
-      const buttonItems = buttons.map((albumCrate, idx) =>
+      const buttonItems = this.props.cratings.map((crating, idx) =>
         <CratingButtonItem
           key={idx}
-          crate={ albumCrate }
+          crate={crating.crate}
+          crating={crating}
           albumId={this.props.albumId}
           requestDeleteCrating={this.props.requestDeleteCrating}
           requestCrateAlbums={this.props.requestCrateAlbums} />
@@ -59,17 +59,21 @@ class Cratings extends React.Component {
       return (
         <div className="cratings-container">
           <ul className={dropdownClass}>
-            <div className="addlist">Add to your lists!</div>
+            <div className="addlist">Add to your lists! ↓</div>
             <div className="dropdown-content">
               { dropDownItems }
             </div>
           </ul>
           <br/>
           <div className="button-item-container">
-          <br/>{ buttonItems }
+            <br/>{ buttonItems }
           </div>
         </div>
-      )
+      );
+    } else {
+      return (
+        <div>how did we get  here?</div>
+      );
     }
   }
 }

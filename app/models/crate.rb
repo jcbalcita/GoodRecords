@@ -14,11 +14,4 @@ class Crate < ActiveRecord::Base
     albums = Jbuilder.new
     albums.array! @album_ids
   end
-
-  def album_id_array_remove(id)
-    @album_ids = self.albums.reject { |album| album.id == id }
-    albums = Jbuilder.new
-    albums.array! @album_ids
-  end
-
 end

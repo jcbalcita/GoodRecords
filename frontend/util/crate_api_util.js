@@ -51,11 +51,10 @@ export const createCrating = (crating, success) => {
   });
 };
 
-export const deleteCrating = (crating, success) => {
+export const deleteCrating = (id, success) => {
   $.ajax({
-    method: 'POST',
-    url: `/api/cratings/delete`,
-    data: crating,
+    method: 'DELETE',
+    url: `/api/cratings/${id}`,
     success
   });
 };

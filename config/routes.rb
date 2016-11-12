@@ -6,9 +6,7 @@ Rails.application.routes.draw do
     resources :album_statuses, only: [:create, :update, :destroy]
     resources :reviews, only: [:index, :show, :create, :update, :destroy]
     resources :crates, only: [:index, :show, :create, :destroy]
-    resources :cratings, only: [:index, :create]
-
-    post 'cratings/delete' => "cratings#destroy"
+    resources :cratings, only: [:index, :create, :destroy]
   end
 
   root to: "static_pages#root"

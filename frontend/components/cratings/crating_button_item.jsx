@@ -10,7 +10,7 @@ class CratingButtonItem extends React.Component {
 
   handleDeleteClick(e) {
     e.preventDefault();
-    this.props.requestDeleteCrating({ 'crate_id': this.props.crate.id, 'album_id': this.props.albumId })
+    this.props.requestDeleteCrating(this.props.crating.id);
   }
 
   handleFetch(e) {
@@ -19,12 +19,18 @@ class CratingButtonItem extends React.Component {
   }
 
   render() {
-    return (
-      <li className="crating-buttons">
-        <button id="cratingfetch" onClick={this.handleFetch}>{this.props.crate.name}</button>
-        <button id="cratingdelete" onClick={this.handleDeleteClick}>x</button>
-      </li>
-    );
+    if (this.props.crate) {
+      return (
+        <li className="crating-buttons">
+          <button id="cratingfetch" onClick={this.handleFetch}>{this.props.crate.name}</button>
+          <button id="cratingdelete" onClick={this.handleDeleteClick}>x</button>
+        </li>
+      );
+    } else {
+      return (
+        <div></div>
+      )
+    }
   }
 }
 

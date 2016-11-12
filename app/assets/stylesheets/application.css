@@ -336,6 +336,8 @@ a:link {
   margin-top: 40px;
   background: white;
   padding: 10px;
+  max-height: 400px;
+  overflow-y: scroll;
 }
 
 .crate-button {
@@ -645,31 +647,36 @@ a:link {
 
 .cratings-container {
   margin-bottom: 20px;
-  display: block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .dropdown {
-  display: inline-block;;
+  margin: 0 auto;
   position: relative;
-  border: 1px solid #808080;
-  margin-bottom: 20px;
   font-weight: 700;
   border-radius: 5px;
   padding: 5px;
 }
 
 .dropdown-empty {
-  display: none;
+  margin: 0 auto;
   position: relative;
-  border-bottom: 1px solid #808080;
-  margin-bottom: 10px;
   font-weight: 400;
+  border-radius: 5px;
+  padding: 5px;
+  color: 	#D3D3D3;
 }
 
 .dropdown:hover {
   color: red;
+  box-shadow: rgba(0,0,0,0.2) 0px 2px 3px, inset rgba(0,0,0,0.2) 0px -1px 2px;
+  border-radius: 20px;
+  cursor: default;
 }
-
 
 .dropdown-content {
   display: none;
@@ -706,14 +713,21 @@ a:link {
   display: block;
 }
 
-/*.button-item-container {
-  display: flex;
-}*/
-
 .crating-buttons {
-  display: inline-block;
-  margin-right: 40px;
-  background-color: #f5f8fa;
+  margin-right: 30px;
+  box-shadow: rgba(0,0,0,0.2) 0px 2px 3px, inset rgba(0,0,0,0.2) 0px -1px 2px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.button-item-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  max-width: 500px;
+  text-shadow: 2px black;
 }
 
 #cratingdelete {
@@ -723,6 +737,7 @@ a:link {
 
 #cratingdelete:hover {
   font-weight: 700;
+  text-decoration: none;
 }
 
 #cratingfetch {

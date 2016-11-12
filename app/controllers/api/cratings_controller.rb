@@ -1,31 +1,32 @@
 class Api::CratingsController < ApplicationController
   def index
+
     album = Album.find_by(id: params[:album_id])
-    @crates = album.crates
-    render 'api/crates/index'
+    cratings = album.cratings
+
+    if cratings.empty?
+      render json: {}
+    else
+      @cratings = cratings
+      render 'api/cratings/index'
+    end
   end
 
   def create
     @crating = Crating.new(crating_params)
-    user = User.find_by(id: current_user.id)
 
     if @crating.save
-      @crates = user.crates
-      render 'api/crates/index'
+      render 'api/cratings/show'
     else
       render json: @crating.errors.full_messages, status: 422
     end
   end
 
   def destroy
-    crating = Crating.find_by(album_id: params[:album_id], crate_id: params[:crate_id])
+    crating = Crating.find_by(id: params[:id])
     crating.destroy
 
-    user = User.find_by(id: current_user.id)
-
-    @crates = user.crates
-    @id = params[:album_id]
-    render 'api/crates/delete'
+    render json: params[:id]
   end
 
   private
