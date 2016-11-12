@@ -3,12 +3,8 @@ import CratingDropDownItem from './crating_dropdown_item';
 import CratingButtonItem from './crating_button_item';
 
 class Cratings extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   
   render() {
-
     if (!this.props.crates) {
       return (
         <div className="cratings-container">
