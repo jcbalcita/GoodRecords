@@ -430,6 +430,10 @@ AlbumStatus.create!(user_id: 1, album_id: 13, status: "want to listen")
 AlbumStatus.create!(user_id: 1, album_id: 12, status: "wishlist")
 AlbumStatus.create!(user_id: 2, album_id: 11, status: "want to listen")
 
+Crate.create!(user_id: 1, name: "Hip-Hop")
+Crate.create!(user_id: 1, name: "Indie")
+Crate.create!(user_id: 1, name: "Electronic")
+
 
 Review.create!(user_id: 2, album_id: 1, body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", rating: 1)
 Review.create!(user_id: 2, album_id: 2, body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", rating: 3)
