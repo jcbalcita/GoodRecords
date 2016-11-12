@@ -13,8 +13,7 @@ const RootMiddleware = applyMiddleware(
   SessionMiddleware,
   AlbumsMiddleware,
   ReviewsMiddleware,
-  CratesMiddleware,
-  logger
+  CratesMiddleware
 );
 
 export default RootMiddleware;
