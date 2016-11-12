@@ -2,7 +2,7 @@ class Api::CratingsController < ApplicationController
   def index
 
     album = Album.find_by(id: params[:album_id])
-    cratings = album.cratings
+    cratings = album.cratings.where('user_id = ?', current_user.id)
 
     if cratings.empty?
       render json: {}

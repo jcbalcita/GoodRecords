@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.create!(username: "Guest", password: "password")
-User.create!(username: "user", password: "password")
+User.create!(username: "musiclover", password: "password")
 
 Album.create!(title: "Aquemini",
              artist: "Outkast",
@@ -453,6 +453,8 @@ Crate.create!(user_id: 1, name: "Indie")
 Crate.create!(user_id: 1, name: "Hip-Hop")
 Crate.create!(user_id: 1, name: "Electronic")
 Crate.create!(user_id: 1, name: "Jazz")
+Crate.create!(user_id: 2, name: "Electronic")
+Crate.create!(user_id: 2, name: "Jazz")
 
 Crating.create(album_id: 1, crate_id: 1)
 Crating.create(album_id: 2, crate_id: 1)
@@ -464,13 +466,9 @@ Crating.create(album_id: 7, crate_id: 1)
 Crating.create(album_id: 8, crate_id: 1)
 Crating.create(album_id: 9, crate_id: 1)
 
-Crating.create(album_id: 1, crate_id: 2)
-Crating.create(album_id: 11, crate_id: 2)
-Crating.create(album_id: 12, crate_id: 2)
-Crating.create(album_id: 13, crate_id: 2)
-Crating.create(album_id: 14, crate_id: 2)
-Crating.create(album_id: 15, crate_id: 2)
-Crating.create(album_id: 16, crate_id: 2)
-Crating.create(album_id: 17, crate_id: 2)
-Crating.create(album_id: 18, crate_id: 2)
-Crating.create(album_id: 19, crate_id: 2)
+Crating.create(album_id: 1, crate_id: 5)
+Crating.create(album_id: 2, crate_id: 5)
+Crating.create(album_id: 3, crate_id: 6)
+Crating.create(album_id: 4, crate_id: 5)
+Crating.create(album_id: 5, crate_id: 5)
+Crating.create(album_id: 6, crate_id: 6)
