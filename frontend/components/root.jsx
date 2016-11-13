@@ -38,7 +38,7 @@ const Root = ({store}) => {
   const _requestAlbumAndReviews = ({params}) => {
     store.dispatch(requestReviews(params.albumId));
     store.dispatch(requestAlbum(params.albumId));
-    store.dispatch(requestCratings(params.albumId))
+    store.dispatch(requestCratings(params.albumId));
   };
 
   return (
