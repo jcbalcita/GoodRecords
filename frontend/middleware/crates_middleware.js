@@ -34,10 +34,7 @@ import { hashHistory } from 'react-router';
 export default ({ getState, dispatch }) => next => action => {
   const cratesSuccess = crates => dispatch(receiveCrates(crates));
   const crateSuccess = crate => dispatch(receiveCrate(crate));
-  const deleteCrateSuccess = crate => {
-    dispatch(processDeleteCrate(crate.id));
-    dispatch(fetchCratings(crate.albumId));
-  };
+  const deleteCrateSuccess = id => dispatch(processDeleteCrate(id));
 
   const albumCratesSuccess = albums => {
     dispatch(receiveAllAlbums(albums));
