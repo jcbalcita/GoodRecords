@@ -36,7 +36,7 @@ class Api::CratesController < ApplicationController
       crate.destroy
     end
 
-    render json: { id: params[:id] }
+    render json: params[:id]
   end
 
   private

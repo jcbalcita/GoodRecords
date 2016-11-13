@@ -3,14 +3,10 @@ import CratingDropDownItem from './crating_dropdown_item';
 import CratingButtonItem from './crating_button_item';
 
 class Cratings extends React.Component {
-<<<<<<< HEAD
-  
-=======
   constructor(props) {
     super(props);
   }
 
->>>>>>> temp-branch
   render() {
     if (!this.props.crates) {
       return (

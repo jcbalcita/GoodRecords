@@ -23,7 +23,8 @@ const CratesReducer = (state = defaultState, action) => {
       delete newState.userCrates[action.id];
       return newState;
     case RECEIVE_CRATINGS:
-      return merge({}, state, { albumCratings: action.cratings });
+      newState.albumCratings = action.cratings;
+      return newState;
     case RECEIVE_CRATING:
       let merged = merge(newState.albumCratings, action.crating)
       newState.albumCratings = merged;
