@@ -648,9 +648,8 @@ a:link {
 .cratings-container {
   margin-bottom: 20px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;;
   align-items: center;
-  justify-content: space-around;
   flex-wrap: wrap;
 }
 
