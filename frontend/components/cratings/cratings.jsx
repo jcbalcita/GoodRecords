@@ -3,7 +3,14 @@ import CratingDropDownItem from './crating_dropdown_item';
 import CratingButtonItem from './crating_button_item';
 
 class Cratings extends React.Component {
+<<<<<<< HEAD
   
+=======
+  constructor(props) {
+    super(props);
+  }
+
+>>>>>>> temp-branch
   render() {
     if (!this.props.crates) {
       return (
@@ -29,6 +36,14 @@ class Cratings extends React.Component {
 
       let cratedNames = this.props.cratings.map(crating => crating.crate.name);
       let dropDowns = [];
+      let buttons = [];
+      let allCrateNames = this.props.crates.map(crate => crate.name);
+
+      this.props.cratings.forEach(crating => {
+        if (allCrateNames.includes(crating.crate.name)) {
+          buttons.push(crating)
+        }
+      });
 
       this.props.crates.forEach(crate => {
         if (!cratedNames.includes(crate.name)) {
@@ -40,7 +55,7 @@ class Cratings extends React.Component {
         <CratingDropDownItem key={idx} crate={crate} albumId={this.props.albumId} requestAddCrating={this.props.requestAddCrating} />
       );
 
-      const buttonItems = this.props.cratings.map((crating, idx) =>
+      const buttonItems = buttons.map((crating, idx) =>
         <CratingButtonItem
           key={idx}
           crate={crating.crate}
