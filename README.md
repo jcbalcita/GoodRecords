@@ -2,7 +2,7 @@
 
 [Goodrecords live][heroku]
 
-[heroku]: http://goodrecords.herokuapp.com'
+[heroku]: http://goodrecords.herokuapp.com
 
 Goodrecords is a full-stack web application that drew inspiration from Goodreads. Users can keep track of their record collection, maintain a wishlist, and keep a list of albums they would like to listen to.  Users also have the ability to create their own custom lists and add albums to those lists. In addition, users can review and rate albums, and view other users' reviews.
 

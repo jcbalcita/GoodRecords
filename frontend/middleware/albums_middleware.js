@@ -9,8 +9,7 @@ import { requestAllAlbums,
          REQUEST_NEW_STATUS,
          REQUEST_UPDATE_STATUS,
          REQUEST_REMOVE_STATUS,
-         requestRemoveStatus,
-         CLEAR_ALBUMS } from '../actions/album_actions';
+         requestRemoveStatus } from '../actions/album_actions';
 
 import { requestReviews } from '../actions/review_actions';
 
