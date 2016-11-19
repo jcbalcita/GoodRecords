@@ -145,6 +145,7 @@ a:link {
 
 .splash-image {
   width: 100%;
+  height: 100vh;
 }
 
 .splash-greeting {
@@ -167,8 +168,8 @@ a:link {
 
 .login-signup {
   position: absolute;
-  top: 180px;
-  right: 390px;
+  top: 190px;
+  left: 60px;
   color: white;
   background-color: black;
   opacity: 0.85;
@@ -179,11 +180,17 @@ a:link {
   border-radius: 10px;
 }
 
+.login-signup a {
+  color: red;
+  text-decoration: none;
+  padding: 10px;
+}
+
 .login-form-container {
   position: absolute;
   padding: 10px;
   top: 280px;
-  right: 175px;
+  left: 60px;
   color: white;
   background-color: black;
   opacity: 0.85;
@@ -197,6 +204,7 @@ a:link {
   background-color: white;
   color: black;
   width: 200px;
+  padding: 5px;
 }
 
 .login-form * {
@@ -377,6 +385,7 @@ a:link {
 .new-crate {
   border-bottom: 1px solid #808080;
   length: 150px;
+  padding: 3px;
 }
 
 .sidebar-crate-container a:hover {
@@ -603,7 +612,7 @@ a:link {
   border: 1px solid #808080;
   text-align: justify;
   margin-bottom: 0;
-  padding: 10px;
+  padding: 15px;
 }
 
 .review-edit-bar {
