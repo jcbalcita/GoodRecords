@@ -12,6 +12,10 @@ class Sidebar extends React.Component {
     this.handleCollectionClick = this.handleCollectionClick.bind(this);
   }
 
+  // componentWillUnmount() {
+  //     this.props.receiveCrates({ albumCratings: {}, userCrates: {} });
+  // }
+
   handleBrowseClick(e) {
     e.preventDefault();
     this.props.requestAllAlbums();

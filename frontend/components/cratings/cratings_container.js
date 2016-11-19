@@ -2,7 +2,8 @@ import { connect } from 'react-redux';
 import { requestAddCrating,
          requestDeleteCrating,
          requestCrateAlbums,
-         requestCratings } from '../../actions/crate_actions';
+         requestCratings,
+         processDeleteCrating } from '../../actions/crate_actions';
 
 import Cratings from './cratings';
 
@@ -28,7 +29,8 @@ const mapDispatchToProps = dispatch => ({
   requestAddCrating: crating => dispatch(requestAddCrating(crating)),
   requestDeleteCrating: id => dispatch(requestDeleteCrating(id)),
   requestCrateAlbums: id => dispatch(requestCrateAlbums(id)),
-  requestCratings: albumId => dispatch(requestCratings(albumId))
+  requestCratings: albumId => dispatch(requestCratings(albumId)),
+  processDeleteCrating: id => dispatch(processDeleteCrating(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Cratings);

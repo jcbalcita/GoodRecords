@@ -15,7 +15,8 @@ const CratesReducer = (state = defaultState, action) => {
 
   switch(action.type) {
     case RECEIVE_CRATES:
-      return merge({}, state, { userCrates: action.crates });
+      newState.userCrates = action.crates;
+      return newState;
     case RECEIVE_CRATE:
       newState.userCrates = merge(newState.userCrates, action.crate);
       return newState;

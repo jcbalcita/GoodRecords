@@ -28,21 +28,24 @@ class Cratings extends React.Component {
           You haven't placed this album in any of your lists.
         </div>
       );
-    } else if (this.props.crates && this.props.cratings) {
+    } else {
 
-      let cratedNames = this.props.cratings.map(crating => crating.crate.name);
+      let cratedIds = this.props.cratings.map(crating => crating.crate.id);
       let dropDowns = [];
       let buttons = [];
-      let allCrateNames = this.props.crates.map(crate => crate.name);
+      let allCrateIds = this.props.crates.map(crate => crate.id);
 
       this.props.cratings.forEach(crating => {
-        if (allCrateNames.includes(crating.crate.name)) {
-          buttons.push(crating)
+        if (allCrateIds.includes(crating.crate.id)) {
+          buttons.push(crating);
+        } else {
+          const index = cratedIds.indexOf(crating.crate.id);
+          cratedIds.splice(index);
         }
       });
 
       this.props.crates.forEach(crate => {
-        if (!cratedNames.includes(crate.name)) {
+        if (!cratedIds.includes(crate.id)) {
           dropDowns.push(crate);
         }
       });
@@ -76,10 +79,6 @@ class Cratings extends React.Component {
             <br/>{ buttonItems }
           </div>
         </div>
-      );
-    } else {
-      return (
-        <div>how did we get  here?</div>
       );
     }
   }
