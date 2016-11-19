@@ -93,7 +93,7 @@ class Reviews extends React.Component {
       <button onClick={handleDelete(review.id)}>Delete</button>
     </div>;
 ```
-The Review Item component is passed a prop, properly bound to its parent, that allows it to change the state of its parent.  This is how the "Edit" button in the Review Item component is able to re-render the review from the existing review to the edit review form.  Once its parent component rerenders, the `componentWilLReceiveProps` function changes the parent component's edit state to false, displaying the edited review and removing the form.
+The Review Item component is passed a prop, properly bound to its parent, that allows it to change the state of its parent.  This is how the "Edit" button in the Review Item component is able to re-render the existing review into the edit review form.  Once its parent component rerenders, the parent component's `componentWilLReceiveProps` function its edit state to false, displaying the edited review and removing the form.
 
 #### Add to list
 
