@@ -65,7 +65,7 @@ Each status button is passed a prop "type", and its functionality and appearance
 
 Users can create reviews and view other people's reviews of the album.  Users can click on the stars to rate the album, and input their review into a text field.  Upon submit, the review is automatically rendered on the page.  A user can edit and delete the review without leaving the album detail page -- only that portion of the page changes.
 
-```
+```javascript
 class Reviews extends React.Component {
   constructor(props) {
     super(props);
