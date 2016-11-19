@@ -400,10 +400,24 @@ a:link {
   background-color: #f5f8fa;
   margin-top: 20px;
   margin-bottom: 30px;
-  overflow-y: scroll;
+  margin-right: 30px;
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 65%;
+  min-width: 500px;
+  min-height: 500px;
+}
+
+.album-detail-container {
+  background-color: #f5f8fa;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  justify-content: flex-start;
+  width: 65%;
+  min-width: 500px;
+  min-height: 500px;
+  text-align: center;
 }
 
 .album-index-item {
@@ -431,17 +445,6 @@ a:link {
 
 .album-title {
   color: red;
-}
-
-.album-detail-container {
-  background-color: #f5f8fa;
-  margin-top: 40px;
-  margin-right: 40px;
-  justify-content: flex-start;
-  width: 65%;
-  min-width: 500px;
-  min-height: 500px;
-  text-align: center;
 }
 
 .album-art-and-info {
