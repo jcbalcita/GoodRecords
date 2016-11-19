@@ -37,11 +37,63 @@ The relationships between users, albums, and custom lists are stored in the data
 
 At the album detail page, the user can hover over the album art to add or remove the album from their shelves.  When an album's shelf status is changed, the buttons are re-rendered, enabled/disabled, and colored/highlighted appropriately.  The text stating the shelf status is also immediately updated.
 
+```javascript
+    const cssClass = () => {
+      if (this.props.type === this.props.status) {
+        return "status-button-freeze";
+      } else if (this.props.type === "remove" && !this.props.hasStatus) {
+        return "status-button-gray"
+      } else {
+        return "status-button"
+      }
+    }
+
+    let functionality = cssClass().length > 13
+
+    return (
+      <button className={cssClass()}
+              onClick={this.handleClick}
+              disabled={functionality}>
+        {buttonText}
+      </button>
+```
+Each status button is passed a prop "type", and its functionality and appearance change depending on whether its "type" matches with the "status" from the database/store.
+
 #### Reviews
 
 ![image of album index](docs/wireframes/reviews.png)
 
 Users can create reviews and view other people's reviews of the album.  Users can click on the stars to rate the album, and input their review into a text field.  Upon submit, the review is automatically rendered on the page.  A user can edit and delete the review without leaving the album detail page -- only that portion of the page changes.
+
+```
+class Reviews extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { 'edit': false }
+    this.toggleEditToTrue = this.toggleEditToTrue.bind(this);
+  }
+
+  componentWillReceiveProps(newProps) {
+    if (this.state.edit) {
+      this.setState({ edit: false })
+    }
+  }
+
+  toggleEditToTrue(e) {
+    e.preventDefault();
+    this.setState({ edit: true })
+  }
+
+//-----------------
+// Review Item
+  const editBar =
+    <div className="review-edit-bar">
+      <button onClick={toggleEditToTrue}>Edit</button>
+      <button onClick={handleDelete(review.id)}>Delete</button>
+    </div>;
+```
+The Review Item component is passed a prop, properly bound to its parent, that allows it to change the state of its parent.  This is how the "Edit" button in the Review Item component is able to re-render the review from the existing review to the edit review form.  Once its parent component rerenders, the `componentWilLReceiveProps` function changes the parent component's edit state to false, displaying the edited review and removing the form.
 
 #### Add to list
 
