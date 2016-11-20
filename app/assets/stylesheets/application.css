@@ -172,7 +172,6 @@ a:link {
   left: 60px;
   color: white;
   background-color: black;
-  opacity: 0.85;
   padding: 10px;
   list-style: none;
   font-weight: 700;
@@ -193,7 +192,6 @@ a:link {
   left: 60px;
   color: white;
   background-color: black;
-  opacity: 0.85;
   width: 380px;
   vertical-align: middle;
   border-radius: 10px;
