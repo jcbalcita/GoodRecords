@@ -65,7 +65,7 @@ Each status button is passed a prop "type", and its functionality and appearance
 
 Users can create reviews and view other people's reviews of the album.  Users can click on the stars to rate the album, and input their review into a text field.  Upon submit, the review is automatically rendered on the page.  A user can edit and delete the review without leaving the album detail page -- only that portion of the page changes.
 
-```
+```javascript
 class Reviews extends React.Component {
   constructor(props) {
     super(props);
@@ -93,7 +93,7 @@ class Reviews extends React.Component {
       <button onClick={handleDelete(review.id)}>Delete</button>
     </div>;
 ```
-The Review Item component is passed a prop, properly bound to its parent, that allows it to change the state of its parent.  This is how the "Edit" button in the Review Item component is able to re-render the review from the existing review to the edit review form.  Once its parent component rerenders, the `componentWilLReceiveProps` function changes the parent component's edit state to false, displaying the edited review and removing the form.
+The Review Item component is passed a prop, properly bound to its parent, that allows it to change the state of its parent.  This is how the "Edit" button in the Review Item component is able to re-render the existing review into the edit review form.  Once its parent component rerenders, the parent component's `componentWilLReceiveProps` function its edit state to false, displaying the edited review and removing the form.
 
 #### Add to list
 
