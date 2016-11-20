@@ -59,7 +59,7 @@ class AuthForm extends React.Component {
 				<div className="login-form-container">
 					<form onSubmit={this.handleSubmit} className="login-form-box">
 						<br/>
-						Please <b>{this.props.formType}</b> below:
+						Please <b style={{color: "red"}}>{this.props.formType}</b> below:
 						{this.renderErrors()}
 						<div className="login-form">
 							<br/>

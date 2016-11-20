@@ -32,7 +32,7 @@ class Status extends React.Component {
 
     let buttonText = buttonTexts[this.props.type];
 
-    let cssClass = () => {
+    const cssClass = () => {
       if (this.props.type === this.props.status) {
         return "status-button-freeze";
       } else if (this.props.type === "remove" && !this.props.hasStatus) {
