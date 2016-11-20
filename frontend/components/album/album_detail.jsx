@@ -14,7 +14,7 @@ class AlbumDetail extends React.Component {
       return <div className="album-detail-container"><div className="loader">Loading...</div></div>;
     } else {
       const types = ["owned", "wishlist", "want to listen", "remove"]
-      let statusButtons = statuses.map((type, id) => (
+      let statusButtons = types.map((type, id) => (
         <StatusContainer key={id} type={type} status={this.props.album.status} />
       ));
 
