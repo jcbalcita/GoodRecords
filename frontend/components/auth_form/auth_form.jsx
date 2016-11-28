@@ -35,10 +35,20 @@ class AuthForm extends React.Component {
 	}
 
 	renderErrors() {
-		if (this.props.errors[0].length > 0) {
+		if (this.props.errors[0].typeof === "Array") {
 			return(
 				<ul className="error-message">
 					{this.props.errors[0].map((error, i) => (
+						<li key={`error-${i}`}>
+							error
+						</li>
+					))}
+				</ul>
+			);
+		} else if (this.props.errors){
+			return (
+				<ul className="error-message">
+					{this.props.errors.map((error, i) => (
 						<li key={`error-${i}`}>
 							{error}<br />
 						</li>
@@ -46,9 +56,7 @@ class AuthForm extends React.Component {
 				</ul>
 			);
 		} else {
-			return (
-				<div></div>
-			);
+			return <div></div>
 		}
 	}
 
