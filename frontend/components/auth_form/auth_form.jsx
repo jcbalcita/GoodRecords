@@ -35,7 +35,7 @@ class AuthForm extends React.Component {
 	}
 
 	renderErrors() {
-		if (this.props.errors[0]) {
+		if (this.props.errors[0].length > 0) {
 			return(
 				<ul className="error-message">
 					{this.props.errors[0].map((error, i) => (
