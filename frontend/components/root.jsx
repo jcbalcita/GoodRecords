@@ -4,6 +4,7 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import { requestAllAlbums, requestAlbum } from '../actions/album_actions';
 import { requestReviews } from '../actions/review_actions';
 import { requestCratings } from '../actions/crate_actions';
+import { receiveErrors } from '../actions/session_actions';
 //components
 import App from './app';
 import AuthFormContainer from './auth_form/auth_form_container';
@@ -18,10 +19,11 @@ import ReviewsContainer from './reviews/reviews_container';
 const Root = ({store}) => {
 
   const _redirect = (nextState, replace) => {
-      const currentUser = store.getState().session.currentUser;
+    store.dispatch(receiveErrors([]));
+    const currentUser = store.getState().session.currentUser;
       if (currentUser) {
         replace('home');
-      }
+    }
   };
 
   const _ensureLoggedIn = (nextState, replace) => {
