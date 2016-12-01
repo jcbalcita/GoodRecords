@@ -30,15 +30,21 @@ handleLogoutClick() {
   }
 
   render() {
-    let currentUser = this.props.currentUser;
-    let logout = this.props.logout;
+    const currentUser = this.props.currentUser;
+    const logout = this.props.logout;
+    const navLogo = () => (
+      <Link onClick={this.props.requestAllAlbums.bind(this)}>
+        <img src="https://res.cloudinary.com/jcbalcita/image/upload/c_scale,w_143/v1478708380/logos/good_records3.png">
+        </img>
+      </Link>
+    );
 
     return (
       <nav className="navbar">
-        <Link onClick={this.props.requestAllAlbums.bind(this)}>
+        {currentUser ? <Link onClick={this.props.requestAllAlbums.bind(this)}>
           <img src="https://res.cloudinary.com/jcbalcita/image/upload/c_scale,w_143/v1478708380/logos/good_records3.png">
           </img>
-        </Link>
+        </Link> : <div></div> }
         {currentUser ? this.navGreeting(currentUser.username, logout) : this.navSlogan()}
       </nav>
     );
