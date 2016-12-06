@@ -154,7 +154,8 @@ a:link {
 
 .splash-greeting {
   position: absolute;
-  left: 200px;
+  left: 150px;
+  top: 20px;
   font-weight: 700;
   color: #DCDCDC;
   text-shadow: 3px 3px  3px black;
@@ -166,9 +167,8 @@ a:link {
 }
 
 .greeting-subhead {
-  margin-top: 20px;
   font-size: 20px;
-  padding-left: 40px;
+  padding-left: 45px;
   color: #fffff0;
   text-shadow: 3px 3px 3px black;
 }
