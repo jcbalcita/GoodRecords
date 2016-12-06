@@ -296,7 +296,7 @@ a:link {
 }
 
 .side-bar-item {
-  background-color: #fffff0;
+  background-color: #FFFFF0;
   width: 190px;
   height: 25px;
   border-radius: 2px;
@@ -353,18 +353,17 @@ a:link {
   margin: 0 auto;
   border-radius: 5px;
   margin-top: 40px;
-  background: white;
   padding: 10px;
   max-height: 400px;
   overflow-y: scroll;
-  background-color: #fffff0;
+  background-color: #FFFFF0;
 }
 
 .crate-button {
   width: 10px;
   color: red;
   padding-left: 30px;
-  background-color: #fffff0;
+  background-color: #FFFFF0;
 }
 
 .crate-button:hover {
@@ -456,14 +455,9 @@ a:link {
   font-weight: 700;
 }
 
-.album-title {
-  color: red;
-}
-
 .album-art-and-info {
   display: flex;
-  justify-content: center;;
-  margin-bottom: 30px;
+  justify-content: center;
 }
 
 .album-info {
@@ -477,9 +471,9 @@ a:link {
 .album-title {
   color: red;
   font-size: 28px;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
   font-weight: 400;
-  text-shadow: 2px red;
+  text-shadow: 1px red;
 }
 
 .album-artist {
@@ -511,8 +505,11 @@ a:link {
 }
 
 .album-status {
-  margin-top: 50px;
+  text-align: center;
+  color: red;
   font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .album-description-container p {
@@ -639,7 +636,7 @@ a:link {
 .review-form {
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .review-submit {
@@ -669,7 +666,7 @@ a:link {
 }
 
 .cratings-container {
-  margin-bottom: 20px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;;
   align-items: center;
@@ -736,21 +733,21 @@ a:link {
 }
 
 .crating-buttons {
-  background-color: #F0F8FF;
+  background-color: #FFFFF0;
   color: black;
-  margin-right: 30px;
-  box-shadow: rgba(0,0,0,0.2) 0px 2px 3px, inset rgba(0,0,0,0.2) 0px -1px 2px;
-  border-radius: 5px;
-  margin-bottom: 10px;
+  margin-right: 12px;
+  box-shadow: rgba(0,0,0,0.2) 0px 1px 1px, inset rgba(0,0,0,0.2) 0px -1px 2px;
+  border-radius: 3px;
+  margin-bottom: 8px;
 }
 
 .button-item-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   flex-wrap: wrap;
-  max-width: 500px;
+  max-width: 300px;
   text-shadow: 2px black;
 }
 

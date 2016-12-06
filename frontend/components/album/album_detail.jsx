@@ -41,12 +41,10 @@ class AlbumDetail extends React.Component {
               <div className="album-title">{album.title}</div>
               <div className="album-artist">{album.artist}</div>
               <div className="album-year">{album.year}</div>
-              <div className="album-status">{texts[album.status]}</div>
+              <CratingsContainer />
             </div>
           </div>
-
-          <CratingsContainer />
-
+          <div className="album-status">{texts[album.status]}</div>
           <div className="album-description-container">
             <p>{album.description}</p>
           </div>
