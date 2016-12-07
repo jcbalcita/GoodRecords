@@ -296,7 +296,7 @@ a:link {
 }
 
 .side-bar-item {
-  background-color: #FFFFF0;
+  background-color: white;
   width: 190px;
   height: 25px;
   border-radius: 2px;
@@ -356,14 +356,14 @@ a:link {
   padding: 10px;
   max-height: 400px;
   overflow-y: scroll;
-  background-color: #FFFFF0;
+  background-color: white;
 }
 
 .crate-button {
   width: 10px;
   color: red;
   padding-left: 30px;
-  background-color: #FFFFF0;
+  background-color: white;
 }
 
 .crate-button:hover {
