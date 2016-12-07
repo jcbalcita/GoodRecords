@@ -397,6 +397,7 @@ a:link {
 .new-crate {
   border-bottom: 1px solid #808080;
   padding: 2px;
+  padding-right: 0;
 }
 
 .sidebar-crate-container a:hover {
