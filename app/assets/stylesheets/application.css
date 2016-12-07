@@ -740,10 +740,12 @@ a:link {
 .crating-buttons {
   background-color: white;
   color: black;
-  margin-right: 12px;
-  box-shadow: rgba(0,0,0,0.2) 0px 1px 1px, inset rgba(0,0,0,0.2) 0px -1px 2px;
+  margin-right: 5px;
+  /*box-shadow: rgba(0,0,0,0.2) 0px 1px 1px, inset rgba(0,0,0,0.2) 0px -1px 2px;*/
   border-radius: 3px;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
+  padding: 1px;
+  border: 2px solid black;
 }
 
 .button-item-container {
@@ -759,6 +761,7 @@ a:link {
 #cratingdelete {
   background-color: transparent;
   color: red;
+  font-size: 14px;
 }
 
 #cratingdelete:hover {
@@ -770,6 +773,8 @@ a:link {
   background-color: transparent;
   color: black;
   font-weight: 400;
+  margin-right: 7px;
+  font-size: 14px;
 }
 
 #cratingfetch:hover {
