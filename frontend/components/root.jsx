@@ -45,7 +45,7 @@ const Root = ({store}) => {
 
   return (
     <Provider store={store}>
-      <Router history={hashHistory}>
+      <Router onUpdate={() => window.scrollTo(0, 0)} history={hashHistory}>
         <Route path="/" component={App}>
           <IndexRoute component={GreetingContainer} onEnter={_redirect} />
           <Route path="login" component={AuthFormContainer} onEnter={_redirect} />
