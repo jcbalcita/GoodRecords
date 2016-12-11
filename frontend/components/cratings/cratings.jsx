@@ -11,11 +11,10 @@ class Cratings extends React.Component {
     if (!this.props.crates) {
       return (
         <div className="cratings-container">
-          Hello.
         </div>
       );
     } else if (this.props.userCrates && !this.props.cratings) {
-      const dropDownItems = this.props.crates.map((crate, idx) =>
+        const dropDownItems = this.props.crates.map((crate, idx) =>
         <CratingDropDownItem key={idx} crate={crate} albumId={this.props.albumId} requestAddCrating={this.props.requestAddCrating} />
       );
 
@@ -31,9 +30,9 @@ class Cratings extends React.Component {
     } else {
 
       let cratedIds = this.props.cratings.map(crating => crating.crate.id);
+      let allCrateIds = this.props.crates.map(crate => crate.id);
       let dropDowns = [];
       let buttons = [];
-      let allCrateIds = this.props.crates.map(crate => crate.id);
 
       this.props.cratings.forEach(crating => {
         if (allCrateIds.includes(crating.crate.id)) {

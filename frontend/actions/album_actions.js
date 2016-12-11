@@ -12,7 +12,6 @@ export const requestAllAlbums = () => ({
   type: REQUEST_ALL_ALBUMS
 });
 
-
 export const requestUserAlbums = status => ({
   type: REQUEST_USER_ALBUMS,
   status

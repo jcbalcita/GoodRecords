@@ -80,7 +80,7 @@ class AuthForm extends React.Component {
 							<input className="login-button" type="submit" value="Submit" />
 						</div>
 					</form>
-					<button className="guest-login-button" onClick={this.props.guestLogin}>Guest Login</button>
+					<button className="guest-login-button" onClick={this.props.guestLogin}>Demo Login</button>
 				</div>
 			</div>
 		);

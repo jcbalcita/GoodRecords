@@ -154,7 +154,7 @@ a:link {
 
 .splash-greeting {
   position: absolute;
-  left: 150px;
+  left: 120px;
   top: 20px;
   font-weight: 700;
   color: #DCDCDC;
@@ -176,7 +176,7 @@ a:link {
 .login-signup {
   position: absolute;
   top: 220px;
-  left: 240px;
+  left: 210px;
   color: black;
   background-color: #fffff0;
   padding: 10px;
@@ -197,7 +197,7 @@ a:link {
   position: absolute;
   padding: 10px;
   top: 310px;
-  left: 240px;
+  left: 210px;
   color: black;
   background-color: #fffff0;
   width: 380px;
@@ -593,6 +593,7 @@ a:link {
 }
 
 .reviews-header {
+  margin-top: 10px;
   font-size: 16px;
   color: black;
 }
@@ -601,7 +602,7 @@ a:link {
   border: 3px solid black;
   text-align: justify;
   max-width: 700px;
-  margin: 20px auto;
+  margin: 0 auto;
   padding: 15px;
   border-radius: 8px;
   background-color: white;
@@ -696,7 +697,13 @@ a:link {
 
 .dropdown:hover {
   color: red;
-  border-radius: 20px;
+  border-radius: 5px;
+  cursor: default;
+}
+
+.dropdown:focus {
+  color: red;
+  border-radius: 5px;
   cursor: default;
 }
 
