@@ -14,8 +14,6 @@ import AlbumIndexContainer from './album/album_index_container';
 import AlbumDetailContainer from './album/album_detail_container';
 import ReviewsContainer from './reviews/reviews_container';
 
-
-
 const Root = ({store}) => {
 
   const _redirect = (nextState, replace) => {
