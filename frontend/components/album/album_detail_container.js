@@ -4,7 +4,6 @@ import { requestAlbum } from '../../actions/album_actions';
 import { requestReviews } from '../../actions/review_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  // debugger
   return {
     album: state.album,
     reviews: state.reviews

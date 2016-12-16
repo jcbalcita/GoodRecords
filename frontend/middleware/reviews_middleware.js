@@ -18,10 +18,14 @@ import { fetchReviews,
          updateReview,
          removeReview } from '../util/review_api_util.js';
 
+import { receiveErrors } from '../actions/session_actions.js'
+
 export default ({ getState, dispatch }) => next => action => {
-  const reviewsSuccess = reviews => dispatch(receiveReviews(reviews))
-  const reviewSuccess = review => dispatch(receiveReview(review))
-  const deleteSuccess = () => dispatch(processDeleteReview())
+  const reviewsSuccess = reviews => dispatch(receiveReviews(reviews));
+  const reviewSuccess = review =>  {
+    dispatch(receiveReview(review));
+  }
+  const deleteSuccess = () => dispatch(processDeleteReview());
 
   switch (action.type) {
     case REQUEST_REVIEWS:

@@ -9,7 +9,8 @@ const mapStateToProps = state => ({
   albumId: state.album.id,
   reviews: state.reviews,
   hasReviews: Boolean(state.reviews.currentAlbumReviews || state.reviews.currentUserReview),
-  hasCurrentUserReview: Boolean(state.reviews.currentUserReview)
+  hasCurrentUserReview: Boolean(state.reviews.currentUserReview),
+  errors: state.session.errors
 });
 
 const mapDispatchToProps = dispatch => ({

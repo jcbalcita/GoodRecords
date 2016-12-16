@@ -35,21 +35,21 @@ class Reviews extends React.Component {
   }
 
   render() {
-
     if (this.props.reviews.currentAlbumReviews) {
       let reviewArray = Object.keys(this.props.reviews.currentAlbumReviews).map(idx => this.props.reviews.currentAlbumReviews[idx]);
       const reviewItems = reviewArray.map((review, idx) => <ReviewItem review={review} key={idx} type={'otherUser'}/>);
       const editForm = <ReviewFormContainer type={'edit'} review={this.props.reviews.currentUserReview} />
-
       return (
         <main className="reviews-container">
           { this.state.edit ? editForm : this.userReviewOrForm() }
+
           <h3 className="reviews-header">Community Reviews</h3>
           {reviewItems}
         </main>
       );
     } else {
       const editForm = <ReviewFormContainer type={'edit'} review={this.props.reviews.currentUserReview} />
+
       return (
         <main className="reviews-container">
           { this.state.edit ? editForm : this.userReviewOrForm() }
