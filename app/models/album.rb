@@ -18,6 +18,10 @@ class Album < ActiveRecord::Base
                                  where('album_statuses.status = ?', status)
   end
 
+  def self.find_by_search_term(search_term)
+    Album.where('title LIKE ? OR artist LIKE ?', '%search_term%')
+  end
+
   def self.no_results
     { albums: {}, specificRender: false, crateRender: false }
   end

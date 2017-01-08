@@ -6,6 +6,10 @@ class Api::AlbumsController < ApplicationController
       @render = params[:status]
 
       render json: Album.no_results if @albums.empty?
+    elsif (params[:searchTerm])
+      @albums = Album.find_by_search_term(params[:searchTerm])
+      @render = false
+      render json: Album.no_results if @albums.empty?
     else
       @albums = Album.all
       @render = 'all'

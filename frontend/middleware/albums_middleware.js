@@ -9,7 +9,8 @@ import { requestAllAlbums,
          REQUEST_NEW_STATUS,
          REQUEST_UPDATE_STATUS,
          REQUEST_REMOVE_STATUS,
-         requestRemoveStatus } from '../actions/album_actions';
+         requestRemoveStatus,
+         REQUEST_SEARCH_RESULTS } from '../actions/album_actions';
 
 import { requestReviews } from '../actions/review_actions';
 
@@ -18,7 +19,8 @@ import { fetchAllAlbums,
          fetchAlbum,
          createStatus,
          updateStatus,
-         removeStatus } from '../util/album_api_util';
+         removeStatus,
+         fetchSearchResults } from '../util/album_api_util';
 
 import { hashHistory } from 'react-router';
 
@@ -46,6 +48,8 @@ export default ({ getState, dispatch }) => next => action => {
       return updateStatus(action.id, action.status, action.albumId, fetchAlbumSuccess);
     case REQUEST_REMOVE_STATUS:
       return removeStatus(action.id, action.albumId, fetchAlbumSuccess);
+    case REQUEST_SEARCH_RESULTS:
+      return fetchSearchResults(action.searchTerm, fetchAlbumsSuccess);
     default:
       return next(action);
   }

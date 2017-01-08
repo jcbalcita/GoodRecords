@@ -6,7 +6,8 @@ export const RECEIVE_ALBUM = "RECEIVE_ALBUM";
 export const REQUEST_NEW_STATUS = "REQUEST_NEW_STATUS";
 export const REQUEST_UPDATE_STATUS = "REQUEST_UPDATE_STATUS";
 export const REQUEST_REMOVE_STATUS = "REQUEST_REMOVE_STATUS";
-export const CLEAR_ALBUMS = "CLEAR_ALBUMS"
+export const CLEAR_ALBUMS = "CLEAR_ALBUMS";
+export const REQUEST_SEARCH_RESULTS = "REQUEST_SEARCH_RESULTS";
 
 export const requestAllAlbums = () => ({
   type: REQUEST_ALL_ALBUMS
@@ -55,3 +56,8 @@ export const requestRemoveStatus = (id, albumId) => ({
   id,
   albumId
 });
+
+export const requestSearchResults = searchTerm => ({
+  type: REQUEST_SEARCH_RESULTS,
+  searchTerm
+})
