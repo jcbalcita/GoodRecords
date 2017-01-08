@@ -54,7 +54,7 @@ export const fetchSearchResults = (searchTerm, success) => {
   $.ajax({
     method: 'GET',
     url: `/api/albums`,
-    data: { searchTerm: searchTerm },
+    data: { searchTerm },
     success
   });
 };

@@ -7,9 +7,10 @@ class Api::AlbumsController < ApplicationController
 
       render json: Album.no_results if @albums.empty?
     elsif (params[:searchTerm])
-      @albums = Album.find_by_search_term(params[:searchTerm])
+      search_term = (params[:searchTerm]).downcase
+      @albums = Album.find_by_search_term(search_term)
       @render = false
-      render json: Album.no_results if @albums.empty?
+      render json: Album.no_search_results if @albums.empty?
     else
       @albums = Album.all
       @render = 'all'
@@ -23,5 +24,4 @@ class Api::AlbumsController < ApplicationController
     @status = status ? status.status : ""
     @id = status ? status.id : ""
   end
-
 end

@@ -19,10 +19,14 @@ class Album < ActiveRecord::Base
   end
 
   def self.find_by_search_term(search_term)
-    Album.where('title LIKE ? OR artist LIKE ?', '%search_term%')
+    Album.where('lower(title) LIKE ? OR lower(artist) LIKE ?', "%#{search_term}%", "%#{search_term}%")
   end
 
   def self.no_results
     { albums: {}, specificRender: false, crateRender: false }
+  end
+
+  def self.no_search_results
+     { albums: {}, specificRender: 'no_results', crateRender: false }
   end
 end
