@@ -1,5 +1,9 @@
 # GoodRecords
 
+**Search feature added 1/8/17**
+- Navbar now contains an input form that, on submit, queries the `Artist` and `Title` columns of the `ALbums` table.
+- In the future, I'd like to expand this feature to include a dynamic results dropdown that updates as you type.
+
 [Goodrecords live][heroku]
 
 [heroku]: http://goodrecords.herokuapp.com
@@ -105,10 +109,6 @@ There is also a hover-dropdown on the album detail page where users can add the 
 ## Future Directions for the Project
 
 I plan to add the following features to the project.
-
-### Search
-
-Searching for items is a standard feature of Goodreads.  I plan to implement a search bar that creates a dropdown of the first 5 matching results.  Upon submit, the album index page will re-render with the matching albums.
 
 ### Add albums
 
