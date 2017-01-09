@@ -1,8 +1,10 @@
 # GoodRecords
 
+**Search feature added 1/8/17**: Navbar now contains an input form that, on submit, queries the `Artist` and `Title` columns of the `Albums` table.
+
 [Goodrecords live][heroku]
 
-[heroku]: http://goodrecords.herokuapp.com
+[heroku]: http://www.goodrecords.rocks
 
 Goodrecords is a full-stack web application that drew inspiration from Goodreads. Users can keep track of their record collection, maintain a wishlist, and keep a list of albums they would like to listen to.  Users also have the ability to create their own custom lists and add albums to those lists. In addition, users can review and rate albums, and view other users' reviews.
 
@@ -105,10 +107,6 @@ There is also a hover-dropdown on the album detail page where users can add the 
 ## Future Directions for the Project
 
 I plan to add the following features to the project.
-
-### Search
-
-Searching for items is a standard feature of Goodreads.  I plan to implement a search bar that creates a dropdown of the first 5 matching results.  Upon submit, the album index page will re-render with the matching albums.
 
 ### Add albums
 
