@@ -23,7 +23,7 @@ class Search extends React.Component {
 
   fireSearch(e) {
     e.preventDefault();
-    this.props.requestSearchResults(this.state.searchTerm);
+    this.props.requestSearchResults(this.state.searchTerm.trim().slice(0, 50));
   }
 
    render() {
