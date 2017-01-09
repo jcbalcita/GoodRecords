@@ -4,7 +4,6 @@ class Api::AlbumsController < ApplicationController
     if (params[:status])
       @albums = Album.find_by_status(current_user.id, params[:status])
       @render = params[:status]
-
       render json: Album.no_results if @albums.empty?
     elsif (params[:searchTerm])
       search_term = (params[:searchTerm]).downcase

@@ -5,7 +5,7 @@ const SidebarBox = ({ section, handleBrowseClick, handleCollectionClick }) => (
   <div className="sidebar-box">
     <button className={section === 'all' ? "sidebar-item-highlighted" : "side-bar-item"}
             onClick={handleBrowseClick}>
-      Browse All Albums
+      Browse Albums
     </button>
     <button className={section === "owned" ? "sidebar-item-highlighted" : "side-bar-item"}
             onClick={handleCollectionClick.bind(this, "owned")}>
