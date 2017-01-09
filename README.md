@@ -2,7 +2,6 @@
 
 **Search feature added 1/8/17**
 - Navbar now contains an input form that, on submit, queries the `Artist` and `Title` columns of the `Albums` table.
-- In the future, I'd like to expand this feature to include a dynamic results dropdown that updates as you type.
 
 [Goodrecords live][heroku]
 
