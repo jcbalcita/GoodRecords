@@ -1,7 +1,6 @@
 # GoodRecords
 
-**Search feature added 1/8/17**
-- Navbar now contains an input form that, on submit, queries the `Artist` and `Title` columns of the `Albums` table.
+**Search feature added 1/8/17**: Navbar now contains an input form that, on submit, queries the `Artist` and `Title` columns of the `Albums` table.
 
 [Goodrecords live][heroku]
 
