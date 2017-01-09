@@ -254,42 +254,6 @@ Album.create!(title: "Is This It",
              description:
              "Blessed and cursed with an enormous amount of hype from the British press, the Strokes prove to be one of the few groups deserving of their glowing reviews.")
 
-Album.create!(title: "In Utero",
-            artist: "Nirvana",
-            year: "1993",
-            image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1483995859/inutero_t6r6go.jpg",
-            description:
-            "In Utero remains a shattering listen, whether it's viewed as Cobain's farewell letter or self-styled audience alienation. Few other records are as willfully difficult as this.")
-
-Album.create!(title: "Ready to Die",
-            artist: "Notorious B.I.G.",
-            year: "1994",
-            image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1483995859/readytodie_ic8mrz.jpg",
-            description:
-            "The album that reinvented East Coast rap for the gangsta age, Ready to Die made the Notorious B.I.G. a star, and vaulted Sean \"Puffy\" Combs' Bad Boy label into the spotlight as well. Today it's recognized as one of the greatest hardcore rap albums ever recorded, and that's mostly due to Biggie's skill as a storyteller. His raps are easy to understand, but his skills are hardly lacking -- he has a loose, easy flow and a talent for piling multiple rhymes on top of one another in quick succession. ")
-
-Album.create!(title: "Kind of Blue",
-            artist: "Miles Davis",
-            year: "1959",
-            image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1483995859/kindofblue_jafwuh.jpg",
-            description:
-            "Kind of Blue isn't merely an artistic highlight for Miles Davis, it's an album that towers above its peers, a record generally considered as the definitive jazz album. To be reductive, it's the Citizen Kane of jazz -- an accepted work of greatness that's innovative and entertaining. That may not mean it's the greatest jazz album ever made, but it certainly is a universally acknowledged standard of excellence.")
-
-Album.create!(title: "Sgt. Pepper's Lonely Hearts Club Band",
-            artist: "The Beatles",
-            year: "1967",
-            image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1483995859/sgtpepper_z4wynh.jpg",
-            description:
-            "With Revolver, the Beatles made the Great Leap Forward, reaching a previously unheard-of level of sophistication and fearless experimentation. Sgt. Pepper, in many ways, refines that breakthrough, as the Beatles consciously synthesized such disparate influences as psychedelia, art-song, classical music, rock & roll, and music hall, often in the course of one song.")
-
-Album.create!(title: "Thriller",
-            artist: "Michael Jackson",
-            year: "1982",
-            image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1483995859/thriller_nzqumw.png",
-            description:
-            "This was a record that had something for everybody, building on the basic blueprint of Off the Wall by adding harder funk, hard rock, softer ballads, and smoother soul -- expanding the approach to have something for every audience.")
-
-
 Album.create!(title: "Boxer",
              artist: "The National",
              year: "2007",
@@ -450,6 +414,41 @@ Album.create!(title: "Siamese Dream",
              image_url: "https://res.cloudinary.com/jcbalcita/image/upload/v1478672193/siamesedream_q6ewvz.png",
              description:
              "The sessions for the Pumpkins' sophomore effort, Siamese Dream, were wrought with friction -- Corgan eventually played almost all the instruments himself (except for percussion). Some say strife and tension produces the best music, and it certainly helped make Siamese Dream one of the finest alt-rock albums of all time.")
+             Album.create!(title: "In Utero",
+                         artist: "Nirvana",
+                         year: "1993",
+                         image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1483995859/inutero_t6r6go.jpg",
+                         description:
+                         "In Utero remains a shattering listen, whether it's viewed as Cobain's farewell letter or self-styled audience alienation. Few other records are as willfully difficult as this.")
+
+Album.create!(title: "Ready to Die",
+           artist: "Notorious B.I.G.",
+           year: "1994",
+           image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1483995859/readytodie_ic8mrz.jpg",
+           description:
+           "The album that reinvented East Coast rap for the gangsta age, Ready to Die made the Notorious B.I.G. a star, and vaulted Sean \"Puffy\" Combs' Bad Boy label into the spotlight as well. Today it's recognized as one of the greatest hardcore rap albums ever recorded, and that's mostly due to Biggie's skill as a storyteller. His raps are easy to understand, but his skills are hardly lacking -- he has a loose, easy flow and a talent for piling multiple rhymes on top of one another in quick succession. ")
+
+Album.create!(title: "Kind of Blue",
+           artist: "Miles Davis",
+           year: "1959",
+           image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1483995859/kindofblue_jafwuh.jpg",
+           description:
+           "Kind of Blue isn't merely an artistic highlight for Miles Davis, it's an album that towers above its peers, a record generally considered as the definitive jazz album. To be reductive, it's the Citizen Kane of jazz -- an accepted work of greatness that's innovative and entertaining. That may not mean it's the greatest jazz album ever made, but it certainly is a universally acknowledged standard of excellence.")
+
+Album.create!(title: "Sgt. Pepper's Lonely Hearts Club Band",
+           artist: "The Beatles",
+           year: "1967",
+           image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1483995859/sgtpepper_z4wynh.jpg",
+           description:
+           "With Revolver, the Beatles made the Great Leap Forward, reaching a previously unheard-of level of sophistication and fearless experimentation. Sgt. Pepper, in many ways, refines that breakthrough, as the Beatles consciously synthesized such disparate influences as psychedelia, art-song, classical music, rock & roll, and music hall, often in the course of one song.")
+
+Album.create!(title: "Thriller",
+           artist: "Michael Jackson",
+           year: "1982",
+           image_url: "http://res.cloudinary.com/jcbalcita/image/upload/v1483995859/thriller_nzqumw.png",
+           description:
+           "This was a record that had something for everybody, building on the basic blueprint of Off the Wall by adding harder funk, hard rock, softer ballads, and smoother soul -- expanding the approach to have something for every audience.")
+
 
 AlbumStatus.create!(user_id: 1, album_id: 1, status: "owned")
 AlbumStatus.create!(user_id: 1, album_id: 2, status: "owned")
