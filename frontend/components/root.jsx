@@ -17,10 +17,11 @@ import ReviewsContainer from './reviews/reviews_container';
 const Root = ({store}) => {
 
   const _redirect = (nextState, replace) => {
-    store.dispatch(receiveErrors([]));
     const currentUser = store.getState().session.currentUser;
       if (currentUser) {
         replace('home');
+    } else {
+      store.dispatch(receiveErrors([]));
     }
   };
 
