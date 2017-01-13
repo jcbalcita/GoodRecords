@@ -21,8 +21,7 @@ export const createReview = (review, success) => {
     method: 'POST',
     url: '/api/reviews',
     data: { review },
-    success,
-    error
+    success
   });
 };
 
@@ -31,8 +30,7 @@ export const updateReview = (review, success) => {
     method: 'PATCH',
     url: `/api/reviews/${review.id}`,
     data: { review },
-    success,
-    error
+    success
   });
 };
 
