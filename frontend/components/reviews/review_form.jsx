@@ -6,7 +6,8 @@ class ReviewForm extends React.Component {
     super(props);
     this.state = this.props.review || { album_id: this.props.albumId,
                    body: '',
-                   rating: 0
+                   rating: 0,
+                   modalIsOpen: false
                  };
 
     this.update = this.update.bind(this);
@@ -22,6 +23,12 @@ class ReviewForm extends React.Component {
   handleSubmit() {
     return (e) => {
       e.preventDefault();
+
+      if (!this.state.body || !this.state.rating) {
+        alert("A review needs both a body and a rating.")
+        return null;
+      }
+
       let review = {
         id: this.state.id,
         album_id: this.state.album_id,
@@ -41,12 +48,10 @@ class ReviewForm extends React.Component {
   }
 
   render() {
-
     return (
       <div className="review-form">
         <form onSubmit={this.handleSubmit()}>
-          <h2>Rate this album</h2>
-          <StarRatingComponent
+          <span className="rate-this-album">Rate this album:</span> <StarRatingComponent
             name="rating"
             starCount={5}
             value={this.state.rating}

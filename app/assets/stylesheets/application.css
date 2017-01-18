@@ -779,6 +779,12 @@ a:link {
   text-shadow: 2px black;
 }
 
+.rate-this-album {
+  display: inline-block;
+  vertical-align: middle;
+  padding-bottom: 10px;
+}
+
 #cratingdelete {
   background-color: transparent;
   color: red;
