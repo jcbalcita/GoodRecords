@@ -431,7 +431,7 @@ a:link {
   background-color: #FFFFF0;
   margin-top: 20px;
   margin-bottom: 30px;
-  margin-right: 30px;
+  margin-right: 10px;
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 65%;
@@ -443,7 +443,7 @@ a:link {
   background-color: #FFFFF0;
   margin-top: 20px;
   margin-bottom: 30px;
-  margin-right: 20px;
+  margin-right: 10px;
   justify-content: flex-start;
   width: 65%;
   min-width: 500px;
